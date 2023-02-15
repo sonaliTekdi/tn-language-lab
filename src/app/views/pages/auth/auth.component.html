@@ -1,0 +1,12 @@
+<!-- Spinner for lazyload modules -->
+<div class="page-wrapper">
+<div class="page-content">
+<div *ngIf="isLoading" class="spinner-wrapper">
+    <div class="spinner">Loading...</div>
+  </div>
+
+  <div contentAnimate *ngIf="!isLoading">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
