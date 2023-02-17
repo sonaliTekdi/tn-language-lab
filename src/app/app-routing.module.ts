@@ -19,7 +19,7 @@ const routes: Routes = [
         component: HomeComponent
       },
       {
-        path: '',
+        path: 'level',
         loadChildren: () => import('./views/pages/level/level.module').then(m => m.LevelModule)
       },
 
@@ -34,7 +34,7 @@ const routes: Routes = [
           breadcrumb: 'No Access'
         }
       },
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       // { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   },

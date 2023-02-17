@@ -7,7 +7,7 @@ import { of } from 'rxjs';
 @Injectable()
 export class DataService {
 
-  private baseUrl = environment.apiBaseUrl;
+  private baseUrl
 
   private cache: any = {};
 

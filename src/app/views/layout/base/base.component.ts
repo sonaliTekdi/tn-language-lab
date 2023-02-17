@@ -77,7 +77,7 @@ export class BaseComponent implements OnInit {
 
   ngOnInit(): void {
     // this.iat = this.userSessionService.iat();
-    this.expireLogout();
+    // this.expireLogout();
   }
   reset() {
     this.idle.watch();

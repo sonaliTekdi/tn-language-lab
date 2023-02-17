@@ -21,6 +21,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
 import { HomeComponent } from './views/pages/home/home.component';
 import { LevelComponent } from './views/pages/level/level.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { LevelComponent } from './views/pages/level/level.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    RouterModule,
     HttpClientModule,
     ComponentsModule,
     NgHttpLoaderModule.forRoot(),
