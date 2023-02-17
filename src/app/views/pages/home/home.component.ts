@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
 
   goToLevelAndRouting()
   {
-    debugger
     this.router.navigate(["level"])
   }
 
