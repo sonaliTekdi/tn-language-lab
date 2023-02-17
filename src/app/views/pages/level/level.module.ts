@@ -7,6 +7,9 @@ import { LevelComponent } from './level.component';
 import {AccordionModule} from 'primeng/accordion';
 import {PanelModule} from 'primeng/panel';
 import { PanelMenuModule } from 'primeng/panelmenu';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import { ReactiveFormsModule } from '@angular/forms';
+import {DragDropModule} from 'primeng/dragdrop';
 
 
 
@@ -36,7 +39,10 @@ const routes: Routes = [
     CommonModule,
     AccordionModule,
     PanelModule,
+    ReactiveFormsModule,
+    RadioButtonModule,
     PanelMenuModule,
+    DragDropModule,
     RouterModule.forChild(routes),
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],

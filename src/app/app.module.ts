@@ -22,6 +22,7 @@ import { NoAccessComponent } from './views/pages/no-access/no-access.component';
 import { HomeComponent } from './views/pages/home/home.component';
 import { LevelComponent } from './views/pages/level/level.component';
 import { RouterModule } from '@angular/router';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 
 @NgModule({
@@ -35,10 +36,13 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RadioButtonModule,
     LayoutModule,
     RouterModule,
     HttpClientModule,
+    ReactiveFormsModule     ,
     ComponentsModule,
+    FormsModule,
     NgHttpLoaderModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,

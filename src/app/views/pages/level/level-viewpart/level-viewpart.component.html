@@ -1,6 +1,103 @@
-<div class="rounded bg-white border p-3">
+<div class="rounded bg-white border p-3" *ngIf="viewPage == 1">
     <h4 class="rounded bg-light py-3 px-4">Learn with Audio</h4>
+    <audio controls class="w-100 mt-4">
+        <source src="assets/media/audio.mp3" type="audio/mpeg">
+    </audio>
+    <h5 class="px-2 pt-4">What establishes the profile of end-users of the system?</h5>
+    <div class="px-2 pt-2">
+        <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio1
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio1
+            </label>
+          </div>
+    </div>
+    <div class="text-center">
+        <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="gotoNextpage(2)">Next</button>
+    </div>
 </div>
-<div class="rounded bg-white border p-3">
-    <h4 class="rounded bg-light py-3 px-4">Learn with video</h4>
+
+<div class="rounded bg-white border p-3" *ngIf="viewPage == 2">
+    <h4 class="rounded bg-light py-3 px-4">Learn with Video</h4>
+    <video controls class="w-50 mx-auto mt-4 rounded">
+        <source src="assets/media/video.mp4" type="video/mp4">
+    </video>
+    <h5 class="px-2 pt-4">What establishes the profile of end-users of the system?</h5>
+    <div class="px-2 pt-2">
+        <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio1
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio1
+            </label>
+          </div>
+    </div>
+    <div class="text-center">
+        <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="gotoNextpage(3)">Next</button>
+    </div>
+</div>
+
+<div class="rounded bg-white border p-3" *ngIf="viewPage == 3">
+    <h4 class="rounded bg-light py-3 px-4">Learn with Quiz</h4>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+                <div *ngFor="let jslist of jsonList;" class="border-bottom border-dark pb-5">
+                    <div class="d-flex justify-content-center pt-5">
+                        <span class="draggable" id="demo{{jslist.id}}{{j}}" pDraggable (dragstart)="drag($event)" *ngFor="let draglist of jslist.ops_list; let j = index;">{{draglist}}</span>
+                    </div>
+                    <h3 #jslist id="ques_{{jslist.id}}" class="pt-5 mx-auto">It is a long established fact <span class="input-bx" (drop)="drop($event)" pDroppable></span> a reader will be distracted by <span class="input-bx" (drop)="drop($event)" pDroppable></span> readable content of a page <span class="input-bx" (drop)="drop($event)" pDroppable></span> looking at its layout.</h3>
+                    <!-- <h3 #jslist class="pt-5 text-center mx-auto" [innerHTML]="sanitizer.bypassSecurityTrustHtml(jslist.question)"></h3> -->
+                </div>
+                
+                
+                <div class="text-center">
+                    <button class="btn-primary rounded px-4 py-2 border-0 fs-5 mt-5" (click)="getValue()">Show Result</button>
+                </div>
+                
+                <div class="p-5 mx-auto bg-light mt-5" *ngIf="answerBox">
+                        <h3 class="text-center pb-2">THE RESULT..!</h3>
+                    <h4 class="p-4 mt-4 d-flex align-items-center alert" *ngFor="let otptquetn of jsonList" [ngClass]="otptquetn.getques == otptquetn.crctques ? 'alert-success' : 'alert-danger'"> <i class="bi pe-2" [ngClass]="otptquetn.getques == otptquetn.crctques ? 'bi-check-circle-fill' : 'bi-x-circle-fill'"></i> {{otptquetn.getques}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="gotoNextpage(1)">Go to first page</button>
+    </div>
 </div>

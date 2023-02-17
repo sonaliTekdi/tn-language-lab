@@ -428,13 +428,15 @@ a {
 
 @media (min-width: 1800px){
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .page-wrapper .page-content {
-    max-width: 1800px !important;
+    // max-width: 1800px !important;
+    max-width: 100%;
   }
   }
 
   @media (min-width: 1400px){
 .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .page-wrapper .page-content {
-    max-width: 1645px;
+    // max-width: 1645px;
+    max-width: 100%;
 }
   }
 // .p-dropdown .p-dropdown-label{
