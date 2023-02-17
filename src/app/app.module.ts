@@ -5,20 +5,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 import { LayoutModule } from './views/layout/layout.module';
-import { AuthGuard } from './core/guard/auth.guard';
+// import { AuthGuard } from './core/guard/auth.guard';
 
 import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { AuthenticationService } from './core/services/authentication.service';
-import { UserSessionService } from './core/services/usersession.service';
 import { DataService } from './core/services/data.service';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AlertService } from './core/services/alert.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpInterceptorService } from './core/services/interceptor.service';
 import { ComponentsModule } from './views/component/components.module';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
@@ -32,7 +29,6 @@ import { LevelComponent } from './views/pages/level/level.component';
     ErrorPageComponent,
     NoAccessComponent,
     HomeComponent,
-    LevelComponent
   ],
   imports: [
     BrowserModule,
@@ -53,17 +49,12 @@ import { LevelComponent } from './views/pages/level/level.component';
   ],
 
   providers: [
-    AuthGuard,
-    AuthenticationService,
-    UserSessionService,
+    // AuthGuard,
+
     DataService,
     ToastrService,AlertService,
 
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpInterceptorService,
-      multi: true,
-    },
+  
     // {
     //   provide: HIGHLIGHT_OPTIONS, // https://www.npmjs.com/package/ngx-highlightjs
     //   useValue: {

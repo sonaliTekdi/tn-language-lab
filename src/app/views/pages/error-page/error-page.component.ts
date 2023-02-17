@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { UserSessionService } from 'src/app/core/services/usersession.service';
+// import { UserSessionService } from 'src/app/core/services/usersession.service';
 import { Router } from '@angular/router';
 import { AlertService } from 'src/app/core/services/alert.service';
 @Component({
@@ -20,11 +20,10 @@ export class ErrorPageComponent implements OnInit, OnDestroy {
   teacherType: any;
   emisUserType1: any;
 
-  constructor(private route: ActivatedRoute,private userSessionService:UserSessionService,private router: Router,private alertService:AlertService) {
-    this.userName = this.userSessionService.userName();
-            this.emisUserType = this.userSessionService.userTypeId();
-            this.teacherType = this.userSessionService.teacherType();
-            this.emisUserType1 = this.userSessionService.emisUsertype1();
+  constructor(private route: ActivatedRoute,
+    // private userSessionService:UserSessionService,
+    private router: Router,private alertService:AlertService) {
+   
    }
 
   ngOnInit(): void {

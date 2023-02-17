@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
-import { AuthenticationService } from 'src/app/core/services/authentication.service';
-import { UserSessionService } from 'src/app/core/services/usersession.service';
+// import { AuthenticationService } from 'src/app/core/services/authentication.service';
+// import { UserSessionService } from 'src/app/core/services/usersession.service';
 import { DEFAULT_INTERRUPTSOURCES, Idle } from '@ng-idle/core';
 
 @Component({
@@ -21,8 +21,9 @@ export class BaseComponent implements OnInit {
 
   constructor(private router: Router,
     private idle: Idle,
-    private userSessionService:UserSessionService,
-    private authService:AuthenticationService) { 
+    // private userSessionService:UserSessionService,
+    // private authService:AuthenticationService
+    ) { 
 
     // Spinner for lazyload modules
     router.events.forEach((event) => { 
@@ -75,7 +76,7 @@ export class BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.iat = this.userSessionService.iat();
+    // this.iat = this.userSessionService.iat();
     this.expireLogout();
   }
   reset() {
@@ -85,9 +86,9 @@ export class BaseComponent implements OnInit {
   }
   onLogout() {
     this.idle.stop();
-    var path = this.userSessionService.localStorageSessionKey;
-    localStorage.removeItem(path);
-    this.authService.logOut();
+    // var path = this.userSessionService.localStorageSessionKey;
+    // localStorage.removeItem(path);
+    // this.authService.logOut();
     localStorage.clear();
     this.router.navigate(['/auth/login']);
   }

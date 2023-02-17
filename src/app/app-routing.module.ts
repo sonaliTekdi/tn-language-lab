@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BaseComponent } from './views/layout/base/base.component';
-import { AuthGuard } from './core/guard/auth.guard';
+// import { AuthGuard } from './core/guard/auth.guard';
 import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
@@ -18,6 +18,11 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent
       },
+      {
+        path: '',
+        loadChildren: () => import('./views/pages/level/level.module').then(m => m.LevelModule)
+      },
+
       // {
       //   path: 'competition',
       //   loadChildren: () => import('./views/pages/competition/competition.module').then(m => m.CompetitionModule)
@@ -46,8 +51,11 @@ const routes: Routes = [
     path: 'error/:type',
     component: ErrorPageComponent
   },
-  { path: '**', redirectTo: 'error', pathMatch: 'full' }
-];
+  { path: '**', redirectTo: 'error', pathMatch: 'full' },
+
+
+  ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top'})],

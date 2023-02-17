@@ -4,9 +4,9 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { STATE_MENU_TEMP, BEO_MENU, BLK_MENU, BRTE_MENU, CEO_MENU, DEO_MENU, DISTRICT_MENU, HEALTH_LOGIN, JD_SCERT_MENU, STATE_HEALTH, STATE_MENU, SWO_MENU, RTE_VERIFY_MENU, DISTRICT_MENU_SPORT, DEIC_MENU, DOTE_MENU, DET_MENU, OSD_MENU } from './menu';
 import { MenuItem } from './menu.model';
-import { AuthenticationService } from 'src/app/core/services/authentication.service';
+// import { AuthenticationService } from 'src/app/core/services/authentication.service';
 
-import { UserSessionService } from 'src/app/core/services/usersession.service';
+// import { UserSessionService } from 'src/app/core/services/usersession.service';
 import { Idle } from '@ng-idle/core';
 
 
@@ -50,18 +50,18 @@ export class NavbarComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2,
     private router: Router,
-    private authService: AuthenticationService,
+    // private authService: AuthenticationService,
     private idle: Idle,
-    private userSessionService: UserSessionService,
+    // private userSessionService: UserSessionService,
 
   ) {
-    this.userName = this.userSessionService.userName();
-    this.Name = this.userSessionService.name();
-    this.designation = this.userSessionService.designation();
-    this.type_teacher = this.userSessionService.type_teacher();
-    this.teacherName = this.userSessionService.teacherName();
-    this.emisUserType = this.userSessionService.userTypeId();
-    this.emisUserType1 = this.userSessionService.emisUsertype1();
+    // this.userName = this.userSessionService.userName();
+    // this.Name = this.userSessionService.name();
+    // this.designation = this.userSessionService.designation();
+    // this.type_teacher = this.userSessionService.type_teacher();
+    // this.teacherName = this.userSessionService.teacherName();
+    // this.emisUserType = this.userSessionService.userTypeId();
+    // this.emisUserType1 = this.userSessionService.emisUsertype1();
   }
 
   ngOnInit(): void {
@@ -485,7 +485,7 @@ export class NavbarComponent implements OnInit {
    */
   onLogout() {
     this.idle.stop();
-    this.authService.logOut();
+    // this.authService.logOut();
     this.router.navigate(['/auth/login']);
     localStorage.removeItem("token");
     localStorage.clear();
