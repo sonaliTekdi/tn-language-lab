@@ -64,6 +64,77 @@
 }
 
 
+
+//New CSS
+.sidepanel{
+  .pi-chevron-down:before,
+  .pi-angle-down:before {
+    content: "\f63b";
+    font-family: bootstrap-icons !important;
+  }
+  .pi-chevron-right:before,
+  .pi-angle-right:before {
+    content: "\f64d";
+    font-family: bootstrap-icons !important;
+  }
+  .p-submenu-list{
+    padding: 0px!important;
+  }
+  .p-panelmenu-content{
+    padding: 0px;
+    .p-menuitem{
+      .p-menuitem-link{
+        background: #CFDAFF;
+        &:hover{
+          background: unset;
+        }
+      }
+      .p-menuitem{
+        .p-menuitem-link{
+          background: #E8EDFF;
+        }
+        .p-menuitem{
+          .p-menuitem-link{
+            background: #EFF3FF;
+          }
+          .p-menuitem{
+            .p-menuitem-link{
+              background: #F9FBFF;
+              padding: 0.75rem 1.25rem 0.75rem 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .p-panelmenu-header{
+    > a{
+      background: #F6E67D;
+      color: #000;
+      padding: 15px 10px;
+    }
+    &.p-highlight:not(.p-disabled){
+      > a{
+        background: #0F38C1;
+        color: #fff;
+      }
+    }
+  }
+}
+//New CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
 //dashboard Card vertical line
 .vl {
   border-left: 2px solid rgb(204, 204, 204);

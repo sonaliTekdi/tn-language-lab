@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-    S3_BUCKET: "tnemisv2-staging"
+    S3_BUCKET: "languagelabs-staging"
 phases:
   install:
     runtime-versions:
@@ -18,5 +18,5 @@ phases:
   post_build:
      commands:
       - aws s3 sync ./dist s3://${S3_BUCKET} --acl 'public-read' --delete
-      - aws cloudfront create-invalidation --distribution-id=E2QA2K9D9EKO2B --paths '/*'
+      # - aws cloudfront create-invalidation --distribution-id=E2QA2K9D9EKO2B --paths '/*'
       - echo Build completed on `date`

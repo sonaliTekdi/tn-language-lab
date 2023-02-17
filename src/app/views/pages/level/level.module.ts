@@ -6,6 +6,8 @@ import { LevelViewpartComponent } from './level-viewpart/level-viewpart.componen
 import { LevelComponent } from './level.component';
 import {AccordionModule} from 'primeng/accordion';
 import {PanelModule} from 'primeng/panel';
+import { PanelMenuModule } from 'primeng/panelmenu';
+
 
 
 const routes: Routes = [
@@ -34,6 +36,7 @@ const routes: Routes = [
     CommonModule,
     AccordionModule,
     PanelModule,
+    PanelMenuModule,
     RouterModule.forChild(routes),
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
