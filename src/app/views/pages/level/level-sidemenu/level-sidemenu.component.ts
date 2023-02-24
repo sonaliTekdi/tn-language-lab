@@ -21,7 +21,7 @@ export class LevelSidemenuComponent implements OnInit {
                     label: 'Unit 1',
                     items: [
                         {
-                            label: 'Lesson Name', 
+                            label: 'Lesson Name',
                             items: [
                                 {
                                     label: 'Whats going on?',
@@ -47,10 +47,10 @@ export class LevelSidemenuComponent implements OnInit {
                     label: 'Unit 1',
                     items: [
                         {
-                            label: 'Lesson Name', 
+                            label: 'Lesson Name',
                             items: [
                                 {
-                                    label: 'Whats going on?',
+                                    label: 'What\'s going on???',
                                     items: [
                                         { label: 'Introduction' },
                                         { label: 'Warm Up' },
@@ -68,6 +68,6 @@ export class LevelSidemenuComponent implements OnInit {
         },
     ];
   }
- 
+
 
 }
