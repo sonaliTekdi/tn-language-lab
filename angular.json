@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/nobleui-angular",
             "allowedCommonJsDependencies": [
               "chart.js",
               "simplemde"
@@ -35,6 +35,36 @@
             "aot": true,
             "inlineStyleLanguage": "scss",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "src/assets/preview",
+                "output": "preview"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/q1",
+                "output": "q1"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/content-editor",
+                "output": "content-editor"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/open-story",
+                "output": "open-story"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/lets-talk",
+                "output": "lets-talk"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/content-editor/plugin",
+                "output": "plugin"
+              },
               "src/favicon.ico",
               "src/assets",
               "src/.htaccess"
@@ -48,7 +78,8 @@
               "node_modules/quill/dist/quill.snow.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/pivottable/dist/pivot.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/font-awesome/css/font-awesome.min.css"
         
             ],
             "scripts": [
@@ -62,7 +93,9 @@
               "node_modules/pivottable/dist/gchart_renderers.min.js",
               "node_modules/pivottable/dist/export_renderers.js",
               "node_modules/pivottable/dist/plotly_renderers.js",
-              "node_modules/quill/dist/quill.js"
+              "node_modules/quill/dist/quill.js",
+              "node_modules/moment/src/moment.js",
+              "src/assets/lets-talk/js/index.js"
             ]
           },
           "configurations": {
@@ -121,6 +154,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "nobleui-angular:build",
+            "proxyConfig": "proxy.config.js"
+          },
           "configurations": {
             "production": {
               "browserTarget": "nobleui-angular:build:production"

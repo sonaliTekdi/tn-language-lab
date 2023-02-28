@@ -1,0 +1,62 @@
+<h4 class="rounded bg-light py-3 px-4">{{lesson.title}}</h4>
+<section>
+    <div class="px-2 pt-4">
+        <p> {{lesson.instruction_1.en_text}}</p>
+        <p> {{lesson.instruction_1.ta_text}}</p>
+    </div>
+    <audio controls class="w-100 mt-4">
+        <source src={{lesson.instruction_1.audio}} type="audio/mp3">
+    </audio>
+
+</section>
+<section>
+    <div class="px-2 pt-4">
+        <p> {{lesson.instruction_2.en_text}}</p>
+        <p> {{lesson.instruction_2.ta_text}}</p>
+    </div>
+    <video controls class="w-50 mx-auto mt-4 rounded">
+        <source src={{lesson.instruction_2.video}} type="video/mp4">
+    </video>
+
+</section>
+
+<section>
+    <div class="px-2 pt-4">
+        <p> {{lesson.instruction_3.en_text}}</p>
+        <p> {{lesson.instruction_3.ta_text}}</p>
+    </div>
+</section>
+
+
+
+    <!-- <h5 class="px-2 pt-4">ஆத்திச்சூடியை எழுதியவர் யார்?</h5>
+    <div class="px-2 pt-2">
+        <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                கம்பர்
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                ஒளவையார் 
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault1">
+                திருவள்ளுவர்
+            </label>
+          </div>
+          <div class="form-check py-1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                பாரதியார்
+            </label>
+          </div>
+    </div> -->
+    
+    <!-- <div class="text-center">
+        <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="gotoNextpage()">Next</button>
+    </div> -->

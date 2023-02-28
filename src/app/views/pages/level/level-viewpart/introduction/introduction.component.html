@@ -1,0 +1,17 @@
+<h4 class="rounded bg-light py-3 px-4">{{instruction.title}}</h4>
+<section>
+    <div class="px-2 pt-4">
+        <b>Description</b>
+        <p>{{instruction.description}}</p>
+    </div>
+    <div class="px-2 pt-4">
+        <b>Objective</b>
+        <ul>
+            <li *ngFor="let obj of instruction.objective">{{obj}}</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+
+</section>

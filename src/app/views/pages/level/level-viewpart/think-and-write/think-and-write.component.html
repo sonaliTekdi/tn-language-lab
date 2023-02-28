@@ -1,0 +1,15 @@
+<h4 class="rounded bg-light py-3 px-4">{{data.title}}</h4>
+<section>
+    <div class="px-2 pt-4">
+        <p> {{data.instruction_1.en_text}}</p>
+        <p> {{data.instruction_1.ta_text}}</p>
+    </div>
+    <audio controls class="w-100 mt-4">
+        <source src={{data.instruction_1.audio}} type="audio/mp3">
+    </audio>
+
+    <div class="px-2 pt-4">
+        <p> {{data.iframe.instruction_1.en_text}}</p>
+        <p> {{data.iframe.instruction_1.ta_text}}</p>
+    </div>
+</section>

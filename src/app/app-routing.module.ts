@@ -5,6 +5,9 @@ import { ErrorPageComponent } from './views/pages/error-page/error-page.componen
 import { RouterModule, Routes } from '@angular/router';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
 import { HomeComponent } from './views/pages/home/home.component';
+import { PlayerComponent } from './views/pages/player/player.component';
+import { EditorComponent } from './views/pages/editor/editor.component';
+import { WordplayComponent } from './views/pages/level/level-viewpart/wordplay/wordplay.component';
 
 
 const routes: Routes = [
@@ -22,6 +25,19 @@ const routes: Routes = [
         path: 'level',
         loadChildren: () => import('./views/pages/level/level.module').then(m => m.LevelModule)
       },
+      {
+        path: 'player',
+        component: PlayerComponent
+      },
+      {
+        path: 'editor',
+        component: EditorComponent
+      },
+      {
+        path: 'word-play',
+        component: WordplayComponent
+      },
+      
 
       // {
       //   path: 'competition',

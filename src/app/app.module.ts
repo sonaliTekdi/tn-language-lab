@@ -23,6 +23,8 @@ import { HomeComponent } from './views/pages/home/home.component';
 import { LevelComponent } from './views/pages/level/level.component';
 import { RouterModule } from '@angular/router';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { PlayerComponent } from './views/pages/player/player.component';
+import { EditorComponent } from './views/pages/editor/editor.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     ErrorPageComponent,
     NoAccessComponent,
     HomeComponent,
+    PlayerComponent,
+    EditorComponent,
   ],
   imports: [
     BrowserModule,

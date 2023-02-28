@@ -15,7 +15,7 @@
 								{"id":3, "chapter_name": "Picture Play"},
 								{"id":4, "chapter_name": "Open Story"},
 								{"id":5, "chapter_name": "Think and Write"},
-								{"id":6, "chapter_name": "Word Help"},
+								{"id":6, "chapter_name": "Word Help"}
 								
 							]
 						}
@@ -33,7 +33,7 @@
 								{"id":4, "chapter_name": "Picture Play"},
 								{"id":5, "chapter_name": "Let's Talk"},
 								{"id":6, "chapter_name": "Think and Write"},
-								{"id":7, "chapter_name": "Word Help"},
+								{"id":7, "chapter_name": "Word Help"}
 							]
 						}
 					]
@@ -50,7 +50,7 @@
 								{"id":4, "chapter_name": "Picture Play"},
 								{"id":5, "chapter_name": "Let's Talk"},
 								{"id":6, "chapter_name": "Think and Write"},
-								{"id":7, "chapter_name": "Word Help"},
+								{"id":7, "chapter_name": "Word Help"}
 							]
 						}
 					]
@@ -67,7 +67,7 @@
 								{"id":4, "chapter_name": "Word Play"},
 								{"id":5, "chapter_name": "Inkscape"},
 								{"id":6, "chapter_name": "Think and Write"},
-								{"id":7, "chapter_name": "Word Help"},
+								{"id":7, "chapter_name": "Word Help"}
 							]
 						}
 					]
@@ -83,7 +83,7 @@
 								{"id":3, "chapter_name": "Picture Play"},
 								{"id":4, "chapter_name": "Let's Talk"},
 								{"id":5, "chapter_name": "Think and Write"},
-								{"id":6, "chapter_name": "Word Help"},
+								{"id":6, "chapter_name": "Word Help"}
 							]
 						}
 					]
@@ -99,7 +99,7 @@
 								{"id":3, "chapter_name": "CLIx Time"},
 								{"id":4, "chapter_name": "Open Story"},
 								{"id":5, "chapter_name": "Think and Write"},
-								{"id":6, "chapter_name": "Word Help"},
+								{"id":6, "chapter_name": "Word Help"}
 							]
 						}
 					]
@@ -114,11 +114,11 @@
 								{"id":2, "chapter_name": "Picture Play"},
 								{"id":3, "chapter_name": "Open Story"},
 								{"id":4, "chapter_name": "Let's Talk"},
-								{"id":5, "chapter_name": "Think and Write"},
+								{"id":5, "chapter_name": "Think and Write"}
 							]
 						}
 					]
-                },
+                }
             ]
         },
         {
@@ -131,14 +131,14 @@
 							"lesson_name": "My Fish, No my fish",
 							"chapter_list": [
 								{"id":1, "chapter_name": "Introduction 1"},
-								{"id":2, "chapter_name": "Story Time: 'My fish!" "No, my fish!'"},
+								{"id":2, "chapter_name": "Story Time: 'My fish!\" \"No, my fish!'"},
 								{"id":3, "chapter_name": "Let's Talk"},
 								{"id":4, "chapter_name": "Open Story"},
 								{"id":5, "chapter_name": "Introduction 2"},
 								{"id":6, "chapter_name": "Story Time: Under my Bed"},
 								{"id":7, "chapter_name": "Let's Talk"},
 								{"id":8, "chapter_name": "Think and Write"},
-								{"id":9, "chapter_name": "Word Help"},
+								{"id":9, "chapter_name": "Word Help"}
 								
 							]
 						}
@@ -158,7 +158,7 @@
 								{"id":6, "chapter_name": "Story Time: Ramya's Stars"},
 								{"id":7, "chapter_name": "Let's Talk"},
 								{"id":8, "chapter_name": "Think and Write"},
-								{"id":9, "chapter_name": "Word Help"},
+								{"id":9, "chapter_name": "Word Help"}
 								
 							]
 						}
@@ -178,7 +178,7 @@
 								{"id":6, "chapter_name": "Word Play"},
 								{"id":7, "chapter_name": "Open Story"},
 								{"id":8, "chapter_name": "Think and Write"},
-								{"id":9, "chapter_name": "Word Help"},
+								{"id":9, "chapter_name": "Word Help"}
 								
 							]
 						}
@@ -198,7 +198,7 @@
 								{"id":6, "chapter_name": "Story Time: The Red Rain Coat"},
 								{"id":7, "chapter_name": "Let's Talk"},
 								{"id":8, "chapter_name": "Think and Write"},
-								{"id":9, "chapter_name": "Word Help"},
+								{"id":9, "chapter_name": "Word Help"}
 								
 							]
 						}
@@ -217,7 +217,7 @@
 								{"id":5, "chapter_name": "Story Time: Bluie's World"},
 								{"id":6, "chapter_name": "Let's Talk"},
 								{"id":7, "chapter_name": "Think and Write"},
-								{"id":8, "chapter_name": "Word Help"},
+								{"id":8, "chapter_name": "Word Help"}
 								
 							]
 						}
@@ -237,7 +237,7 @@
 								{"id":6, "chapter_name": "Story Time: Where is Gogo?"},
 								{"id":7, "chapter_name": "Let's Talk"},
 								{"id":8, "chapter_name": "Think and Write"},
-								{"id":9, "chapter_name": "Word Help"},
+								{"id":9, "chapter_name": "Word Help"}
 								
 							]
 						}
@@ -257,7 +257,7 @@
 								{"id":6, "chapter_name": "Story Time: Samira's Awful Lunch"},
 								{"id":7, "chapter_name": "CLIx Time"},
 								{"id":8, "chapter_name": "Think and Write"},
-								{"id":9, "chapter_name": "Word Help"},
+								{"id":9, "chapter_name": "Word Help"}
 								
 							]
 						}
@@ -277,13 +277,15 @@
 								{"id":6, "chapter_name": "Let's Talk"},
 								{"id":7, "chapter_name": "CLIx Time"},
 								{"id":8, "chapter_name": "Think and Write"},
-								{"id":9, "chapter_name": "Word Help"},
+								{"id":9, "chapter_name": "Word Help"}
 								
 							]
 						}
 					]
-                },
+                }
         
         
-    ]
+    		]
+		}
+	]
 }
