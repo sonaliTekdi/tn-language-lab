@@ -5,8 +5,6 @@ import { ErrorPageComponent } from './views/pages/error-page/error-page.componen
 import { RouterModule, Routes } from '@angular/router';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
 import { HomeComponent } from './views/pages/home/home.component';
-import { PlayerComponent } from './views/pages/player/player.component';
-import { EditorComponent } from './views/pages/editor/editor.component';
 import { WordplayComponent } from './views/pages/level/level-viewpart/wordplay/wordplay.component';
 
 
@@ -26,18 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('./views/pages/level/level.module').then(m => m.LevelModule)
       },
       {
-        path: 'player',
-        component: PlayerComponent
-      },
-      {
-        path: 'editor',
-        component: EditorComponent
-      },
-      {
         path: 'word-play',
         component: WordplayComponent
       },
-      
+
 
       // {
       //   path: 'competition',
@@ -53,21 +43,22 @@ const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       // { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
-  },
-  {
-    path: 'error',
-    component: ErrorPageComponent,
-    data: {
-      'type': 404,
-      'title': 'Page Not Found',
-      'desc': 'Oopps!! The page you were looking for doesn\'t exist.'
-    }
-  },
-  {
-    path: 'error/:type',
-    component: ErrorPageComponent
-  },
-  { path: '**', redirectTo: 'error', pathMatch: 'full' },
+  }
+  // ,
+  // {
+  //   path: 'error',
+  //   component: ErrorPageComponent,
+  //   data: {
+  //     'type': 404,
+  //     'title': 'Page Not Found',
+  //     'desc': 'Oopps!! The page you were looking for doesn\'t exist.'
+  //   }
+  // },
+  // {
+  //   path: 'error/:type',
+  //   component: ErrorPageComponent
+  // },
+  // { path: '**', redirectTo: 'error', pathMatch: 'full' },
 
 
   ];

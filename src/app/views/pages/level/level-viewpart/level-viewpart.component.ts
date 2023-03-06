@@ -15,6 +15,7 @@ export class LevelViewpartComponent implements OnInit {
   getQustion: any[];
   jsonList: any[];
   answerBox: boolean = false;
+  topicData: any;
 
   introduction_lesson_1 = {
     title: 'Lesson 1: What\'s going on?',
@@ -24,13 +25,13 @@ export class LevelViewpartComponent implements OnInit {
       "You will identify some actions and talk briefly about them.",
       "You will read words and sentences describing different actions and understand what they mean.",
       "You will write some simple sentences to describe everyday actions."
-    ],    
+    ],
     id: "lesson-1",
     instruction_1: {
       en_text: "You will listen carefully to find out specific information about your immediate environment and understand simple descriptions of objects.",
       ta_text: ""
     }
-  } 
+  }
 
   introduction_lesson_2 = {
     title: 'Weather: What\'s in store today?',
@@ -45,7 +46,7 @@ export class LevelViewpartComponent implements OnInit {
       en_text: "In this lesson, we will look at different seasons and weather.",
       ta_text: ""
     }
-  } 
+  }
 
   introduction_lesson_3 = {
     title: 'Location: What\'s in store today?',
@@ -60,7 +61,7 @@ export class LevelViewpartComponent implements OnInit {
       en_text: "In this lesson, you will learn to understand and describe locations of things in your immediate surroundings.",
       ta_text: ""
     }
-  } 
+  }
 
   introduction_lesson_4 = {
     title: 'Feelings: What\'s in store today?',
@@ -76,28 +77,26 @@ export class LevelViewpartComponent implements OnInit {
       en_text: "In this lesson, you will learn to understand and describe locations of things in your immediate surroundings.",
       ta_text: ""
     }
-  } 
+  }
 
-
-
-  lesson_1 =  {
-    title: 'What\'s going on?',
-    id: "lesson-1",
+  introduction_lesson_5 = {
+    title: 'Feelings: What\'s in store today?',
+    id: "lesson-5",
+    description: "In this lesson, you will learn how to use English words to express your feelings.",
+    objective: [
+      "You will listen to audios to recognise and understand words expressing feelings about something or someone in a familiar context or in a simple conversation.",
+      "You will use simple words and phrases to express how you feel about something or someone in your immediate environment.",
+      "You will read simple texts that describe feelings",
+      "You will write simple notes expressing feelings."
+    ],
     instruction_1: {
-      en_text: "Listen and read along.",
-      ta_text: "கேட்கவும் மற்றும் படிக்கவும்.",
-      audio: "assets/collection/lesson-1/audio/instruction-1.mp3"
-    },
-    instruction_2: {
-      en_text: "Click ► to begin.",
-      ta_text: "தொடங்க ► கிளிக் செய்யவும்.",
-      video: "assets/collection/lesson-1/video/instruction-2.mp4"
-    },
-    instruction_3: {
-      en_text: "Watch again by clicking ► button.Click 'Picture Play' to go to the next activity.",
-      ta_text: "► பொத்தானைக் கிளிக் செய்வதன் மூலம் மீண்டும் பார்க்கவும். அடுத்த செயல்பாட்டிற்குச் செல்ல 'படம் விளையாடு' என்பதைக் கிளிக் செய்யவும்."
+      en_text: "In this lesson, you will learn to understand and describe locations of things in your immediate surroundings.",
+      ta_text: ""
     }
-  };
+  }
+
+
+
 
   lesson_2 = {
     "title": "Seasons and Weather",
@@ -153,7 +152,8 @@ export class LevelViewpartComponent implements OnInit {
       "ta_text": "மீண்டும் படிக்கவும் கேட்கவும் ► ஐ அழுத்தவும்."
     }
   }
-    
+
+
   wordplayData_2 = {
     title: 'Word Play: Matching Game',
     id: "lesson-2",
@@ -172,24 +172,6 @@ export class LevelViewpartComponent implements OnInit {
     }
   }
 
-  picturePlayData_lesson_1 = {
-    title: 'Picture Play: What are they doing?',
-    id: "lesson-1",
-    instruction_1: {
-      en_text: "We just saw a video of people doing different actions. Can you match the images below with the actions described?",
-      ta_text: "வெவ்வேறு செயல்களைச் செய்யும் நபர்களின் காணொளி பார்த்தோம். விவரிக்கப்பட்டுள்ள செயல்களுடன் கீழே உள்ள படங்களை உங்களால் பொருத்த முடியுமா?",
-      audio: "assets/collection/lesson-1/picture-play/instruction-1.mp3"
-    },
-    iframe: {
-      instruction_1:{
-        en_text: "Listen to the audio carefully.Drag and drop the image in the box with the audio number that describes the action.",
-        ta_text: "ஆடியோவைக் கவனமாகக் கேளுங்கள். செயலை விவரிக்கும் ஆடியோ எண் கொண்ட பெட்டியில் படத்தை இழுத்து விடவும்.",
-        audio: "assets/collection/lesson-1/picture-play/instruction-1.mp3"
-      },
-      src: "https://h5p.org/h5p/embed/1355913"
-    }
-  }
-
   picturePlayData_lesson_5 = {
     "title": "Picture Play: Seasons",
     "id": "lesson-5",
@@ -204,7 +186,7 @@ export class LevelViewpartComponent implements OnInit {
         "ta_text": "ஆடியோவைக் கவனமாகக் கேளுங்கள். செயலை விவரிக்கும் ஆடியோ எண் கொண்ட பெட்டியில் படத்தை இழுத்து விடவும்.",
         "audio": "assets/collection/lesson-5/picture-play/instruction-1.mp3"
       },
-      "src": "https://h5p.org/h5p/embed/1355993\n"
+      "src": "https://h5p.org/h5p/embed/1355993"
     }
   }
   picturePlayData_lesson_6 = {
@@ -236,9 +218,9 @@ export class LevelViewpartComponent implements OnInit {
     instruction_2: {
         en_text: "Click  ► to listen to a situation. Then, click on the appropriate 'feeling' in the box. Drag and drop it to the correct image/audio. Click on 'Check Answer' when you finish.",
         ta_text: "పరిస్థితిని వినడానికి ► క్లిక్ చేయండి. తరువాత, బాక్సులో సముచిత  'భావన' పైన క్లిక్ చేయండి. సరియైన చిత్రం/ఆడియోకి దానిని డ్రాగ్ చేసి మరియు డ్రాప్ చేయండి. మీరు పూర్తి చేసిన తరువాత 'జవాబు సరైందో కాదో చూడండి'."
-       
+
       },
-    
+
     iframe: {
       instruction_1:{
         en_text: "Drag and drop the right person to complete the pair. Then, click on the record button to say the name of the relationship. e.g. husband and wife.",
@@ -249,7 +231,31 @@ export class LevelViewpartComponent implements OnInit {
     }
   }
 
-  openStory_lesson_1 = {
+  picturePlayData_lesson_10 = {
+    title: 'Picture Play: Weather Report',
+    id: "lesson-10",
+    instruction_1: {
+      en_text: "Here is the news on the weather.But wait! We have to fill the correct weather pictures in the map.Look at the map of India and listen to the audio.Mark the weather for the various places correctly.",
+      ta_text: "వాతావరణం గురించి సమాచారం ఇక్కడ ఉన్నది.కానీ వేచియుడండి! మీరు మ్యాపులో సరియైన వాతావరణ చిత్రాలను నింపాలి. ఇండియా మ్యాప్ చూడండి మరియు ఆడియోని వినండి.విభిన్న ప్రదేశాలను సరిగా వాతావరణాన్ని గుర్తించండి.",
+      audio: "assets/collection/lesson-10/picture-play/instruction-1.mp3"
+    },
+    instruction_2: {
+        en_text: "Click on ► to listen to the weather report.Drag and drop the images onto the correct parts of the country. Good luck!",
+        ta_text: "వాతావరణ నివేదికను వినడానికి ► పైన క్లిక్ చేయండి.దేశం యొక్క సరియైన భాగాలకు చిత్రాల పైన డ్రాగ్ చేసి మరియు డ్రాప్ చేయండి.శుభం కలుగు గాక!"
+
+      },
+
+    iframe: {
+      instruction_1:{
+        en_text: "Drag and drop the right person to complete the pair. Then, click on the record button to say the name of the relationship. e.g. husband and wife.",
+        ta_text: "జతను పూర్తి చేయడానికి సరియైన వ్యక్తిని డ్రాగ్ చేసి మరియు డ్రాప్ చేయండి. తరువాత, సంబంధం పేరుని చెప్పడానికి రికార్డ్ బటన్ పైన క్లిక్ చేయండి. ఉదా. భర్త మరియు భార్య",
+        audio: "assets/collection/lesson-8/picture-play/instruction-1.mp3"
+      },
+      src: "https://h5p.org/h5p/embed/1356282"
+    }
+  }
+
+  openStory_lesson_10 = {
     title: 'Open Story: Describe the Action',
     id: "lesson-1",
     instruction_1: {
@@ -265,7 +271,9 @@ export class LevelViewpartComponent implements OnInit {
     instruction_3: {
       en_text: "Watch again by clicking ► button.Click 'Picture Play' to go to the next activity.",
       ta_text: "► பொத்தானைக் கிளிக் செய்வதன் மூலம் மீண்டும் பார்க்கவும். அடுத்த செயல்பாட்டிற்குச் செல்ல 'படம் விளையாடு' என்பதைக் கிளிக் செய்யவும்."
-    }
+    },
+    iframe: "assets/collection/lesson-10/open-story/EBU02L10.csst"
+
   }
 
   thinkAndWrite_lesson_1 = {
@@ -328,337 +336,6 @@ export class LevelViewpartComponent implements OnInit {
     }
   }
 
-  wordHelp_lesson_1 = [
-    {
-        "word": "appropriate",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-1.mp3",
-        "telugu": "பொருத்தமானது"
-    },
-    {
-        "word": "busy",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-2.mp3",
-        "telugu": "பரபரப்பு"
-    },
-    {
-        "word": "carpet",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-3.mp3",
-        "telugu": "கம்பளம்"
-    },
-    {
-        "word": "clock",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-4.mp3",
-        "telugu": "கடிகாரம்"
-    },
-    {
-        "word": "cloudy",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-5.mp3",
-        "telugu": "மேகமூட்டம்"
-    },
-    {
-        "word": "cricketer",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-6.mp3",
-        "telugu": "கிரிக்கெட் வீரர்"
-    },
-    {
-        "word": "dustbin",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-7.mp3",
-        "telugu": "குப்பை தொட்டி"
-    },
-    {
-        "word": "expressions",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-8.mp3",
-        "telugu": "வெளிப்பாடுகள்"
-    },
-    {
-        "word": "familiar",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-9.mp3",
-        "telugu": "பரிச்சயமான"
-    },
-    {
-        "word": "guests",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-10.mp3",
-        "telugu": "விருந்தினர்கள்"
-    },
-    {
-        "word": "huge",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-11.mp3",
-        "telugu": "மிகப்பெரிய"
-    },
-    {
-        "word": "kite",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-12.mp3",
-        "telugu": "காத்தாடி"
-    },
-    {
-        "word": "locations",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-13.mp3",
-        "telugu": "இடங்கள்"
-    },
-    {
-        "word": "map",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-14.mp3",
-        "telugu": "வரைபடம்"
-    },
-    {
-        "word": "marbles",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-15.mp3",
-        "telugu": "பளிங்கு கற்கள்"
-    },
-    {
-        "word": "miss",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-16.mp3",
-        "telugu": "செல்வி"
-    },
-    {
-        "word": "moods",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-17.mp3",
-        "telugu": "மனநிலைகள்"
-    },
-    {
-        "word": "mufflers",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-18.mp3",
-        "telugu": "மஃப்லர்கள்"
-    },
-    {
-        "word": "nephews",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-19.mp3",
-        "telugu": "மருமகன்கள்"
-    },
-    {
-        "word": "nieces",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-20.mp3",
-        "telugu": "மருமகள்"
-    },
-    {
-        "word": "noisy",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-21.mp3",
-        "telugu": "சத்தம்"
-    },
-    {
-        "word": "painting",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-22.mp3",
-        "telugu": "ஓவியம்"
-    },
-    {
-        "word": "phrases",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-23.mp3",
-        "telugu": "சொற்றொடர்கள்"
-    },
-    {
-        "word": "raincoats",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-24.mp3",
-        "telugu": "ரெயின்கோட்டுகள்"
-    },
-    {
-        "word": "relatives",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-25.mp3",
-        "telugu": "உறவினர்கள்"
-    },
-    {
-        "word": "repeat",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-26.mp3",
-        "telugu": "மீண்டும்"
-    },
-    {
-        "word": "scarves",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-27.mp3",
-        "telugu": "தாவணி"
-    },
-    {
-        "word": "slipper",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-28.mp3",
-        "telugu": "செருப்பு"
-    },
-    {
-        "word": "sunny",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-29.mp3",
-        "telugu": "சூரியன் தீண்டும்"
-    },
-    {
-        "word": "take turns",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-30.mp3",
-        "telugu": "மாறி மாறி எடுக்கவும்"
-    },
-    {
-        "word": "tired",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-31.mp3",
-        "telugu": "சோர்வாக"
-    },
-    {
-        "word": "too",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-32.mp3",
-        "telugu": "கூட"
-    },
-    {
-        "word": "various",
-        "audio": "assets/collection/lesson-1/word-help/audio/word-33.mp3",
-        "telugu": "பல்வேறு"
-    }
-  ]
-
-  wordHelp_lesson_2 = [
-    {
-        "word": "appropriate",
-        "audio": "assets/collection/lession3/wordHelp/audio/appropriate.mp3",
-        "telugu": "பொருத்தமானது"
-    },
-    {
-        "word": "busy",
-        "audio": "assets/collection/lession3/wordHelp/audio/busy.mp3",
-        "telugu": "பரபரப்பு"
-    },
-    {
-        "word": "carpet",
-        "audio": "assets/collection/lession3/wordHelp/audio/carpet.mp3",
-        "telugu": "கம்பளம்"
-    },
-    {
-        "word": "clock",
-        "audio": "assets/collection/lession3/wordHelp/audio/clock.mp3",
-        "telugu": "கடிகாரம்"
-    },
-    {
-        "word": "cloudy",
-        "audio": "assets/collection/lession3/wordHelp/audio/cloudy.mp3",
-        "telugu": "மேகமூட்டம்"
-    },
-    {
-        "word": "cricketer",
-        "audio": "assets/collection/lession3/wordHelp/audio/cricketer.mp3",
-        "telugu": "கிரிக்கெட் வீரர்"
-    },
-    {
-        "word": "dustbin",
-        "audio": "assets/collection/lession3/wordHelp/audio/dustbin.mp3",
-        "telugu": "குப்பை தொட்டி"
-    },
-    {
-        "word": "expressions",
-        "audio": "assets/collection/lession3/wordHelp/audio/expressions.mp3",
-        "telugu": "வெளிப்பாடுகள்"
-    },
-    {
-        "word": "familiar",
-        "audio": "assets/collection/lession3/wordHelp/audio/familiar.mp3",
-        "telugu": "பரிச்சயமான"
-    },
-    {
-        "word": "guests",
-        "audio": "assets/collection/lession3/wordHelp/audio/guests.mp3",
-        "telugu": "விருந்தினர்கள்"
-    },
-    {
-        "word": "huge",
-        "audio": "assets/collection/lession3/wordHelp/audio/huge.mp3",
-        "telugu": "மிகப்பெரிய"
-    },
-    {
-        "word": "kite",
-        "audio": "assets/collection/lession3/wordHelp/audio/kite.mp3",
-        "telugu": "காத்தாடி"
-    },
-    {
-        "word": "locations",
-        "audio": "assets/collection/lession3/wordHelp/audio/locations.mp3",
-        "telugu": "இடங்கள்"
-    },
-    {
-        "word": "map",
-        "audio": "assets/collection/lession3/wordHelp/audio/map.mp3",
-        "telugu": "வரைபடம்"
-    },
-    {
-        "word": "marbles",
-        "audio": "assets/collection/lession3/wordHelp/audio/marbles.mp3",
-        "telugu": "பளிங்கு கற்கள்"
-    },
-    {
-        "word": "miss",
-        "audio": "assets/collection/lession3/wordHelp/audio/miss.mp3",
-        "telugu": "செல்வி"
-    },
-    {
-        "word": "moods",
-        "audio": "assets/collection/lession3/wordHelp/audio/moods.mp3",
-        "telugu": "மனநிலைகள்"
-    },
-    {
-        "word": "mufflers",
-        "audio": "assets/collection/lession3/wordHelp/audio/mufflers.mp3",
-        "telugu": "மஃப்லர்கள்"
-    },
-    {
-        "word": "nephews",
-        "audio": "assets/collection/lession3/wordHelp/audio/nephews.mp3",
-        "telugu": "மருமகன்கள்"
-    },
-    {
-        "word": "nieces",
-        "audio": "assets/collection/lession3/wordHelp/audio/nieces.mp3",
-        "telugu": "மருமகள்"
-    },
-    {
-        "word": "noisy",
-        "audio": "assets/collection/lession3/wordHelp/audio/noisy.mp3",
-        "telugu": "சத்தம்"
-    },
-    {
-        "word": "painting",
-        "audio": "assets/collection/lession3/wordHelp/audio/painting.mp3",
-        "telugu": "ஓவியம்"
-    },
-    {
-        "word": "phrases",
-        "audio": "assets/collection/lession3/wordHelp/audio/phrases.mp3",
-        "telugu": "ரெயின்கோட்டுகள்"
-    },
-    {
-        "word": "relatives",
-        "audio": "assets/collection/lession3/wordHelp/audio/relatives.mp3",
-        "telugu": "உறவினர்கள்"
-    },
-    {
-        "word": "repeat",
-        "audio": "assets/collection/lession3/wordHelp/audio/repeat.mp3",
-        "telugu": "மீண்டும்"
-    },
-    {
-        "word": "scarves",
-        "audio": "assets/collection/lession3/wordHelp/audio/scarves.mp3",
-        "telugu": "தாவணி"
-    },
-    {
-        "word": "slipper",
-        "audio": "assets/collection/lession3/wordHelp/audio/slipper.mp3",
-        "telugu": "செருப்பு"
-    },
-    {
-        "word": "sunny",
-        "audio": "assets/collection/lession3/wordHelp/audio/sunny.mp3",
-        "telugu": "சூரியன் தீண்டும்"
-    },
-    {
-        "word": "take turns",
-        "audio": "assets/collection/lession3/wordHelp/audio/taketurns.mp3",
-        "telugu": "மாறி மாறி எடுக்கவும்"
-    },
-    {
-        "word": "tired",
-        "audio": "assets/collection/lession3/wordHelp/audio/tired.mp3",
-        "telugu": "சோர்வாக"
-    },
-    {
-        "word": "too",
-        "audio": "assets/collection/lession3/wordHelp/audio/too.mp3",
-        "telugu": "கூட"
-    },
-    {
-        "word": "various",
-        "audio": "assets/collection/lession3/wordHelp/audio/various.mp3",
-        "telugu": "பல்வேறு"
-    }
-]
-
   constructor(
     public sanitizer: DomSanitizer,
     public levelService: LevelService
@@ -666,7 +343,7 @@ export class LevelViewpartComponent implements OnInit {
 
   ngOnInit(): void {
     this.initJsonList();
-    
+
   }
 
   initJsonList(){
@@ -686,7 +363,7 @@ export class LevelViewpartComponent implements OnInit {
         "getques":'',
       }
     ]
-  }  
+  }
 
   allowDrop(ev){
     ev.preventDefault();

@@ -1,26 +1,37 @@
 import { Injectable } from '@angular/core';
-import * as collection from '../../../../assets/jsons/level-sidemenu.json'
+import { HttpClient } from '@angular/common/http';
+import { TelemetryService } from '../../../telemetry.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LevelService {
   viewPage = 1;
+  lessonData = {};
   data = '';
-  collection = (collection as any);
-  constructor() { }
+  path;
+  mechanic :any;
+  constructor(private httpService: HttpClient, public telemetryService: TelemetryService) { }
 
-  getCollection(id){
+  getJson(basePath,id) {
+    return this.httpService.get('../../../../assets/lessons/'+ basePath +'/'+id+'/'+id+'.json');
+  }
 
-    return collection;
-
+  getCollection(){
+    return this.httpService.get('../../../../assets/jsons/collection.json');
   }
 
   getData(id){
-    
+
   }
 
-  getLesson(id){
-    
+  getLesson(basePath,lessonId){
+    this.telemetryService.interact(lessonId);
+    console.log(lessonId);
+    this.getJson(basePath, lessonId).subscribe(res =>
+      this.lessonData = res
+    );
+    console.log(this.lessonData);
+    return this.lessonData;
   }
 }

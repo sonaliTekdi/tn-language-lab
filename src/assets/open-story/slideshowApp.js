@@ -1,5 +1,5 @@
-///<reference path="libs/jquery.d.ts" />
-///<reference path="libs/jqueryui.d.ts" />
+// /<reference path="libs/jquery.d.ts" />
+// /<reference path="libs/jqueryui.d.ts" />
 window.onload = function () {
     var el = document.getElementById("content");
     this.slideApp = new Slideshow.SlideshowApp(el);
@@ -537,8 +537,8 @@ var Slideshow;
     })();
     Slideshow.Slide = Slide;
 })(Slideshow || (Slideshow = {}));
-/// <reference path='libs/jquery.d.ts'/>
-/// <reference path='libs/jquery.i18n.d.ts'/>
+//<reference path='libs/jquery.d.ts'/>
+// <reference path='libs/jquery.i18n.d.ts'/>
 var Slideshow;
 (function (Slideshow) {
     var Localization = (function () {
@@ -1394,7 +1394,12 @@ var Slideshow;
                 var dataFile = zip.files['slides.json'];
                 var slidesObj = JSON.parse(dataFile.asText());
                 _this.ui.nameTxtInput.value = slidesObj["name"];
-                var slides = slidesObj["slides"];
+                var slides = [
+                  {"text": "The girl is eating an apple.", "duration": "6", "image": "slide1img.png"},
+                  {"text": "", "duration": "6", "image": "slide2img.png"},
+                  {"text": "", "duration": "6", "image": "slide3img.png"},
+                  {"text": "", "duration": "6", "image": "slide4img.png"},
+                  {"text": "", "duration": "6", "image": "slide5img.png"}];
                 for (var i = 0; i < slides.length; i++) {
                     var slideObj = slides[i];
                     _this.addSlide();

@@ -1,0 +1,57 @@
+<div *ngIf="lessonData">
+  <h4 class="rounded bg-light py-3 px-4">{{lessonData?.title}}</h4>
+  <div *ngFor="let item of lessonData.data;">
+    <section *ngIf="item.type == 'html'" [innerHTML]="item.content">
+    </section>
+
+    <section *ngIf="item.text">
+      <div *ngIf="item.text">{{ item.text }}</div>
+    </section>
+
+    <section *ngIf="item.type == 'audio'">
+      <audio class="w-100 mt-4" controls >
+        <source [src]="item.content" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section *ngIf="item.type == 'video'">
+      <video class="w-50 mx-auto mt-4 rounded" controls>
+        <source [src]="item.content" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </section>
+
+    <section *ngIf="item.type == 'h5p'" [innerHTML]="getH5pHtml(item.content)| safe: 'html'">
+    </section>
+
+
+    <section *ngIf="item.type == 'recording'">
+      <iframe allow="microphone" width=100%; height="600;" [src]="'lets-talk/Open Story.html' | safe: 'resourceUrl'"></iframe>
+    </section>
+
+    <section *ngIf="item.type == 'iframe'">
+      <iframe allow="microphone" scrolling="no" width=100%; height="600;" allow="microphone" [src]="item.content | safe: 'resourceUrl'"></iframe>
+    </section>
+
+    <section *ngIf="item.type == 'image'">
+      <img width="100%" height="500"  [src]="item.content">
+    </section>
+
+
+    <section *ngIf="item.type == 'images'">
+     <ng-container  *ngFor="let image of item.content;">
+      <img width="300" height="300"  src="{{image.src}}">
+      <p>{{image.name}}</p>
+     </ng-container>
+    </section>
+
+    <section *ngIf="item.type == 'openStory'" [innerHTML]="getOpenStoryHtml(item.content) | safe: 'html'">
+      <iframe allow="microphone" width=100%; height="600;" [src]="'lets-talk/Open Story.html' | safe: 'resourceUrl'"></iframe>
+    </section>
+
+    <section *ngIf="item.type == 'wordHelp'">
+      <app-word-help [data]="item.content"></app-word-help>
+    </section>
+  </div>
+</div>

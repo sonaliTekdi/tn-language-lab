@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,18 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+@HostListener('window:message',['$event'])
+onMessage(e)
+{
+if (e.origin!="http://localhost:4200")
+  {
+  return false;
+  }
+if (e.data.for=="user")
+  {
+    this.router.navigate(["level"])
+  }
+}
   constructor(private router:Router) { }
 
   ngOnInit(): void {

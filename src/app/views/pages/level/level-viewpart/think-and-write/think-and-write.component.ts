@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-think-and-write',
@@ -7,9 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ThinkAndWriteComponent implements OnInit {
   @Input() data;
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
+    console.log("thinkand wirte", this.data);
+  }
+
+  getIframeUrl() {
+    
+    return this.sanitizer.bypassSecurityTrustResourceUrl(this.data);
   }
 
 }

@@ -1,0 +1,45 @@
+{
+  "title": "Unit 1",
+  "name": "Unit 1",
+  "id": "l1_u1_le1_english",
+  "type": "unit",
+  "basePath": "lesson1",
+  "children": [
+    {
+      "id": "introduction",
+      "title": "Lesson 1",
+      "type": "lesson",
+      "name": "Lesson 1"
+    },
+    {
+      "id": "openstory",
+      "title": "Lesson 1",
+      "type": "lesson",
+      "name": "Lesson 1"
+    },
+    {
+      "id": "pictureplay",
+      "title": "Lesson 1",
+      "type": "lesson",
+      "name": "Lesson 1"
+    },
+    {
+      "id": "thinkandwrite",
+      "title": "Lesson 1",
+      "type": "lesson",
+      "name": "Lesson 1"
+    },
+    {
+      "id": "warmup",
+      "title": "Lesson 1",
+      "type": "lesson",
+      "name": "Lesson 1"
+    },
+    {
+      "id": "wordhelp",
+      "title": "Lesson 1",
+      "type": "lesson",
+      "name": "Lesson 1"
+    }
+  ]
+}

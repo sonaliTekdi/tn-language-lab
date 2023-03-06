@@ -1,0 +1,19 @@
+{
+    "title": "Story Time: When Amma Went to School",
+    "id": "storytime",
+    "data": [
+      {
+          "type": "html",
+          "content": "<br><blockquote>Click on Play to listen to the story. Read the subtitles to follow the dialogues carefully.</blockquote>"
+      },
+      {
+          "type": "video",
+          "content": "assets/lessons/lesson3-unit2/storytime/video/1.mp4"
+      },
+      {
+          "type": "html",
+          "content": "<br><blockquote>Replay the video if you wish to listen to the story again.<br>When you are ready, go to the next task.</blockquote>"
+      }
+  ]
+  }
+

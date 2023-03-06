@@ -14,10 +14,10 @@ import { WordplayComponent } from './level-viewpart/wordplay/wordplay.component'
 import { OpenStoryComponent } from './level-viewpart/open-story/open-story.component';
 import { LetsTalkComponent } from './level-viewpart/lets-talk/lets-talk.component';
 import { WarmUpComponent } from './level-viewpart/warm-up/warm-up.component';
-import { IntroductionComponent } from './level-viewpart/introduction/introduction.component';
-import { PicturePlayComponent } from './level-viewpart/picture-play/picture-play.component';
 import { ThinkAndWriteComponent } from './level-viewpart/think-and-write/think-and-write.component';
 import { WordHelpComponent } from './level-viewpart/word-help/word-help.component';
+import { ViewLessonComponent } from './level-viewpart/view-lesson/view-lesson.component';
+import { SafePipe } from '../../../safePipe';
 
 
 
@@ -45,11 +45,11 @@ const routes: Routes = [
     OpenStoryComponent,
     LetsTalkComponent,
     WarmUpComponent,
-    IntroductionComponent,
-    PicturePlayComponent,
     ThinkAndWriteComponent,
     WordHelpComponent,
-  
+    ViewLessonComponent,
+    SafePipe
+
   ],
   imports: [
     CommonModule,
@@ -61,6 +61,7 @@ const routes: Routes = [
     DragDropModule,
     RouterModule.forChild(routes),
   ],
+  exports:[SafePipe]
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class LevelModule { }

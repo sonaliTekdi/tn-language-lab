@@ -1,0 +1,25 @@
+{
+    "title": "Let's Talk",
+    "id": "letstalk",
+    "data": [
+        {
+            "type": "image",
+            "content": "assets/lessons/lesson6/letstalk/images/1.jpg"
+          },
+
+      {
+          "type": "html",
+          "content": "<br><blockquote>Look at the picture and read the questions.<br>Choose any one question to answer.<br><br>படத்தைப் பார்த்து கேள்விகளைப் படியுங்கள்.<br>பதிலளிக்க ஏதேனும் ஒரு கேள்வியைத் தேர்ந்தெடுங்கள்.</blockquote>"
+      },
+      {
+          "type": "audio",
+          "content": "assets/lessons/lesson6/letstalk/audio/instruction-1.mp3"
+      },
+
+      {
+        "type": "recording",
+        "content": ""
+      }
+  ]
+  }
+

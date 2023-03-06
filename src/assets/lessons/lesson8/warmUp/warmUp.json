@@ -1,0 +1,31 @@
+{
+  "title": "Warm Up: How do you feel today?",
+  "id": "warmUp",
+  "data": [
+    {
+        "type": "html",
+        "content": "<br><br><blockquote><h4>Listen and read along.</h4></blockquote>"
+    },
+    {
+        "type": "text",
+        "content": "Text content"
+    },
+    {
+        "type": "audio",
+        "content": "assets/lessons/lesson8/warmUp/audio/instruction-1.mp3"
+    },
+    {
+        "type": "html",
+        "content": "<br><blockquote> <div>Click  ► to begin.<br></div> </blockquote>"
+    },
+    {
+        "type": "video",
+        "content": "assets/lessons/lesson8/warmUp/video/instruction1.mp4"
+    },
+    {
+        "type": "html",
+        "content": "<br><blockquote><h4>Press  ►  to read and listen again.</h4></blockquote>"
+    }
+        ]
+    }
+

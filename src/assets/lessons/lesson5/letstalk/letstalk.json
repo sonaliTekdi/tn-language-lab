@@ -1,0 +1,23 @@
+{
+    "title": "Let's Talk: My Favourite Season",
+    "id": "letstalk",
+    "data": [
+      
+      {
+          "type": "html",
+          "content": "<br><blockquote>Look at the photographs of three seasons.<br>Choose your favourite season. Talk about why you like it.<br><br> </blockquote>"
+      },
+      {
+          "type": "audio",
+          "content": "assets/lessons/lesson5/letstalk/audio/ins1.mp3"
+      },
+      {
+        "type": "html",
+        "content": "<br><blockquote>Discuss with your partner and write a dialogue for the chosen option.<br> </blockquote>"
+    },
+    {
+        "type": "recording",
+        "content": ""
+      }
+  ]
+  }
