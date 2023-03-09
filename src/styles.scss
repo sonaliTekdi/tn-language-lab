@@ -595,3 +595,73 @@ th[sortable].desc:after {
 
   }
 }
+.sidepanel .p-panelmenu-header > a {
+  background: #F2EEF4 !important;
+  color: #333333 !important;
+  margin-bottom: 10px;
+  position: relative;
+  padding-right: 37px;
+}
+.sidepanel .p-panelmenu-content{
+  margin:10px;
+  border: 1px solid #C8BAD2;
+  border-radius: 8px;
+
+}
+.sidepanel .p-panelmenu-content .p-menuitem .p-menuitem-link{
+  background: #fff;
+}
+.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link .p-menuitem-text:first-child{
+  font-size: 14px;
+}
+.p-panelmenu .p-panelmenu-panel {
+  margin-bottom: 8px;
+}
+.level-nav{
+  padding: 19px 0;
+  left: 0px;
+  top: 0px;
+  background: #662D91;
+  margin-bottom: 8px;
+}
+.footer-level-img{
+  margin-top: 50px;
+  background-image: url(./assets/home-asset/level-footer.png);
+  height: 474px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.sidepanel .pi-chevron-right:before, .sidepanel .pi-angle-right:before {
+  content: "\f27b";
+  font-family: bootstrap-icons !important;
+  background: #662D91;
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  border-radius: 50%;
+  padding: 6px;
+  color: #fff;
+  font-weight: 900;
+  margin-top: -14px;
+}
+.sidepanel .pi-chevron-down:before, .sidepanel .pi-angle-down:before {
+  content: "\F282";
+  font-family: bootstrap-icons !important;
+  background: #662D91;
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  border-radius: 50%;
+  padding: 6px;
+  color: #fff;
+  font-weight: 900;
+  margin-top: -14px;
+}
+li a[aria-expanded="true"] span{
+  color: #662D91 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+}

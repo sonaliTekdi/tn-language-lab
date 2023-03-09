@@ -1,20 +1,32 @@
-<div class="banner-img">
+<!-- <div class="banner-img">
     <img src="assets/images/level-sidebar/banner-img.png" class="img-fluid w-100">
-</div>
+</div> -->
+<header>
+  <nav class="level-nav">
+   <div class="container-fluid">
+    <img class="img-fluid" width="59px" height="59px" src="../../../../assets/home-asset/header-round.png" alt="">
+    <img class="img-fluid ms-3" height="64px" width="162.77px" src="../../../../assets/home-asset/mozhigal_white.png" alt="header-logo">
 
+   </div>
+  </nav>
+</header>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3">
-            <app-level-sidemenu></app-level-sidemenu>
-        </div>
         <div class="col-md-9">
-          <div class="rounded bg-white border p-3">
+          <div class="rounded bg-white border p-3" *ngIf="levelService?.currentLessonData">
             <app-view-lesson [lessonData]="levelService?.lessonData"></app-view-lesson>
           </div>
-          <!-- <div class="text-center">
-            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="gotoNextpage()">Next</button>
-          </div> -->
+          <div class="text-center">
+            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson()" *ngIf="levelService?.currentLessonData">Next</button>
+            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson()" *ngIf="!levelService?.currentLessonData">Start</button>
+          </div>
             <!-- <app-level-viewpart></app-level-viewpart> -->
         </div>
+        <div class="col-md-3">
+          <app-level-sidemenu></app-level-sidemenu>
+      </div>
     </div>
 </div>
+  <footer>
+   <div class="footer-level-img"></div>
+  </footer>

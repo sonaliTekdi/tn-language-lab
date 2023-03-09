@@ -1,160 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<iframe id="homePageIframe" style="width: 100vw; height: 100vh;" allowfullscreen src="home-page/index.html"></iframe>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-<!-- <div class="bnr-image position-relative">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-    <img src="assets/images/home/Banner.png" alt="" class="w-100 img-fluid d-none d-sm-block">
-     <img src="assets/images/home/banner-mobile.png" alt="" class="w-100 img-fluid d-block d-sm-none">
-      <div class="bnr-cnct position-absolute banner-content ps-sm-1">
+<body>
+    <header>
         <div class="container">
-            <div class="row">
-            <div class=" offset-md-1 col-md-12">
-                <div class="text pb-2">
-      <p class="text-white fs-3 fw-light align-items-center mt-4 left-border">LET'S LEARN ENGLISH TOGETHER</p>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <img class="img-fluid mt-2" width="59px" height="59px" src="../../../../assets/home-asset/header-round.png" alt="">
+                    <img class="img-fluid ms-3" height="64px" width="162.77px" src="../../../../assets/home-asset/header_logo.png" alt="header-logo">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="">Home</a>
+                        <a class="nav-link me-4 fs-14 fw-700"  href="">About</a>
+                        <a routerLink="/level" class="nav-link me-4 fs-14 fw-700"  href="">Language Lab</a>
+                        <a class="nav-link me-4 fs-14 fw-700"  href="">Explore</a>
+                        <a class="nav-link fs-14 fw-700" id="eng">Eng &nbsp; /</a>
+                        <a class="nav-link me-4 fs-14 fw-700" id="de">
+                            தமிழ்</a>
 
-        <p class=" text-white" style="font-size: 80px;">SpeakEnglish</p>
-        <p class="h2 pb-4" style="color: #f6ea7d;font-size: 80px;">Like an Expert.</p>
-        <p class="text-white fw-light fs-4 pb-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-            Lorem ipsum dolor sit amet consectetur.</p>
-        <button type="button" class=" btn mt-4 text-white btn-lg border-warning fs-3 bg-transparent border border-2 px-sm-5">Read More</button>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-
-
-<div class="bnr-boxes position-relative">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-2 col-md-6 col-sm-12 mb-3 mb-md-3"  (click)="goToLevelAndRouting()">
-                <div class="bnr-card text-center border rounded-5 py-4 px-2 shadow bg-white mb-4 mb-sm-0">
-                    <img src="../../assets/images/home/eng.png" alt="logo">
-                    <p class=" fs-3 mb-4">Communicative English</p>
+                        <a routerLink="/level" class="nav-link fs-14 fw-700 text-pink header-btn" href="">LOGIN</a>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 mb-3 mb-md-3">
-                <div class="bnr-card text-center border rounded-5 py-4 px-2 shadow bg-white mb-4 mb-sm-0">
-                    <img src="../../assets/images/home/books.png" alt="logo">
-                    <p class="fs-3 mb-4">Resources Material</p>
-                </div>
-            </div>
-
-
-            <div class="col-lg-2 col-md-6 col-sm-12 mb-3 mb-md-3">
-                <div class="bnr-card text-center border rounded-5 py-4 px-2 shadow bg-white mb-4 mb-sm-0">
-                    <img src="../../assets/images/home/open-book.png" alt="logo">
-                    <p class="fs-3 mb-4">Interactive Material</p>
-                </div>
-            </div>
-
-
-            <div class="col-lg-2 col-md-6 col-sm-12 mb-3 mb-md-3">
-                <div class="bnr-card text-center border rounded-5 py-4 px-2 shadow bg-white mb-4 mb-sm-0">
-                    <img src="../../assets/images/home/message.png" alt="logo">
-                    <p class="fs-3 mb-4">connect</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-6 col-sm-12 mb-3 mb-md-3">
-                <div class="bnr-card text-center border rounded-5 py-4 px-2 shadow bg-white mb-4 mb-sm-0">
-                    <img src="../../assets/images/home/customer-service.png" alt="logo">
-                    <p class="fs-3 mb-4">Expert Coner</p>
-                </div>
-            </div>
+              </nav>
 
         </div>
+    </header>
+
+   <section>
+    <div class="ptb-80 position-relative">
+    <div class="follow-label">மொழிகள்</div>
+    <div class="container">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 ps-5">
+                        <img width="567px" height="567px" class="img-fluid girls-size ps-5"
+                            src="../../../../assets/home-asset/girls.png" alt="girls">
+
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="map-img ps-5">
+                            <div class="english fw-700 fs-24">
+                                <div>LET'S LEARN ENGLISH TOGETHER</div>
+                              </div>
+                            <div class="tamil fw-700 fs-24">
+                                <div>ஒன்றாக ஆங்கிலம் கற்போம்</div>
+                            </div>
+                            <div class="text-blue fs-64 fw-900">SpeakEnglish</div>
+                            <div class="fs-64 fw-900 text-pink">Like an Expert.</div>
+                            <div class="fs-14 mw-72">“Mozhigal” aims to provide students with a conducive learning environment to enable them to become self paced independent learners and practice their language skills. This includes
+                            providing students and teachers an online platform for language learning whichcontains many exciting activities and interactive digital tools to practice listening, speaking, reading and writing.</div>
+                            <!-- <div class="mt-4">
+                                <a class="anker-holder bg-blue text-white fs-14" href="#">Read More</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+          </owl-carousel-o>
     </div>
 </div>
+   </section>
 
-<div class="tchr-sec position-relative">
-    <div class="container">
-        <div class="row ">
-            <div class="offset-md-2 col-md-8">
-                <div class="d-block d-sm-flex align-items-center justify-content-center pt-5 text-center">
-                    <img src="../../assets/images/home/talking.svg" alt="logo" height="130px">
-                    <h4 class="px-2 px-sm-5 m-0 py-4 py-sm-0 fs-1"><b>How to skill the second language</b> </h4>
-                    <button type="button" class="btn btn-primary btn-lg px-4 fs-1">view more</button>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="teacher">
+    <section>
+        <div class="bg-grey">
             <div class="container">
-                <div class="row ">
-                    <div class="offset-md-2 col-md-6">
-                        <div class="d-flex d-block align-items-center justify-content-center">
-                            <div class="teacher1">
-                                <h2 class="mt-5 text-primary fs-1 mb-4">Boost your learning with Super language Lab</h2>
-                                <p class="pt-2 fs-3 mb-5 lh-lg">Learning a language on Language Lab is completely free, but you can remove ads and support free education with Super. First 2 weeks on us!</p>
+                <div class="d-flex circle-holder justify-content-between flex-wrap">
+                   <a href="#blue-section">
+                    <div class="blue-circle flex-center">
+                        <div>
+                            <div class="flex-center">
+                                <img class="img-fluid" height="53.33px" width="53.33px" src="../../../../assets/home-asset/earth.png" alt="">
                             </div>
-                            <img src="../../assets/images/home/Mask Group 1.svg" alt="logo" width="200px">
+                            <div  class="text-white fs-16 fw-700 text-center mt-3 icon-text">Let’s Learn</div>
                         </div>
                     </div>
+                   </a>
+                    <div class="blue-circle flex-center">
+                        <div>
+                            <div class="flex-center">
+                                <img class="img-fluid" height="45.33" width="58.67" src="./../../../../assets/home-asset/open-book.png" alt="">
+                            </div>
+                            <div class="text-white fs-16 fw-700 mt-3 icon-text">Let’s play</div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="blue-circle flex-center">
+                            <div>
+                                <div class="flex-center">
+                                    <img class="img-fluid" height="53.33px" width="53.33px" src="./../../../../assets/home-asset/connect.png"
+                                    alt="">
+                                </div>
+                                <div class="text-white fs-16 fw-700 mt-3 icon-text"> Read Along!</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="blue-circle flex-center">
+                            <div>
+                                <div class="flex-center">
+                                    <img class="img-fluid" height="53.33" width="45.33" src="../../../../assets/home-asset/expert.png" alt="">
+                                </div>
+                                <div class="text-white fs-16 fw-700 mt-3 icon-text">Teachers’ Hub</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="blue-circle  flex-center">
+                            <div>
+                                <div class="flex-center">
+                                    <img class="img-fluid" height="53.33" width="42.67" src="../../../../assets/home-asset/file-sve.png"
+                                        alt="">
+                                </div>
+                                <div class="text-white fs-16 fw-700 mt-3 icon-text">Research</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="item ptb-120">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-12">
+                        <div>
+                            <div class="text-blue fs-64 fw-900">How To Learn For Tomorrow</div>
+                            <div class="fs-14 mw-72">Across the world, digital tools which allow learners to speak, record, and listen to themselves have been recognised as having a significant  role  in  improving listening and communication among non-native speakers learning foreign languages. It plays an important role in learner’s acquiring accurate pronunciation through stress on word accent, intonation, and rhythm.
+                            </div>
+                            <div class="fs-14 mw-72">
+                                The online learning platform would enable the upper primary learners in the socially and educationally backward blocks to practice multiplicity of linguistic activities such as listening exercises, vocabulary work, and fluency building. The platform also integrates AI in language learning by enabling students to record and practice their speech which would then be tested for fluency and accuracy by AI.
+                            </div>
+                            <div class="moretext fs-14 mw-72">
+                                <div class="fs-14 mw-72">Mozhigal proposes to supplement existing Hi-Tech Lab computers in schools with two pairs of headsets per system to enable their functioning as language labs.
+                                </div>
+                                <div class="fs-14 mw-72">
+                                    Once every 2 weeks, 1 English period will be dedicated for student use of the language lab. This will result in each child spending a combined 20 periods a year in the language lab for learning English.
+                                </div>
+                                <div class="fs-14 mw-72">
+                                    The language lab period would be utilized as a self paced independent mode of learning where students will be able to access level-based modules on the computer and engage in listening as well as speaking activities.
+                                </div>
+                            </div>
+                            <div class="moreless-button read-btn">Read more</div>
+                            <!-- <div class="mt-4">
+                                <a class="anker-holder bg-blue text-white fs-14" href="#">View More</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-sm-12">
+                        <img width="716px" height="453.39px" class="img-fluid" src="../../../../assets/home-asset/second-lang.png"
+                            alt="girls">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="item pb-120 ">
+            <div class="row">
+                <div class="col-lg-7 col-sm-12">
+                    <img width="832px" height="486.99px" class="img-fluid" src="../../../../assets/home-page/asset/girls-carausel.png" alt="girls">
+                </div>
+                <div class="col-lg-4 ps-5 col-sm-12">
+                    <owl-carousel-o [options]="customOptions">
+                      <ng-template carouselSlide>
+                        <div class="text-blue fs-34 fw-700">Break the Barriers</div>
+                                <div class="fs-14 mt-3 "> “Mozhigal” builds a conducive environment for the student to be the self paced independent language learners. Language breaks the barriers of communication, shapes the way one thinks and opens up diversified opportunities to leverage.
+                                </div>
+                                <div class="fs-14 mt-3 ">The Students and teachers will use Mozhigal’s interactive and engaging mechanics to learn and practice listening, speaking, reading and writing.
+                                </div>
+                      </ng-template>
+                    </owl-carousel-o>
                 </div>
             </div>
         </div>
     </div>
 
+    <section>
 
-   <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-lg-3 col-md-6 col-sm-12 mb-3 mb-md-3">
-        <div class="card rounded-5 card1 mx-4 mb-5 mb-sm-0">
-            <div class="card-body">
-                <div class="card rounded-5 text-center card2">
-                    <div class="card-body">
-                        <img src="../../assets/images/home/support.png" alt="logo">
+    </section>
+
+
+    <section>
+        <div id="blue-section" class="bg-blue ptb-120 position-relative">
+            <img class="shadow" src="../../../../assets/home-asset/shadow.png" alt="img">
+            <div class="follow-label2">மொழிகள்</div>
+            <div class="contianer">
+                <div class="flex-center">
+                    <div class="text-center text-white fs-48 fw-900 mw-72">Boost your learning with Super language Lab
                     </div>
-                </div>
-                <h5 class="text-center fs-2 text-white pt-4">Live online classes available 24/7</h5>
-                <p class="text-center text-white  fs-3 pt-4">Feel free to work and study with us.</p>
-                <div class="row p-4">
-                    <button class="btn rounded-5 btn-lg bg-white d-flex align-items-center justify-content-between py-4" style="color:blue"><b>Learn more.</b><i
-                            class="pi pi-arrow-circle-right view-btn text-white rounded-5 fs-5"></i></button>
                 </div>
             </div>
+
+                <div class="contianer">
+                    <owl-carousel-o [options]="customOptions">
+                        <ng-template carouselSlide>
+                            <div class="flex-center mt-3">
+                                <div class="iframe-container">
+                                    <iframe width="500px" height="500px" class="responsive-iframe" src="/assets/games/index.html" allow="camera; microphone" frameborder="0"></iframe>
+                                </div>
+
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="flex-center mt-3">
+                                <div class="iframe-container">
+                                    <iframe class="responsive-iframe" src="https://d2xtitd7ss55fi.cloudfront.net/index.html#/proto3/all?source=https://d2xtitd7ss55fi.cloudfront.net/db/proto3.json" allow="camera; microphone" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </ng-template>
+                      </owl-carousel-o>
+                </div>
+
+
+
         </div>
-    </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 mb-3 mb-md-3">
-                    <div class="card rounded-5 card1 mx-4  mb-5 mb-sm-0">
-                        <div class="card-body">
-                            <div class="card rounded-5 text-center card2">
-                                <div class="card-body">
-                                    <img src="../../assets/images/home/badge.png" alt="logo">
+    </section>
+
+
+    <section>
+        <div class="ptb-120">
+            <div class="flex-center">
+                <div class="text-center fw-900 fs-48">Testimonials</div>
+            </div>
+            <div class="flex-center">
+                <div class="text-center fs-24">See what people are saying</div>
+            </div>
+            <div class="container">
+                <owl-carousel-o [options]="customOptions">
+                  <ng-template carouselSlide>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12">
+                            <img class="img-fluid sizetest" src="../../../../assets/home-asset/testimonial_girl1.png" alt="girls">
+                        </div>
+                        <div class="col-lg-8 col-sm-12 mt-5">
+                            <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                            <div class="ms-33 mw-74">
+                                <div class="test-tit text-grey">Learning a language on Language Lab is completely
+                                    free, but you can remove ads and support free education with Super. First 2
+                                    weeks on us!</div>
+                                <div class="ms-30p">
+                                    <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                                </div>
+                                <div class="text-blue fw-900 fs-24 mt-5">Nandini Iyer</div>
+                                <div class="fs-16 text-grey">Student</div>
+                            </div>
+
+                        </div>
+                    </div>
+                  </ng-template>
+
+                </owl-carousel-o>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <section>
+            <div class="bg-grey ptb-120">
+                <div class="text-center text-blue fs-48 fw-900">Why Choose Mozhigal </div>
+                <div class="container pt-5">
+                    <div class="d-flex justify-content-around flex-wrap gap-50">
+                        <div>
+                            <div class="bg-pink flex-center mb-4">
+                                <div>
+                                    <div class="flex-center">
+                                        <div class="text-center text-white mw-72 fs-24 min-h fw-700">Live online classes
+                                            available 24/7</div>
+                                    </div>
+                                    <div class="flex-center">
+                                        <div class="text-center text-white fs-16  mw-72 fw-700">Feel free to work and study
+                                            with us.</div>
+                                    </div>
+                                    <!-- <div class="mt-5 flex-center">
+                                        <a class="anker-holder bg-white text-black fs-14" href="#">Read More</a>
+                                    </div> -->
                                 </div>
                             </div>
-                            <h5 class="text-center fs-2 text-white pt-4">Enhance your learning experience</h5>
-                            <p class="text-center text-white  fs-3 pt-4">Feel free to work and study with us.</p>
-                            <div class="row p-4">
-                                <button class="btn rounded-5 btn-lg bg-white d-flex align-items-center justify-content-between py-4" style="color:blue"><b>Learn more.</b><i
-                                        class="pi pi-arrow-circle-right view-btn text-white rounded-5 fs-5"></i></button>
+                        </div>
+                        <div>
+                            <div class="bg-pink flex-center mb-4">
+                                <div>
+                                    <div class="flex-center">
+                                        <div class="text-center text-white mw-72 fs-24 min-h fw-700">Enhance your
+                                            learning experience</div>
+                                    </div>
+                                    <div class="flex-center">
+                                        <div class="text-center text-white fs-16  mw-72 fw-700">Feel free to work and
+                                            study with us.</div>
+                                    </div>
+                                    <!-- <div class="mt-5 flex-center">
+                                        <a class="anker-holder bg-white text-black fs-14" href="#">Read More</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="bg-pink flex-center mb-4">
+                                <div>
+                                    <div class="flex-center">
+                                        <div class="text-center text-white mw-72 fs-24 min-h fw-700">Practise with
+                                            online activities
+                                            and materials</div>
+                                    </div>
+                                    <div class="flex-center">
+                                        <div class="text-center text-white fs-16  mw-72 fw-700">Feel free to work and
+                                            study with us.</div>
+                                    </div>
+                                    <!-- <div class="mt-5 flex-center">
+                                        <a class="anker-holder bg-white text-black fs-14" href="#">Read More</a>
+                                    </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 mb-3 mb-md-3">
-                    <div class="card rounded-5 card1 mx-4  mb-5 mb-sm-0">
-                        <div class="card-body">
-                            <div class="card rounded-5 text-center card2">
-                                <div class="card-body">
-                                    <img src="../../assets/images/home/graduation-hat.png" alt="logo">
-                                </div>
-                            </div>
-                            <h5 class="text-center fs-2 text-white pt-3">Practise with online activities and materials</h5>
-                            <p class="text-center text-white  fs-3 pt-3">Feel free to work and study with us.</p>
-                            <div class="row p-4">
-                                <button class="btn rounded-5 btn-lg bg-white d-flex align-items-center justify-content-between py-4" style="color:blue"><b>Learn more.</b><i
-                                        class="pi pi-arrow-circle-right view-btn text-white rounded-5 fs-5"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-    <footer>
-        <div class="p-4 text-white mt-5" style="background-color:#0F38C1; text-align: right;">
-            <h3>contact us</h3>
-          </div>
-</footer> -->
+            </div>
+        </section>
+    </section>
+
+
+    <footer class="footer-blue"></footer>
+
+    <script src="../../../../vendorowl/vendors/jquery.min.js"></script>
+</body>
+
+</html>

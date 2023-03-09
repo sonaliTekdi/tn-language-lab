@@ -1,3 +1,4 @@
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -38,6 +39,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     RadioButtonModule,
     LayoutModule,
     RouterModule,
+    CarouselModule,
     HttpClientModule,
     ReactiveFormsModule     ,
     ComponentsModule,
