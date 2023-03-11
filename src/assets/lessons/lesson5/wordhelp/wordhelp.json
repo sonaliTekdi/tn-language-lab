@@ -6,88 +6,11 @@
             "type": "wordHelp",
             "content": [
               {
-                  "word": "appropriate",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-1.mp3",
-                  "example":"...click on the appropriate 'feeling' in the box.;",
-                  "meaning":"suitable",
-                  "telugu": "பொருத்தமானது"
-              },
-              {
                   "word": "cloudy",
                   "audio": "assets/lessons/lesson5/wordhelp/audio/word-5.mp3",
                   "example":"It is cloudy.",
                   "meaning":"when there are clouds in the sky",
                   "telugu": "மேகமூட்டம்"
-              },
-              {
-                  "word": "cricketer",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-6.mp3",
-                  "example":"The picture of the cricketer...",
-                  "meaning":"someone who plays cricket",
-                  "telugu": "கிரிக்கெட் (மட்டைப்பந்து)வீரர்"
-              },
-              {
-                  "word": "expressions",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-8.mp3",
-                  "example":"Use some of the expressions in the word cloud to help you.",
-                  "meaning":"groups of words used for a situation",
-                  "telugu": "வெளிப்பாடுகள்"
-              },
-              {
-                  "word": "familiar",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-9.mp3",
-                  "example":"Are you familiar with any of the places that you read or heard in the Warm Up?",
-                  "meaning":"know well",
-                  "telugu": "பரிச்சயமான"
-              },
-              {
-                  "word": "huge",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-11.mp3",
-                  "example":"A huge playground",
-                  "meaning":"very big",
-                  "telugu": "மிகப்பெரிய"
-              },
-              {
-                  "word": "locations",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-13.mp3",
-                  "example":"Today, we will learn to describe locations.",
-                  "meaning":"places ",
-                  "telugu": "இடங்கள்"
-              },
-              {
-                  "word": "miss",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-16.mp3",
-                  "example":"I don't want to miss the Sunday music programme.",
-                  "meaning":"not see",
-                  "telugu": "செல்வி"
-              },
-              {
-                  "word": "mufflers",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-18.mp3",
-                  "example":"In winter, people wear scarves and mufflers.",
-                  "meaning":"a scarf worn around the face to feel warm in winter",
-                  "telugu": "மஃப்லர்கள்(கம்பளிக்கழுத்துக்குட்டை)"
-              },
-              {
-                  "word": "nephews",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-19.mp3",
-                  "example":"I guess she loves her nieces and nephews as much as we love her!",
-                  "meaning":"brother's or sister's sons",
-                  "telugu": "மருமகன்கள்"
-              },
-              {
-                  "word": "nieces",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-20.mp3",
-                  "example":"I guess she loves her nieces and nephews as much as we love her!",
-                  "meaning":"brother's or sister's daughters",
-                  "telugu": "மருமகள்"
-              },
-              {
-                  "word": "phrases",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-23.mp3",
-                  "example":"Use words and phrases from the word cloud given below.",
-                  "meaning":"groups of words",
-                  "telugu": "சொற்றொடர்கள்"
               },
               {
                   "word": "raincoats",
@@ -97,20 +20,6 @@
                   "telugu": "ரெயின்கோட்டுகள்"
               },
               {
-                  "word": "relatives",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-25.mp3",
-                  "example":"Can you help Afsana find her relatives?",
-                  "meaning":"family members",
-                  "telugu": "உறவினர்கள்"
-              },
-              {
-                  "word": "scarves",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-27.mp3",
-                  "example":"In winter, people wear scarves and mufflers.",
-                  "meaning":"a cloth worn around the neck, head or shoulders",
-                  "telugu": "தாவணி(கழுத்துத்துண்டு)"
-              },
-              {
                   "word": "sunny",
                   "audio": "assets/lessons/lesson5/wordhelp/audio/word-29.mp3",
                   "example":"It's sunny.",
@@ -118,18 +27,18 @@
                   "telugu": "சூரியன் தீண்டும்"
               },
               {
-                  "word": "too",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-32.mp3",
-                  "example":"I want to play cricket too...",
-                  "meaning":"also/ as well  ",
-                  "telugu": "கூட"
+                  "word": "mufflers",
+                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-18.mp3",
+                  "example":"In winter, people wear scarves and mufflers.",
+                  "meaning":"a scarf worn around the face to feel warm in winter",
+                  "telugu": "மஃப்லர்கள்(கம்பளிக்கழுத்துக்குட்டை)"
               },
               {
-                  "word": "various",
-                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-33.mp3",
-                  "example":"Mark the weather for the various places correctly.",
-                  "meaning":"different",
-                  "telugu": "பல்வேறு"
+                  "word": "scarves",
+                  "audio": "assets/lessons/lesson5/wordhelp/audio/word-27.mp3",
+                  "example":"In winter, people wear scarves and mufflers.",
+                  "meaning":"a cloth worn around the neck, head or shoulders",
+                  "telugu": "தாவணி(கழுத்துத்துண்டு)"
               }
             ]   
         }

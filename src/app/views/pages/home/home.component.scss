@@ -341,6 +341,17 @@ a{
   .meu{
     margin-left: 40px;
   }
+  .d-none{ display: none;}
   .navbar-toggler-icon i{
     font-size: 50px;
   }
+  .navbar-nav .sub-menu { display:none; padding-left: 0; z-index: 2;}
+  .navbar-nav .sub-menu, .navbar-nav .sub-menu li { list-style: none; margin-left: 0;}
+  .navbar-nav .parent{ position: relative;}
+  .navbar-nav .parent:hover .sub-menu{ display: block; 
+    position: absolute;
+    width: 210px;
+    background: #e7e7e7;
+    border: 1px solid #bbb;
+    margin-top: 5px;
+}

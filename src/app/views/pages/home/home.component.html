@@ -31,9 +31,20 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav ms-auto">
                         <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="">Home</a>
-                        <a class="nav-link me-4 fs-14 fw-700"  href="">About</a>
+                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="/#lear-for-tomorrow" routerLink="/#lear-for-tomorrow">Lets Learn</a>
+                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="">Lets Play</a>
+                        <a class="nav-link me-4 fs-14 fw-700 parent"  href="">About
+                            <ul class="sub-menu">
+                                <li>
+                                    <a class="nav-link me-4 fs-14 fw-700" routerLink="/learn-tommorow" href="">Learn for Tomorrow</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link me-4 fs-14 fw-700" routerLink="/research" href="">Research</a>
+                                </li>
+                            </ul>
+                        </a>
                         <a routerLink="/level" class="nav-link me-4 fs-14 fw-700"  href="">Language Lab</a>
-                        <a class="nav-link me-4 fs-14 fw-700"  href="">Explore</a>
+                        <a class="nav-link me-4 fs-14 fw-700 d-none"  href="">Explore</a>
                         <a class="nav-link fs-14 fw-700" id="eng">Eng &nbsp; /</a>
                         <a class="nav-link me-4 fs-14 fw-700" id="de">
                             தமிழ்</a>
@@ -145,12 +156,14 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="lear-for-tomorrow">
         <div class="container">
             <div class="item ptb-120">
                 <div class="row">
                     <div class="col-lg-5 col-sm-12">
-                        <div>
+                        <div class="text-blue fs-64 fw-900">How To Learn For Tomorrow</div>
+                        <div class=""><a routerLink="/learn-tommorow" href="#" class="fs-14 fw-700 text-pink header-btn"> Know more</a></div>
+                        <div style="display: none;">
                             <div class="text-blue fs-64 fw-900">How To Learn For Tomorrow</div>
                             <div class="fs-14 mw-72">Across the world, digital tools which allow learners to speak, record, and listen to themselves have been recognised as having a significant  role  in  improving listening and communication among non-native speakers learning foreign languages. It plays an important role in learner’s acquiring accurate pronunciation through stress on word accent, intonation, and rhythm.
                             </div>

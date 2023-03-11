@@ -54,14 +54,6 @@
       "type": "recording",
       "content": ""
     },
-      {
-        "type": "audio",
-        "content": "assets/lessons/lesson8/letstalk/audio/audio2.mp3"
-    },
-    {
-      "type": "transcript",
-      "content": "<pre style='word-wrap: break-word; white-space: pre-wrap;'>When do you feel happy, sad, tired,<br>worried, angry, bored or confused?<br>Choose any feeling and talk to your<br>partner about it.</pre>"
-    },
     {
       "type": "options",
       "content":[
@@ -69,10 +61,20 @@
           "imageSrc": "",
           "name":"When do you feel happy, sad, tired, worried, angry, bored or confused? Choose any feeling and talk to your partner about it.?",
           "audioSrc": "assets/lessons/lesson8/letstalk/audio/option1.mp3",
+          "quesionTranscript": "<pre style='word-wrap: break-word; white-space: pre-wrap;'>When do you feel happy, sad, tired,<br>worried, angry, bored or confused?<br>Choose any feeling and talk to your<br>partner about it.</pre>",
           "modelAudioSrc": "assets/lessons/lesson8/letstalk/audio/modelAns1.mp3",
           "modelImageSrc":"assets/lessons/lesson8/letstalk/image/modelAns1.png",
-          "modelTranscript": "Student A: When do you feel bored?",
+          "modelAnsTranscript": "Student A: When do you feel bored?",
           "instructions": "<ul> <li> <span style=\"font-size: 10pt; font-family: Arial; font-style: normal;\"> Click&nbsp;► to listen to two examples. </span> </li> <li> <span style=\"font-size: 10pt; font-family: Arial; font-style: normal;\"> Take turns with your partner and describe any one feeling. </span> </li> <li> <span style=\"font-size: 10pt; font-family: Arial; font-style: normal;\"> Use words and phrases from the word cloud given below. </span> </li> <li> <span style=\"font-size: 10pt; font-family: Arial; font-style: normal;\"> When you and your partner are ready, click 'record' </span> </li> <li> <span style=\"font-size: 10pt; font-family: Arial; font-style: normal;\"> If you want to hear your recording, click on the ►. </span> </li> <li> <span style=\"font-size: 10pt; font-family: Arial; font-style: normal;\"> If you are happy with your recording, click on 'Save File'. </span> </li> </ul>"
+        },
+        {
+          "modelAudioSrc": "assets/lessons/lesson8/letstalk/audio/modelAns1.mp3",
+          "modelImageSrc":"assets/lessons/lesson8/letstalk/image/modelAns1.png",
+          "modelAnsTranscript": "Student A: When do you feel bored?"
+        },{
+          "modelAudioSrc": "assets/lessons/lesson8/letstalk/audio/modelAns1.mp3",
+          "modelImageSrc":"assets/lessons/lesson8/letstalk/image/modelAns1.png",
+          "modelAnsTranscript": "Student A: When do you feel bored?"
         }
       ]
     }

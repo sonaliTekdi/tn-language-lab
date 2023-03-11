@@ -26,6 +26,7 @@ import { RouterModule } from '@angular/router';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ResearchComponent } from './views/pages/research/research.component';
 import { ComingComponent } from './views/pages/coming/coming.component';
+import { LearnTommorowComponent } from './views/pages/learn-tommorow/learn-tommorow.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ComingComponent } from './views/pages/coming/coming.component';
     NoAccessComponent,
     HomeComponent,
     ResearchComponent,
-    ComingComponent
+    ComingComponent,
+    LearnTommorowComponent
   ],
   imports: [
     BrowserModule,

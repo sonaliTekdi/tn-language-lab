@@ -43,9 +43,32 @@
 
     <section *ngIf="item.type == 'options'">
       <div class="d-flex justify-content-around">
+        <!-- <ng-container *ngFor="let option of item.content; let i = index">
+          <div [ngClass]="!option1Selected ? 'opt-unselected' : 'opt-selected'" (click)="switchModelAnswer(i)">
+            <div *ngIf="item.content[i].imageSrc"><img width="200" height="200"  src="{{item.content[i].imageSrc}}"> &nbsp;&nbsp;
+            <div class="mt-2"><b>{{item.content[i].name}}</b></div>
+            </div>
+            <div *ngIf="!item.content[i].imageSrc">
+              <p>{{item.content[i].name}}</p>
+            </div>
+            <div *ngIf="item.content[i].audioSrc">
+              <audio class="w-100 mt-4" controls >
+                <source [src]="item.content[i].audioSrc" type="audio/mp3">
+              Your browser does not support the audio element.
+              </audio>
+            </div>
+            <section *ngIf="item.content[i].quesionTranscript">
+              <div *ngIf="textShow" [innerHTML]="item.content[i].quesionTranscript" class="scrollbar"></div>
+              <button type="button" (click) = "showText()" class="btn btn-primary">Transcript</button>
+            </section>
+          </div>
+        </ng-container> -->
+
+
+
         <ng-container>
           <div [ngClass]="!option1Selected ? 'opt-unselected' : 'opt-selected'" (click)="switchModelAnswer('option1')">
-            <div *ngIf="item.content[0].imageSrc"><img width="200" height="200"  src="{{item.content[0].imageSrc}}"> &nbsp;&nbsp;
+            <div *ngIf="item?.content[0]?.imageSrc"><img width="200" height="200"  src="{{item.content[0].imageSrc}}"> &nbsp;&nbsp;
             <div class="mt-2"><b>{{item.content[0].name}}</b></div>
             </div>
             <div *ngIf="!item.content[0].imageSrc">
@@ -57,9 +80,13 @@
               Your browser does not support the audio element.
               </audio>
             </div>
+            <section *ngIf="item.content[0].quesionTranscript">
+              <div *ngIf="textShow" [innerHTML]="item.content[0].quesionTranscript" class="scrollbar"></div>
+              <button type="button" (click) = "showText()" class="btn btn-primary">Transcript</button>
+            </section>
           </div>
         </ng-container>
-        <ng-container *ngIf="item.content[1]">
+        <ng-container *ngIf="item?.content[1]?.imageSrc || item?.content[1]?.audioSrc ">
           <div [ngClass]="!option2Selected ? 'opt-unselected' : 'opt-selected'" (click)="switchModelAnswer('option2')">
             <div *ngIf="item.content[1].imageSrc"><img width="200" height="200"  src="{{item.content[1].imageSrc}}"> &nbsp;&nbsp;
             <div class="mt-2"><b>{{item.content[1].name}}</b></div>
@@ -73,9 +100,13 @@
               Your browser does not support the audio element.
               </audio>
             </div>
+            <section *ngIf="item.content[1].quesionTranscript">
+              <div *ngIf="textShow" [innerHTML]="item.content[1].quesionTranscript" class="scrollbar"></div>
+              <button type="button" (click) = "showText()" class="btn btn-primary">Transcript</button>
+            </section>
           </div>
         </ng-container>
-        <ng-container *ngIf="item.content[2]">
+        <ng-container *ngIf="item?.content[2]?.imageSrc || item?.content[2]?.audioSrc ">
           <div [ngClass]="!option3Selected ? 'opt-unselected' : 'opt-selected'" (click)="switchModelAnswer('option3')">
             <div *ngIf="item.content[2].imageSrc"><img width="200" height="200"  src="{{item.content[2].imageSrc}}"> &nbsp;&nbsp;
             <div class="mt-2"><b>{{item.content[2].name}}</b></div>
@@ -89,6 +120,10 @@
               Your browser does not support the audio element.
               </audio>
             </div>
+            <section *ngIf="item.content[2].quesionTranscript">
+              <div *ngIf="textShow" [innerHTML]="item.content[2].quesionTranscript" class="scrollbar"></div>
+              <button type="button" (click) = "showText()" class="btn btn-primary">Transcript</button>
+            </section>
           </div>
         </ng-container>
       </div>
@@ -105,6 +140,10 @@
                   <source [src]="item.content[0].modelAudioSrc" type="audio/mp3">
                 Your browser does not support the audio element.
                 </audio>
+                <section *ngIf="item.content[0].modelAnsTranscript">
+                  <div *ngIf="textShow" [innerHTML]="item.content[0].modelAnsTranscript" class="scrollbar"></div>
+                  <button type="button" (click) = "showText()" class="btn btn-primary">Transcript</button>
+                </section>
               </div>
             </div>
           </ng-container>
@@ -126,6 +165,10 @@
                 Your browser does not support the audio element.
                 </audio>
               </div>
+              <section *ngIf="item.content[1].modelAnsTranscript">
+                <div *ngIf="textShow" [innerHTML]="item.content[1].modelAnsTranscript" class="scrollbar"></div>
+                <button type="button" (click) = "showText()" class="btn btn-primary">Transcript</button>
+              </section>
             </div>
           </ng-container>
         </div>
@@ -146,6 +189,10 @@
                 Your browser does not support the audio element.
                 </audio>
               </div>
+              <section *ngIf="item.content[2].modelAnsTranscript">
+                <div *ngIf="textShow" [innerHTML]="item.content[2].modelAnsTranscript" class="scrollbar"></div>
+                <button type="button" (click) = "showText()" class="btn btn-primary">Transcript</button>
+              </section>
             </div>
           </ng-container>
         </div>
