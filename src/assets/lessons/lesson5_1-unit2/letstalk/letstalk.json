@@ -1,0 +1,38 @@
+{
+  "title": "Let's Talk: Hobbies and Pastimes",
+  "id": "letstalk",
+  "data": [
+    {
+      "type": "html",
+      "content": "<br><blockquote>Things we like to do in our free time are called hobbies.<br>Talk about what you like to do in your free time OR say something about your favourite actor/actress.<br><br> </blockquote>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson5_1-unit2/letstalk/audio/audio1.mp3"
+    },
+    {
+      "type": "html",
+      "content": "<br><blockquote>Discuss with your partner and write a dialogue for the chosen option.<br><br> </blockquote>"
+    },
+    {
+      "type": "recording",
+      "content": ""
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson5_1-unit2/letstalk/audio/audio2.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>What do you like to do in your free time?</pre>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson5_1-unit2/letstalk/audio/audio3.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>Who is your favourite actor or actress?</pre>"
+    }
+  ]
+}

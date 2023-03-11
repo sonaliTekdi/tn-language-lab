@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SpinnerComponent } from './views/component/spinnercomponent/spinner.component';
 import { TelemetryService } from './telemetry.service';
+import { LogsService } from './logs.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,11 +12,12 @@ export class AppComponent implements OnInit {
   title = 'TNEMIS';
 
   constructor(
-    public telemetryService: TelemetryService,
+    public telemetryService: TelemetryService,public logsService: LogsService
   ) {
   }
 
   ngOnInit() {
+    let service = this.logsService;
     this.telemetryService.initialize({
       context: {
         mode: 'play',  // To identify preview used by the user to play/edit/preview
@@ -38,6 +40,7 @@ export class AppComponent implements OnInit {
         dispatcher: {
           dispatch(event) {
             console.log(`Events from dispatcher: ${JSON.stringify(event)}`);
+            service.create(event);
           }
         }
       },
@@ -50,6 +53,4 @@ export class AppComponent implements OnInit {
     console.log('telemetry');
     this.telemetryService.start('langulagelab');
   }
-
-
 }

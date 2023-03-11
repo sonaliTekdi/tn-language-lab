@@ -17,16 +17,16 @@
       {
         "type": "images",
         "content": [
-          {"src": "assets/lessons/lesson10/openstory/image/img2.png"},
-          {"src": "assets/lessons/lesson10/openstory/image/img3.png"},
-          {"src": "assets/lessons/lesson10/openstory/image/img4.png"}
+          {"src": "assets/lessons/lesson10/openstory/image/img2.png","width":"200","height":"100"},
+          {"src": "assets/lessons/lesson10/openstory/image/img3.png","width":"200","height":"100"},
+          {"src": "assets/lessons/lesson10/openstory/image/img4.png","width":"200","height":"100"}
           ]
       },
       {
         "type": "images",
         "content": [
-          {"src": "assets/lessons/lesson10/openstory/image/img5.png"},
-          {"src": "assets/lessons/lesson10/openstory/image/img6.png"}
+          {"src": "assets/lessons/lesson10/openstory/image/img5.png","width":"200","height":"100"},
+          {"src": "assets/lessons/lesson10/openstory/image/img6.png","width":"200","height":"100"}
           
           ]
       },

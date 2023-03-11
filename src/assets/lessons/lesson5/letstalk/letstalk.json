@@ -1,23 +1,49 @@
 {
-    "title": "Let's Talk: My Favourite Season",
-    "id": "letstalk",
-    "data": [
-      
-      {
-          "type": "html",
-          "content": "<br><blockquote>Look at the photographs of three seasons.<br>Choose your favourite season. Talk about why you like it.<br><br> </blockquote>"
-      },
-      {
-          "type": "audio",
-          "content": "assets/lessons/lesson5/letstalk/audio/ins1.mp3"
-      },
-      {
+  "title": "Let's Talk: My Favourite Season",
+  "id": "letstalk",
+  "data": [
+    {
         "type": "html",
-        "content": "<br><blockquote>Discuss with your partner and write a dialogue for the chosen option.<br> </blockquote>"
+        "content": "<br><blockquote>Look at the photographs of three seasons.<br>Choose your favourite season. Talk about why you like it.<br><br> </blockquote>"
     },
     {
-        "type": "recording",
-        "content": ""
-      }
-  ]
-  }
+        "type": "audio",
+        "content": "assets/lessons/lesson5/letstalk/audio/ins1.mp3"
+    },
+    {
+      "type": "html",
+      "content": "<br><blockquote>Discuss with your partner and write a dialogue for the chosen option.<br> </blockquote>"
+    },
+    {
+      "type": "options",
+      "content":[
+        {
+          "imageSrc": "assets/lessons/lesson5/wordplay/image/img1.jpg",
+          "name":"What I like to do in summer.",
+          "audioSrc": "assets/lessons/lesson5/letstalk/audio/option1.mp3",
+          "modelImageSrc":"assets/lessons/lesson5/wordplay/image/img1.jpg",
+          "modelAudioSrc": "assets/lessons/lesson5/letstalk/audio/modelAns1.mp3",
+          "instructions": "<ul><li>Look at the photograph and listen to an example.</li> <li>Discuss with your partner. Practice your answer.</li>  <li>When you are ready, record it by clicking 'Record'.</li>  <li>If you want to hear your recording, click on the ► button.</li>  <li>If you are happy with your recording, click on 'Save File'. &ZeroWidthSpace;</li></ul>"
+        },
+        {
+          "imageSrc": "assets/lessons/lesson5/wordplay/image/img2.jpg",
+          "name":"What I like to do in the monsoon",
+          "modelImageSrc": "assets/lessons/lesson5/wordplay/image/img2.jpg",
+          "audioSrc": "assets/lessons/lesson5/letstalk/audio/option2.mp3",
+          "modelAudioSrc": "assets/lessons/lesson5/letstalk/audio/modelAns2.mp3"
+        },
+        {
+          "imageSrc": "assets/lessons/lesson5/wordplay/image/img3.jpg",
+          "modelImageSrc": "assets/lessons/lesson5/wordplay/image/img3.jpg",
+          "name":"What I like to do in winter.",
+          "audioSrc": "assets/lessons/lesson5/letstalk/audio/option3.mp3",
+          "modelAudioSrc": "assets/lessons/lesson5/letstalk/audio/modelAns3.mp3"
+        }
+      ]
+    },
+    {
+      "type": "recording",
+      "content": ""
+    }
+  ] 
+}

@@ -1,0 +1,17 @@
+{
+    "title": "CLIx Time",
+    "id": "wordplay",
+    "data": [
+      {
+          "type": "html",
+          "content": "<br><ul><li>Read the questions on the screen and listen to the audio track for each question.</li><li>Choose an answer option carefully</li></ul>"
+      },
+      
+      {
+        "type": "h5p",
+        "content": "https://h5p.org/h5p/embed/1357967"
+        }   
+  ]
+  }
+  
+  

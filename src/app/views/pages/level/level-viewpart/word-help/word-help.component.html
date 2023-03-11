@@ -9,13 +9,12 @@
           <td style="text-align: center;"><strong>Pronunciation</strong>&nbsp; &nbsp;&nbsp;</td>
           <td><strong>Usage</strong></td>
           <td><strong>Meaning in Context</strong></td>
-          <td><strong>शब्दों के हिंदी अर्थ</strong></td>
-          <td><strong>Telugu meaning</strong></td>
+          <td><strong>Tamil meaning</strong></td>
         </tr>
             
       </thead>
       <tbody>
-        <tr *ngFor="let dictionary of dictionary">
+        <tr *ngFor="let dictionary of data">
           <td>{{dictionary.word}}</td>
           <td><script>
             function togglerTranscript(a){
@@ -24,9 +23,9 @@
             </script>
               <audio controls="" id="audio-player-5a5daedf69602a0149d6d5ab" width="100px"><source src="{{dictionary.audio}}" type="audio/mp3"></audio>
              </td>
-          <td>{{dictionary.meaning}}</td>
+         
           <td>{{dictionary.example}}</td>
-          <td>{{dictionary.hindi}}</td>
+          <td>{{dictionary.meaning}}</td>
           <td>{{dictionary.telugu}}</td>
         </tr>
     

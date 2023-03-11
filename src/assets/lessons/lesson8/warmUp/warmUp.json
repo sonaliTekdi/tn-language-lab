@@ -4,7 +4,7 @@
   "data": [
     {
         "type": "html",
-        "content": "<br><br><blockquote><h4>Listen and read along.</h4></blockquote>"
+        "content": "<br><br><blockquote>Listen and read along.<br>கேளுங்கள் மற்றும் படிக்கவும்.</blockquote>"
     },
     {
         "type": "text",
@@ -16,7 +16,7 @@
     },
     {
         "type": "html",
-        "content": "<br><blockquote> <div>Click  ► to begin.<br></div> </blockquote>"
+        "content": "<br><blockquote> <div>Click  ► to begin.<br>தொடங்க ► கிளிக் செய்யவும்.</div> </blockquote>"
     },
     {
         "type": "video",
@@ -24,7 +24,7 @@
     },
     {
         "type": "html",
-        "content": "<br><blockquote><h4>Press  ►  to read and listen again.</h4></blockquote>"
+        "content": "<br><blockquote>Press  ►  to read and listen again.<br>மீண்டும் படிக்கவும் கேட்கவும் ► ஐ அழுத்தவும்.</blockquote>"
     }
         ]
     }

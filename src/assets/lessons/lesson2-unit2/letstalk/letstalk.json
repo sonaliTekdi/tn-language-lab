@@ -1,0 +1,38 @@
+{
+  "title": "Let's Talk: Stars and Diamonds",
+  "id": "letstalk",
+  "data": [
+    {
+      "type": "html",
+      "content": "<br><blockquote>Ramya's grandma gave her pretty, shiny, diamond earrings. They looked like stars. Do stars look like diamonds? Do diamonds look like stars?<br><br> </blockquote>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson2-unit2/letstalk/audio/audio1.mp3"
+    },
+    {
+      "type": "html",
+      "content": "<br><blockquote>Discuss with your partner and choose any one option.<br><br> </blockquote>"
+    },
+    {
+      "type": "recording",
+      "content": ""
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson2-unit2/letstalk/audio/audio2.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>What happened after Ramya sang \"Twinkle twinkle\"?</pre>"
+  },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson2-unit2/letstalk/audio/audio3.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>What do stars look like?</pre>"
+  }
+  ]
+}

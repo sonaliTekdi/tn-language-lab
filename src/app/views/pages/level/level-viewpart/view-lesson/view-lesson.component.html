@@ -25,11 +25,6 @@
     <section *ngIf="item.type == 'h5p'" [innerHTML]="getH5pHtml(item.content)| safe: 'html'">
     </section>
 
-
-    <section *ngIf="item.type == 'recording'">
-      <iframe allow="microphone" width=100%; height="600;" [src]="'lets-talk/Open Story.html' | safe: 'resourceUrl'"></iframe>
-    </section>
-
     <section *ngIf="item.type == 'iframe'">
       <iframe allow="microphone" scrolling="no" width=100%; height="600;" allow="microphone" [src]="item.content | safe: 'resourceUrl'"></iframe>
     </section>
@@ -41,17 +36,139 @@
 
     <section *ngIf="item.type == 'images'">
      <ng-container  *ngFor="let image of item.content;">
-      <img width="300" height="300"  src="{{image.src}}">
-      <p>{{image.name}}</p>
+      <img width="{{image.width}}" height="{{image.height}}"  src="{{image.src}}"> &nbsp;&nbsp;
+      <!-- <p>{{image.name}}</p> -->
      </ng-container>
     </section>
 
-    <section *ngIf="item.type == 'openStory'" [innerHTML]="getOpenStoryHtml(item.content) | safe: 'html'">
+    <section *ngIf="item.type == 'options'">
+      <div class="d-flex justify-content-around">
+        <ng-container>
+          <div [ngClass]="!option1Selected ? 'opt-unselected' : 'opt-selected'" (click)="switchModelAnswer('option1')">
+            <div *ngIf="item.content[0].imageSrc"><img width="200" height="200"  src="{{item.content[0].imageSrc}}"> &nbsp;&nbsp;
+            <div class="mt-2"><b>{{item.content[0].name}}</b></div>
+            </div>
+            <div *ngIf="!item.content[0].imageSrc">
+              <p>{{item.content[0].name}}</p>
+            </div>
+            <div *ngIf="item.content[0].audioSrc">
+              <audio class="w-100 mt-4" controls >
+                <source [src]="item.content[0].audioSrc" type="audio/mp3">
+              Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="item.content[1]">
+          <div [ngClass]="!option2Selected ? 'opt-unselected' : 'opt-selected'" (click)="switchModelAnswer('option2')">
+            <div *ngIf="item.content[1].imageSrc"><img width="200" height="200"  src="{{item.content[1].imageSrc}}"> &nbsp;&nbsp;
+            <div class="mt-2"><b>{{item.content[1].name}}</b></div>
+            </div>
+            <div *ngIf="!item.content[1].imageSrc">
+              <p>{{item.content[1].name}}</p>
+            </div>
+            <div *ngIf="item.content[1].audioSrc">
+              <audio class="w-100 mt-4" controls >
+                <source [src]="item.content[1].audioSrc" type="audio/mp3">
+              Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="item.content[2]">
+          <div [ngClass]="!option3Selected ? 'opt-unselected' : 'opt-selected'" (click)="switchModelAnswer('option3')">
+            <div *ngIf="item.content[2].imageSrc"><img width="200" height="200"  src="{{item.content[2].imageSrc}}"> &nbsp;&nbsp;
+            <div class="mt-2"><b>{{item.content[2].name}}</b></div>
+            </div>
+            <div *ngIf="!item.content[2].imageSrc">
+              <p>{{item.content[2].name}}</p>
+            </div>
+            <div *ngIf="item.content[2].audioSrc">
+              <audio class="w-100 mt-4" controls >
+                <source [src]="item.content[2].audioSrc" type="audio/mp3">
+              Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+
+      <div *ngIf="option1Selected">
+        <div class="mt-2" [innerHTML]="item.content[0].instructions"></div>
+          <div><b>Model Answer: </b></div>
+        <div class="d-flex justify-content-around">
+          <ng-container>
+            <div *ngIf="item.content[0].modelImageSrc"><img width="200" height="200"  src="{{item.content[0].modelImageSrc}}"> &nbsp;&nbsp;</div>
+            <div class="mt-5">
+              <div *ngIf="item.content[0].modelAudioSrc">
+                <audio class="w-30 mt-4" controls >
+                  <source [src]="item.content[0].modelAudioSrc" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <section>
+          <iframe allow="microphone" width=100%; [src]="'lets-talk/Open Story.html' | safe: 'resourceUrl'"></iframe>
+        </section>
+      </div>
+      <div *ngIf="option2Selected">
+        <div class="mt-2" [innerHTML]="item.content[0].instructions"></div>
+          <div><b>Model Answer: </b></div>
+        <div class="d-flex justify-content-around">
+          <ng-container>
+            <div *ngIf="item.content[1].modelImageSrc"><img width="200" height="200"  src="{{item.content[1].modelImageSrc}}"> &nbsp;&nbsp;</div>
+            <div class="mt-5">
+              <div *ngIf="item.content[1].modelAudioSrc">
+                <audio class="w-30 mt-4" controls >
+                  <source [src]="item.content[1].modelAudioSrc" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <section>
+          <iframe allow="microphone" width=100%; [src]="'lets-talk/Open Story.html' | safe: 'resourceUrl'"></iframe>
+        </section>
+      </div>
+      <div *ngIf="option3Selected">
+        <div class="mt-2" [innerHTML]="item.content[0].instructions"></div>
+          <div><b>Model Answer: </b></div>
+        <div class="d-flex justify-content-around">
+          <ng-container>
+            <div *ngIf="item.content[2].modelImageSrc"><img width="200" height="200"  src="{{item.content[2].modelImageSrc}}"> &nbsp;&nbsp;</div>
+            <div class="mt-5">
+              <div *ngIf="item.content[2].modelAudioSrc">
+                <audio class="w-30 mt-4" controls >
+                  <source [src]="item.content[2].modelAudioSrc" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <section>
+          <iframe allow="microphone" width=100%; [src]="'lets-talk/Open Story.html' | safe: 'resourceUrl'"></iframe>
+        </section>
+      </div>
+
+     </section>
+
+      <section *ngIf="item.type == 'openStory'" [innerHTML]="getOpenStoryHtml(item.content) | safe: 'html'">
       <iframe allow="microphone" width=100%; height="600;" [src]="'lets-talk/Open Story.html' | safe: 'resourceUrl'"></iframe>
     </section>
 
     <section *ngIf="item.type == 'wordHelp'">
       <app-word-help [data]="item.content"></app-word-help>
     </section>
+
+    <section *ngIf="item.type == 'transcript'">
+      <div *ngIf="textShow" [innerHTML]="item.content" class="scrollbar"></div>
+      <button type="button" (click) = "showText()" class="btn btn-primary">Transcript</button>
+    </section>
+
+
   </div>
 </div>

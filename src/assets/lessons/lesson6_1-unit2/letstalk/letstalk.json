@@ -1,0 +1,46 @@
+{
+  "title": "Let's Talk: Making Friends",
+  "id": "letstalk",
+  "data": [
+    {
+      "type": "html",
+      "content": "<br><blockquote>Let's talk about friendships.</blockquote>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson6_1-unit2/letstalk/audio/audio1.mp3"
+    },
+    {
+      "type": "html",
+      "content": "<br><blockquote>Read the options given below. Click on Answer This to choose one of the following options<br></blockquote>"
+    },
+    {
+      "type": "recording",
+      "content": ""
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson6_1-unit2/letstalk/audio/audio2.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>Who are your friends? What do you like to do with your friends?</pre>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson6_1-unit2/letstalk/audio/audio3.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>Are animals your friends? Do you like to play with animals?</pre>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson6_1-unit2/letstalk/audio/audio4.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>If you are in a new school, how will you make friends?</pre>"
+    }
+  ]
+}

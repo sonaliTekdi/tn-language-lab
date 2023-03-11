@@ -27,8 +27,12 @@
         "content": "assets/lessons/lesson5/warmUp/video/instruction1.mp4"
     },
     {
+        "type": "transcript",
+        "content": "<pre style='word-wrap: break-word; white-space: pre-wrap;'>The sun is out today.<br>There's rain and thunder.<br>It's cloudy, with some rain.<br>It's sunny, with some rain.<br>There's lightning and thunder.</pre>"
+    },
+    {
         "type": "html",
-        "content": "<br><br><blockquote><h4>Click 'next' to go to the next activity.</h4><br>அடுத்த செயல்பாட்டிற்குச் செல்ல 'அடுத்து' என்பதைக் கிளிக் செய்யவும்.</blockquote>"
+        "content": "<br><br><blockquote>Click 'next' to go to the next activity.<br>அடுத்த செயல்பாட்டிற்குச் செல்ல 'அடுத்து' என்பதைக் கிளிக் செய்யவும்.</blockquote>"
     }
         ]
     }

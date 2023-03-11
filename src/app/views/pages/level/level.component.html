@@ -13,12 +13,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-9">
-          <div class="rounded bg-white border p-3" *ngIf="levelService?.currentLessonData">
+          <div class="rounded bg-white border p-3" *ngIf="levelService?.lessonData">
             <app-view-lesson [lessonData]="levelService?.lessonData"></app-view-lesson>
           </div>
           <div class="text-center">
-            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson()" *ngIf="levelService?.currentLessonData">Next</button>
-            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson()" *ngIf="!levelService?.currentLessonData">Start</button>
+            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson()" *ngIf="levelService?.lessonData">Next</button>
+            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson()" *ngIf="!levelService?.lessonData">Start</button>
           </div>
             <!-- <app-level-viewpart></app-level-viewpart> -->
         </div>

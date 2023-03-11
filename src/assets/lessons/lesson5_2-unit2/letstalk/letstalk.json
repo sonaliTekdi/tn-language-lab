@@ -1,0 +1,46 @@
+{
+  "title": "Let's Talk: Messages",
+  "id": "letstalk",
+  "data": [
+    {
+      "type": "html",
+      "content": "<br><blockquote>Now let us answer some questions to show what Bluie's story tells us.<br><br> </blockquote>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson5_2-unit2/letstalk/audio/audio1.mp3"
+    },
+    {
+      "type": "html",
+      "content": "<br><blockquote>Read the options given below. Click on Answer This to choose one of the following options.<br><br> </blockquote>"
+    },
+    {
+      "type": "recording",
+      "content": ""
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson5_2-unit2/letstalk/audio/audio2.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>What does the story tell us?</pre>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson5_2-unit2/letstalk/audio/audio3.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>Why was Bluie sad?</pre>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson5_2-unit2/letstalk/audio/audio4.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>Why did the earth turn red and hot?</pre>"
+    }
+  ]
+}

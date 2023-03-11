@@ -6,6 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
 import { HomeComponent } from './views/pages/home/home.component';
 import { WordplayComponent } from './views/pages/level/level-viewpart/wordplay/wordplay.component';
+import { ResearchComponent } from './views/pages/research/research.component';
+import { ComingComponent } from './views/pages/coming/coming.component';
 
 
 const routes: Routes = [
@@ -27,7 +29,14 @@ const routes: Routes = [
         path: 'word-play',
         component: WordplayComponent
       },
-
+      {
+        path: 'research',
+        component: ResearchComponent
+      },
+      {
+        path: 'coming',
+        component: ComingComponent
+      },
 
       // {
       //   path: 'competition',

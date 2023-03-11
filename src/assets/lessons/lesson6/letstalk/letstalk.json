@@ -2,10 +2,11 @@
     "title": "Let's Talk",
     "id": "letstalk",
     "data": [
-        {
+          {
             "type": "image",
             "content": "assets/lessons/lesson6/letstalk/images/1.jpg"
           },
+
 
       {
           "type": "html",
@@ -15,11 +16,43 @@
           "type": "audio",
           "content": "assets/lessons/lesson6/letstalk/audio/instruction-1.mp3"
       },
+      {
+      "type": "options",
+      "content":[
+        {
+          "imageSrc": "",
+          "name":"Where are the fruits?",
+          "audioSrc": "assets/lessons/lesson6/letstalk/audio/option1.mp3",
+          "modelAudioSrc": "assets/lessons/lesson6/letstalk/audio/modelAns1.mp3",
+          "modelImageSrc":"assets/lessons/lesson6/letstalk/images/modelAns1.png",
+          "modelTranscript": "Student A: Can you see the fruits? Student B: Yes I can. Student A: Where are they? Student B: They are in front of the girl.",
+          "answerText": "<ul><li>Look at the photograph and listen to an example.</li> <li>Discuss with your partner. Practice your answer.</li>  <li>When you are ready, record it by clicking 'Record'.</li>  <li>If you want to hear your recording, click on the ► button.</li>  <li>If you are happy with your recording, click on 'Save File'. &ZeroWidthSpace;</li></ul>"
+        },
+        {
+          "imageSrc": "",
+          "name":"Where is the girl sitting?",
+          "audioSrc": "assets/lessons/lesson6/letstalk/audio/option2.mp3",
+          "modelAudioSrc": "assets/lessons/lesson6/letstalk/audio/modelAns2.mp3",
+          "modelImageSrc":"assets/lessons/lesson6/letstalk/images/modelAns2.png",
+          "modelTranscript": "A: Can you see the girl? B: Yes, I can.A: Where is she sitting? B: She is sitting on a chair."
+        },
+        {
+          "imageSrc": "",
+          "name":"Where is the chair?",
+          "audioSrc": "assets/lessons/lesson6/letstalk/audio/option3.mp3",
+          "modelAudioSrc": "assets/lessons/lesson6/letstalk/audio/modelAns2.mp3",
+          "modelImageSrc":"assets/lessons/lesson6/letstalk/images/modelAns3.png",
+          "modelTranscript": "A: Can you see the chair? B: Yes, I can see it. A: Where is it? B: It is next to the girl."
+        }
+      ]
+    },
 
       {
         "type": "recording",
         "content": ""
       }
+
+      
   ]
   }
 

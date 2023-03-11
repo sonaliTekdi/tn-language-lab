@@ -120,9 +120,16 @@
       }
     }
   }
-}
-//New CSS
 
+
+
+
+}
+// .p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link:active{
+//   background-color: red !important;
+// }
+
+//New CSS
 
 
 
@@ -453,11 +460,11 @@ span.p-dialog-header-close-icon.ng-tns-c112-4.pi.pi-times{
 }
 
 .p-tabview .p-tabview-panels {
-  padding: 0rem; 
-  border: 0 none; 
-  color: none; 
-  border-bottom-right-radius: 0px; 
-  border-bottom-left-radius: 0px; 
+  padding: 0rem;
+  border: 0 none;
+  color: none;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .p-tabview .p-tabview-nav li .p-tabview-nav-link {
@@ -475,7 +482,7 @@ span.p-dialog-header-close-icon.ng-tns-c112-4.pi.pi-times{
   margin: 0 0 -2px 0;
 }
 
-// Calender Style Change 
+// Calender Style Change
 span.p-calendar{
   width: 100% !important;
 }
@@ -637,27 +644,27 @@ th[sortable].desc:after {
   content: "\f27b";
   font-family: bootstrap-icons !important;
   background: #662D91;
-  position: absolute;
-  right: 10px;
   font-size: 14px;
   border-radius: 50%;
   padding: 6px;
   color: #fff;
   font-weight: 900;
   margin-top: -14px;
+  position: relative;
+  left: 286px;
 }
 .sidepanel .pi-chevron-down:before, .sidepanel .pi-angle-down:before {
   content: "\F282";
   font-family: bootstrap-icons !important;
   background: #662D91;
-  position: absolute;
-  right: 10px;
   font-size: 14px;
   border-radius: 50%;
   padding: 6px;
   color: #fff;
   font-weight: 900;
   margin-top: -14px;
+  position: relative;
+  left: 286px;
 }
 li a[aria-expanded="true"] span{
   color: #662D91 !important;

@@ -24,13 +24,17 @@ import { HomeComponent } from './views/pages/home/home.component';
 import { LevelComponent } from './views/pages/level/level.component';
 import { RouterModule } from '@angular/router';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { ResearchComponent } from './views/pages/research/research.component';
+import { ComingComponent } from './views/pages/coming/coming.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NoAccessComponent,
-    HomeComponent
+    HomeComponent,
+    ResearchComponent,
+    ComingComponent
   ],
   imports: [
     BrowserModule,

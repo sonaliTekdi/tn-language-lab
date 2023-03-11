@@ -46,6 +46,11 @@ if (e.data.for=="user")
           $(".tamil").show();
         });
         }); 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("fast");
+          });
+        });
   }
   customOptions: OwlOptions = {
     loop: true,

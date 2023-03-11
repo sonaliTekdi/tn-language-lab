@@ -1,0 +1,46 @@
+{
+  "title": "Let's Talk",
+  "id": "letstalk",
+  "data": [
+    {
+      "type": "html",
+      "content": "<br><blockquote>Either answer a question related to the story or answer a question about your self.<br><br> </blockquote>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson1-unit2/letstalk/audio/audio1.mp3"
+    },
+    {
+      "type": "html",
+      "content": "<br><blockquote>Discuss with your partner and write a dialogue for the chosen option.<br><br> </blockquote>"
+    },
+    {
+      "type": "recording",
+      "content": ""
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson1-unit2/letstalk/audio/audio2.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>What was the boy afraid of?</pre>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson1-unit2/letstalk/audio/audio3.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>WHAT HAPPENED WHEN THE LIGHTS CAME ON?</pre>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson1-unit2/letstalk/audio/audio4.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<pre  style='word-wrap: break-word; white-space: pre-wrap;'>Why are we afraid of the dark?</pre>"
+    }
+  ]
+}

@@ -55,7 +55,6 @@
         /*horizontal centering*/
         align-items: center;
         width: 334px;
-        margin-bottom: 30px;
     }
     .cancel-recording-button,
     .stop-recording-button {
@@ -312,5 +311,3 @@
 /* Extra Large devices */
 
 @media (min-width: 1200px) {}
-
-

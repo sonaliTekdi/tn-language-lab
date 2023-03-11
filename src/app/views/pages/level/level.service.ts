@@ -52,10 +52,14 @@ export class LevelService {
     this.currentLessonData = {id: lessonId, pid: basePath};
     this.telemetryService.interact(lessonId);
     console.log(lessonId);
+    localStorage.setItem("basePath", JSON.stringify(basePath));
+    localStorage.setItem("lessonId", JSON.stringify(lessonId));
     this.getJson(basePath, lessonId).subscribe(res =>
       this.lessonData = res
     );
     console.log(this.lessonData);
     return this.lessonData;
   }
+
+  
 }

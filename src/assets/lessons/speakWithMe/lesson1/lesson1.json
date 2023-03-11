@@ -4,6 +4,6 @@
   "data": [
     {
         "type": "iframe",
-        "content": "https://d2xtitd7ss55fi.cloudfront.net/index.html#/proto3/all?source=https://d2xtitd7ss55fi.cloudfront.net/db/proto3.json"
+        "content": "/assets/sb-all/index.html#/proto3/all?source=/assets/sb-all/db/proto3.json"
     }
 ]}

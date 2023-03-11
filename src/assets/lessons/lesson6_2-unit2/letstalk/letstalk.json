@@ -1,0 +1,46 @@
+{
+  "title": "Let's Talk: Being Kind",
+  "id": "letstalk",
+  "data": [
+    {
+      "type": "html",
+      "content": "<br><blockquote>The boy in the story was a kind person. Let us now discuss kindness.</blockquote>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson6_2-unit2/letstalk/audio/audio1.mp3"
+    },
+    {
+      "type": "html",
+      "content": "<br><blockquote>Read the options given below. Click on Answer This to choose one of the following options<br></blockquote>"
+    },
+    {
+      "type": "recording",
+      "content": ""
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson6_2-unit2/letstalk/audio/audio2.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<p>Who is a kind person? Can you describe them?</p>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson6_2-unit2/letstalk/audio/audio3.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<p>Have you ever helped someone? How did you help them?</p>"
+    },
+    {
+      "type": "audio",
+      "content": "assets/lessons/lesson6_2-unit2/letstalk/audio/audio4.mp3"
+    },
+    {
+      "type": "transcript",
+      "content": "<p>Has anyone ever helped you?</p>"
+    }
+  ]
+}
