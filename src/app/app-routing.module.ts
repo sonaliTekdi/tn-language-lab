@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BaseComponent } from './views/layout/base/base.component';
 // import { AuthGuard } from './core/guard/auth.guard';
-//import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
+// import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
 import { HomeComponent } from './views/pages/home/home.component';
@@ -11,7 +11,7 @@ import { ComingComponent } from './views/pages/coming/coming.component';
 
 
 const routes: Routes = [
-  //{ path:'auth', loadChildren: () => import('./views/pages/auth/auth.module').then(m => m.AuthModule) },
+  // { path:'auth', loadChildren: () => import('./views/pages/auth/auth.module').then(m => m.AuthModule) },
   {
     path: '',
     component: BaseComponent,
