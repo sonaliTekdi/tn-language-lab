@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.58d558c4.css",
-    "main.js": "./static/js/main.50c34eb9.js",
+    "main.js": "./static/js/main.20b14ea4.js",
     "static/js/787.f8217a87.chunk.js": "./static/js/787.f8217a87.chunk.js",
     "static/media/turn2.png": "./static/media/turn2.4b40ec04128a619ac2d9.png",
     "static/media/turn1.png": "./static/media/turn1.00ecc8a971f1eda97011.png",
     "static/media/main.png": "./static/media/main.5169fee2caf0ba2682ec.png",
     "static/media/elephant.png": "./static/media/elephant.b55f3755c0cf639d1921.png",
     "static/media/sweet_sour.png": "./static/media/sweet_sour.5d52aad4b8f06d2c0497.png",
+    "static/media/avatar.png": "./static/media/avatar.89c66c75f1dcc6e758cf.png",
     "static/media/p2win.png": "./static/media/p2win.1612b3018a6b18519b09.png",
     "static/media/story14.png": "./static/media/story14.8b9e567c816b38b149d4.png",
     "static/media/story13.png": "./static/media/story13.d24d54c6f84a7c65db25.png",
@@ -52,7 +53,6 @@
     "static/media/p4.png": "./static/media/p4.3aeade315a6fa5581201.png",
     "static/media/mode.png": "./static/media/mode.5a34c2ba627db1d52d60.png",
     "static/media/story.png": "./static/media/story.b37f6d4798672cc50932.png",
-    "static/media/avatar.png": "./static/media/avatar.6d582aab914fd7004cf6.png",
     "static/media/ps2.png": "./static/media/ps2.667aa15fc9699023bb88.png",
     "static/media/ps4.png": "./static/media/ps4.6f76494722b88eafaed9.png",
     "static/media/p1.png": "./static/media/p1.4e0394882f313a71ed60.png",
@@ -74,11 +74,11 @@
     "static/media/mobileGameBar.svg": "./static/media/mobileGameBar.f8996823297078247341e8029e055df8.svg",
     "index.html": "./index.html",
     "main.58d558c4.css.map": "./static/css/main.58d558c4.css.map",
-    "main.50c34eb9.js.map": "./static/js/main.50c34eb9.js.map",
+    "main.20b14ea4.js.map": "./static/js/main.20b14ea4.js.map",
     "787.f8217a87.chunk.js.map": "./static/js/787.f8217a87.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.58d558c4.css",
-    "static/js/main.50c34eb9.js"
+    "static/js/main.20b14ea4.js"
   ]
 }

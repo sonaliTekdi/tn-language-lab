@@ -355,3 +355,13 @@ a{
     border: 1px solid #bbb;
     margin-top: 5px;
 }
+.text-yellow{ color: #FDA700;}
+.text-orange{color: #FF6745;}
+.list-style{ margin-top: 20px;}
+.list-style li{display: inline-block; margin-right: 20px; padding: 10px; border: 1px solid #ddd;}
+li.special{ 
+    border: none!important;
+    padding-right: 25px !important;
+    margin-right: 25px!important;
+    border-right: 1px solid #e9e8e8 !important;
+}

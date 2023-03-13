@@ -31,8 +31,8 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav ms-auto">
                         <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="">Home</a>
-                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="/#lear-for-tomorrow" routerLink="/#lear-for-tomorrow">Lets Learn</a>
-                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="">Lets Play</a>
+                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="#lear-for-tomorrow" routerLink="#lear-for-tomorrow" (click)="scrolltoDiv('lear-for-tomorrow')">Lets Learn</a>
+                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" (click)="scrolltoDiv('boost-learning')">Lets Play</a>
                         <a class="nav-link me-4 fs-14 fw-700 parent"  href="">About
                             <ul class="sub-menu">
                                 <li>
@@ -43,7 +43,7 @@
                                 </li>
                             </ul>
                         </a>
-                        <a routerLink="/level" class="nav-link me-4 fs-14 fw-700"  href="">Language Lab</a>
+                        <a routerLink="/level" class="nav-link me-4 fs-14 fw-700 d-none"  href="">Language Lab</a>
                         <a class="nav-link me-4 fs-14 fw-700 d-none"  href="">Explore</a>
                         <a class="nav-link fs-14 fw-700" id="eng">Eng &nbsp; /</a>
                         <a class="nav-link me-4 fs-14 fw-700" id="de">
@@ -66,7 +66,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-sm-12 ps-5">
                         <img width="567px" height="567px" class="img-fluid girls-size ps-5"
-                            src="../../../../assets/home-asset/girls.png" alt="girls">
+                            src="../../../../assets/home-asset/learn-english.png" alt="girls">
 
                     </div>
                     <div class="col-lg-6 col-sm-12">
@@ -78,8 +78,8 @@
                                 <div>ஒன்றாக ஆங்கிலம் கற்போம்</div>
                             </div>
                             <div class="text-blue fs-64 fw-900">SpeakEnglish</div>
-                            <div class="fs-64 fw-900 text-pink">Like an Expert.</div>
-                            <div class="english fs-14 mw-72">“Mozhigal” aims to provide students with a conducive learning environment to enable them to become self paced independent learners and practice their language skills. This includes
+                            <div class="fs-64 fw-900 text-pink">With Confidence</div>
+                            <div class="english fs-16 mw-72">“Mozhigal” aims to provide students with a conducive learning environment to enable them to become self paced independent learners and practice their language skills. This includes
                             providing students and teachers an online platform for language learning whichcontains many exciting activities and interactive digital tools to practice listening, speaking, reading and writing.</div>
                             <div class="tamil fs-14 mw-72">
                                 "மொழிகள்" மாணவர்கள் சுய-வேக சுயாதீன கற்றவர்களாக மாறுவதற்கும் அவர்களின் மொழித் திறன்களைப் பயிற்சி செய்வதற்கும் ஏற்ற கற்றல் சூழலை மாணவர்களுக்கு வழங்குவதை நோக்கமாகக் கொண்டுள்ளது. மாணவர்கள் மற்றும் ஆசிரியர்களுக்கு மொழி கற்றலுக்கான ஆன்லைன் தளத்தை வழங்குவது இதில் அடங்கும், இதில் பல உற்சாகமான செயல்பாடுகள் மற்றும் ஊடாடும் டிஜிட்டல் கருவிகளைக் கேட்பது, பேசுவது, படித்தல் மற்றும் எழுதுவது ஆகியவற்றைப் பயிற்சி செய்ய முடியும்.
@@ -90,6 +90,77 @@
                         </div>
                     </div>
                 </div>
+               
+            </ng-template>
+
+           
+
+            <ng-template carouselSlide>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 ps-5">
+                        <img width="567px" height="567px" class="img-fluid girls-size ps-5"
+                            src="../../../../assets/home-asset/we-are-building.png" alt="girls">
+
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="map-img ps-5">
+                            <div class="english fw-700 fs-24">
+                                <div>IMPACT IN TERMS OF POTENTIAL</div>
+                              </div>
+                            <div class="tamil fw-700 fs-24">
+                                <div>ஒன்றாக ஆங்கிலம் கற்போம்</div>
+                            </div>
+                            <div class="text-blue fs-64 fw-900">We are building</div>
+                            <div class="fs-64 fw-900 text-yellow">For the children.</div>
+                            <div class="english fs-16 mw-72">consectetur adipiscing elit duis tristique sollicitudin nibh sit 
+                                amet commodo nulla facilisi nullam vehicula ipsum a arcu 
+                                cursus vitae congue</div>
+                            <div class="tamil fs-14 mw-72">
+                                "மொழிகள்" மாணவர்கள் சுய-வேக சுயாதீன கற்றவர்களாக மாறுவதற்கும் அவர்களின் மொழித் திறன்களைப் பயிற்சி செய்வதற்கும் ஏற்ற கற்றல் சூழலை மாணவர்களுக்கு வழங்குவதை நோக்கமாகக் கொண்டுள்ளது. மாணவர்கள் மற்றும் ஆசிரியர்களுக்கு மொழி கற்றலுக்கான ஆன்லைன் தளத்தை வழங்குவது இதில் அடங்கும், இதில் பல உற்சாகமான செயல்பாடுகள் மற்றும் ஊடாடும் டிஜிட்டல் கருவிகளைக் கேட்பது, பேசுவது, படித்தல் மற்றும் எழுதுவது ஆகியவற்றைப் பயிற்சி செய்ய முடியும்.
+                            </div>
+                            <!-- <div class="mt-4">
+                                <a class="anker-holder bg-blue text-white fs-14" href="#">Read More</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+                
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 ps-5">
+                        <img width="567px" height="567px" class="img-fluid girls-size ps-5"
+                            src="../../../../assets/home-asset/academic-research.png" alt="girls">
+
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="map-img ps-5">
+                            <div class="english fw-700 fs-24">
+                                <div>STATE OF THE ART TECHNOLOGY MEET</div>
+                              </div>
+                            <div class="tamil fw-700 fs-24">
+                                <div>ஒன்றாக ஆங்கிலம் கற்போம்</div>
+                            </div>
+                            <div class="text-blue fs-64 fw-900">Academic Research </div>
+                            <div class="fs-34 fw-900 text-orange">To drive language learning</div>
+                            <div class="english fs-16 mw-72">consectetur adipiscing elit duis tristique sollicitudin nibh sit 
+                                amet commodo nulla facilisi nullam vehicula ipsum a arcu 
+                                cursus vitae congue</div>
+                            <div class="tamil fs-14 mw-72">
+                                "மொழிகள்" மாணவர்கள் சுய-வேக சுயாதீன கற்றவர்களாக மாறுவதற்கும் அவர்களின் மொழித் திறன்களைப் பயிற்சி செய்வதற்கும் ஏற்ற கற்றல் சூழலை மாணவர்களுக்கு வழங்குவதை நோக்கமாகக் கொண்டுள்ளது. மாணவர்கள் மற்றும் ஆசிரியர்களுக்கு மொழி கற்றலுக்கான ஆன்லைன் தளத்தை வழங்குவது இதில் அடங்கும், இதில் பல உற்சாகமான செயல்பாடுகள் மற்றும் ஊடாடும் டிஜிட்டல் கருவிகளைக் கேட்பது, பேசுவது, படித்தல் மற்றும் எழுதுவது ஆகியவற்றைப் பயிற்சி செய்ய முடியும்.
+                            </div>
+                            <!-- <div class="mt-4">
+                                <a class="anker-holder bg-blue text-white fs-14" href="#">Read More</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+              
             </ng-template>
           </owl-carousel-o>
     </div>
@@ -100,7 +171,7 @@
         <div class="bg-grey">
             <div class="container">
                 <div class="d-flex circle-holder justify-content-between flex-wrap">
-                   <a href="#blue-section">
+                   <a (click)="scrolltoDiv('lear-for-tomorrow')">
                     <div class="blue-circle flex-center">
                         <div>
                             <div class="flex-center">
@@ -110,7 +181,7 @@
                         </div>
                     </div>
                    </a>
-                    <a routerLink="/coming" href="">
+                    <a (click)="scrolltoDiv('boost-learning')">
                         <div class="blue-circle flex-center">
                             <div>
                                 <div class="flex-center">
@@ -220,7 +291,7 @@
     </section>
 
 
-    <section>
+    <section id="boost-learning">
         <div id="blue-section" class="bg-blue ptb-120 position-relative">
             <img class="shadow" src="../../../../assets/home-asset/shadow.png" alt="img">
             <div class="follow-label2">மொழிகள்</div>
@@ -263,7 +334,7 @@
                 <div class="text-center fw-900 fs-48">Testimonials</div>
             </div>
             <div class="flex-center">
-                <div class="text-center fs-24">See what people are saying</div>
+                <div class="text-center fs-24">Our Journey So Far </div>
             </div>
             <div class="container">
                 <owl-carousel-o [options]="customOptions">
@@ -275,14 +346,106 @@
                         <div class="col-lg-8 col-sm-12 mt-5">
                             <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
                             <div class="ms-33 mw-74">
-                                <div class="test-tit text-grey">Learning a language on Language Lab is completely
-                                    free, but you can remove ads and support free education with Super. First 2
-                                    weeks on us!</div>
+                                <div class="test-tit text-grey">This two weeks program on Spoken English was a well planned one. The syllabus and contents were really innovative. The sessions were enjoyable to both the people delivered and received.
+                                    There was considerable improvement in the spoken English skill among the students after completion of this program.</div>
                                 <div class="ms-30p">
                                     <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
                                 </div>
-                                <div class="text-blue fw-900 fs-24 mt-5">Nandini Iyer</div>
-                                <div class="fs-16 text-grey">Student</div>
+                                <div class="text-blue fw-900 fs-24 mt-5">A Georgina</div>
+                                <div class="fs-16 text-grey">BT Asst</div>
+                            </div>
+
+                        </div>
+                    </div>
+                  </ng-template>
+
+                  <ng-template carouselSlide>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12">
+                            <img class="img-fluid sizetest" src="../../../../assets/home-asset/testimonial_girl1.png" alt="girls">
+                        </div>
+                        <div class="col-lg-8 col-sm-12 mt-5">
+                            <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                            <div class="ms-33 mw-74">
+                                <div class="test-tit text-grey">First of all,I would like to thank you for implementing the Spoken English Programme. 
+                                    I have nearly 40 children in my class (8th English Medium). For each English period, we have different segments. 
+                                    For each and every segment of the class, gamified activities were conducted for the children, 
+                                    regarding a particular topic of that day. Activities and games such as motivational songs ,Hangman,Hot seat,
+                                     Board Race, Interview ect. were  recommended and encouraged to be played in class. 
+                                     Each student bloomed in my English class and I could smell the fragrance of English in my classroom. 
+                                    It's a very good initiative and I really feel proud to be a part of this programme. Thank you. </div>
+                                <div class="ms-30p">
+                                    <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                                </div>
+                                <div class="text-blue fw-900 fs-24 mt-5">M.R. Maheswari</div>
+                                <div class="fs-16 text-grey">B T Asst. (English)</div>
+                            </div>
+
+                        </div>
+                    </div>
+                  </ng-template>
+
+                  <ng-template carouselSlide>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12">
+                            <img class="img-fluid sizetest" src="../../../../assets/home-asset/testimonial_girl1.png" alt="girls">
+                        </div>
+                        <div class="col-lg-8 col-sm-12 mt-5">
+                            <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                            <div class="ms-33 mw-74">
+                                <div class="test-tit text-grey">I enjoyed my Spoken English class very much.
+                                     We were made to do many activities and projects. Some of the activities 
+                                     were very interactive where I had to enact drama. 
+                                    My teacher focused on grammar and I have learnt LSRW skills in the class. 
+                                    I feel my English knowledge has improved. </div>
+                                <div class="ms-30p">
+                                    <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                                </div>
+                                <div class="text-blue fw-900 fs-24 mt-5">D. Gajalakshmi</div>
+                                <div class="fs-16 text-grey">Student, IX A</div>
+                            </div>
+
+                        </div>
+                    </div>
+                  </ng-template>
+
+                  <ng-template carouselSlide>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12">
+                            <img class="img-fluid sizetest" src="../../../../assets/home-asset/testimonial_girl1.png" alt="girls">
+                        </div>
+                        <div class="col-lg-8 col-sm-12 mt-5">
+                            <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                            <div class="ms-33 mw-74">
+                                <div class="test-tit text-grey">She has learnt to speak English very well and can understand the 
+                                    meaning of many English words now. 
+                                    She has also learnt how to read English well and is writing without making spelling mistakes. </div>
+                                <div class="ms-30p">
+                                    <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                                </div>
+                                <div class="text-blue fw-900 fs-24 mt-5">Parent of D. Gajalakshmi</div>
+                                <div class="fs-16 text-grey d-none">B T Asst. (English)</div>
+                            </div>
+
+                        </div>
+                    </div>
+                  </ng-template>
+
+                  <ng-template carouselSlide>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12">
+                            <img class="img-fluid sizetest" src="../../../../assets/home-asset/testimonial_girl1.png" alt="girls">
+                        </div>
+                        <div class="col-lg-8 col-sm-12 mt-5">
+                            <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                            <div class="ms-33 mw-74">
+                                <div class="test-tit text-grey">My daughter, Sujitha has started trying to speak in English.
+                                     She likes the activities and drama in the Spoken English period and her English writing has also improved. </div>
+                                <div class="ms-30p">
+                                    <img class="semi-colun" src="../../../../assets/home-asset/semi-colun.png" alt="semi-colun">
+                                </div>
+                                <div class="text-blue fw-900 fs-24 mt-5">Parent of Sujithra, Class IX</div>
+                                <div class="fs-16 text-grey d-none">B T Asst. (English)</div>
                             </div>
 
                         </div>
@@ -297,7 +460,7 @@
 
 
 
-    <section>
+    <section class="d-none">
         <section>
             <div class="bg-grey ptb-120">
                 <div class="text-center text-blue fs-48 fw-900">Why Choose Mozhigal </div>
@@ -360,7 +523,23 @@
             </div>
         </section>
     </section>
+    <section>
+        <div class="bg-grey ptb-120">
+            <div class="text-center text-blue fs-48 fw-900 flex-center">Partners</div>
+            <div class="flex-center fs-24"> TNSCERT Partners with</div>
+            
+            <div class="partner-logo flex-center">
+                <ul class="list-style">
+                 <li class="special"><div><img class="" src="../../../../assets/home-asset/logo-en.png" alt="SCERT logo" height="100px"></div><div>SCERT</div></li>
+                  <li><div><a href="https://ai4bharat.org/" target="_blank"name="AI4Bharat"><img height="100px" src="../../../../assets/home-asset/ai-for-bharat.jpeg" alt="AI4Bharat"></a></div><div>ai4bharat by IIT-M</div></li>
+                  <li><div><a href="#"><img height="100px" src="../../../../assets/home-asset/ekstep-removebg-preview.png" alt="ekstep Foundation"></a></div><div>The ALL by EkStep</div></li>   
+                </ul>
+                
+            </div>
+            
 
+        </div>
+    </section>
 
 
     <footer class="footer-blue"></footer>

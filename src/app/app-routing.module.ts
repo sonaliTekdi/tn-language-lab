@@ -9,7 +9,7 @@ import { WordplayComponent } from './views/pages/level/level-viewpart/wordplay/w
 import { ResearchComponent } from './views/pages/research/research.component';
 import { ComingComponent } from './views/pages/coming/coming.component';
 import { LearnTommorowComponent } from './views/pages/learn-tommorow/learn-tommorow.component';
-
+import { DownloadTelemetryComponent } from './download-telemetry/download-telemetry.component';
 
 const routes: Routes = [
   { path:'auth', loadChildren: () => import('./views/pages/auth/auth.module').then(m => m.AuthModule) },
@@ -21,6 +21,9 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent
+      },{
+        path: 'DownloadTelemetry',
+        component: DownloadTelemetryComponent
       },
       {
         path: 'level',

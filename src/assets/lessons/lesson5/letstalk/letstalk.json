@@ -26,15 +26,15 @@
           "instructions": "<ul><li>Look at the photograph and listen to an example.</li> <li>Discuss with your partner. Practice your answer.</li>  <li>When you are ready, record it by clicking 'Record'.</li>  <li>If you want to hear your recording, click on the ► button.</li>  <li>If you are happy with your recording, click on 'Save File'. &ZeroWidthSpace;</li></ul>"
         },
         {
-          "imageSrc": "assets/lessons/lesson5/wordplay/image/img2.jpg",
+          "imageSrc": "assets/lessons/lesson5/wordplay/image/Monsoon.jpeg",
           "name":"What I like to do in the monsoon",
-          "modelImageSrc": "assets/lessons/lesson5/wordplay/image/img2.jpg",
+          "modelImageSrc": "assets/lessons/lesson5/wordplay/image/Monsoon.jpeg",
           "audioSrc": "assets/lessons/lesson5/letstalk/audio/option2.mp3",
           "modelAudioSrc": "assets/lessons/lesson5/letstalk/audio/modelAns2.mp3"
         },
         {
-          "imageSrc": "assets/lessons/lesson5/wordplay/image/img3.jpg",
-          "modelImageSrc": "assets/lessons/lesson5/wordplay/image/img3.jpg",
+          "imageSrc": "assets/lessons/lesson5/wordplay/image/Winter.jpeg",
+          "modelImageSrc": "assets/lessons/lesson5/wordplay/image/Winter.jpeg",
           "name":"What I like to do in winter.",
           "audioSrc": "assets/lessons/lesson5/letstalk/audio/option3.mp3",
           "modelAudioSrc": "assets/lessons/lesson5/letstalk/audio/modelAns3.mp3"

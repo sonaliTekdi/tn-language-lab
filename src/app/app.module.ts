@@ -27,6 +27,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { ResearchComponent } from './views/pages/research/research.component';
 import { ComingComponent } from './views/pages/coming/coming.component';
 import { LearnTommorowComponent } from './views/pages/learn-tommorow/learn-tommorow.component';
+import { DownloadTelemetryComponent } from './download-telemetry/download-telemetry.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { LearnTommorowComponent } from './views/pages/learn-tommorow/learn-tommo
     HomeComponent,
     ResearchComponent,
     ComingComponent,
-    LearnTommorowComponent
+    LearnTommorowComponent,
+    DownloadTelemetryComponent
   ],
   imports: [
     BrowserModule,

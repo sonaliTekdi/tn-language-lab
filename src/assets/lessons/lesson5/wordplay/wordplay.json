@@ -4,7 +4,7 @@
   "data": [
     {
         "type": "html",
-        "content": "<blockquote><br>Look at the images.<br> Each picture shows a season.<br><br>Read the sentences.Match the names of the seasons with the sentences.<br>Drag and drop the correct word in the blank. Click 'Check Answer' when you finish.<br><br>படங்களைப் பாருங்கள். ஒவ்வொரு படமும் ஒரு பருவத்தைக் காட்டுகிறது.<br> வாக்கியங்களைப் படியுங்கள். பருவங்களின் பெயர்களை வாக்கியங்களுடன் பொருத்தவும். <br> சரியான வார்த்தையை வெற்றிடங்களில் நிரப்பவும்.  நீங்கள் முடித்ததும் 'பதிலைச் சரிபார்க்க'  கிளிக் செய்யவும். </blockquote>"
+        "content": "<blockquote><br>Look at the images.<br> Each picture shows a season.<br><br>Read the sentences.<br>Match the names of the seasons with the sentences.<br>படங்களைப் பாருங்கள். ஒவ்வொரு படமும் ஒரு பருவத்தைக் காட்டுகிறது.<br> வாக்கியங்களைப் படியுங்கள். பருவங்களின் பெயர்களை வாக்கியங்களுடன் பொருத்தவும்.</blockquote>"
     },
     {
         "type": "text",
@@ -18,8 +18,8 @@
       "type": "images",
       "content": [
         {"src": "assets/lessons/lesson5/wordplay/image/img1.jpg","name":"Picture1","width":"300","height":"300"},
-        {"src": "assets/lessons/lesson5/wordplay/image/img2.jpg","name":"Picture2","width":"300","height":"300"},
-        {"src": "assets/lessons/lesson5/wordplay/image/img3.jpg","name":"Picture3","width":"300","height":"300"}
+        {"src": "assets/lessons/lesson5/wordplay/image/Monsoon.jpeg","name":"Picture2","width":"300","height":"300"},
+        {"src": "assets/lessons/lesson5/wordplay/image/Winter.jpeg","name":"Picture3","width":"300","height":"300"}
         ]
     },
     {

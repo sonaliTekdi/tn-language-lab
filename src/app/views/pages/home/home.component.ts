@@ -81,5 +81,9 @@ if (e.data.for=="user")
   {
     this.router.navigate(["level"])
   }
+  scrolltoDiv(id)
+  {
+    document.getElementById(id).scrollIntoView()
 
+  }
 }

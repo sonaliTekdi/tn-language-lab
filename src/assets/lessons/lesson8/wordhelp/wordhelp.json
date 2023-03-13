@@ -1,62 +1,32 @@
 {
     "title": "Word Help",
     "id": "wordhelp",
-    "data": [ 
+    "data": [
         {
             "type": "wordHelp",
             "content": [
-              {
-                  "word": "appropriate",
-                  "audio": "assets/lessons/lesson8/wordhelp/audio/word-1.mp3",
-                  "example":"...click on the appropriate 'feeling' in the box.;",
-                  "meaning":"suitable",
-                  "telugu": "பொருத்தமானது"
-              },
-              {
-                  "word": "expressions",
-                  "audio": "assets/lessons/lesson8/wordhelp/audio/word-8.mp3",
-                  "example":"Use some of the expressions in the word cloud to help you.",
-                  "meaning":"groups of words used for a situation",
-                  "telugu": "வெளிப்பாடுகள்"
-              },
-              {
-                  "word": "moods",
-                  "audio": "assets/lessons/lesson8/wordhelp/audio/word-17.mp3",
-                  "example":"Are there any other moods or feelings you would like to share?",
-                  "meaning":"state of mind: sad, happy, angry etc.",
-                  "telugu": "மனநிலைகள்"
-              },
-              {
-                  "word": "noisy",
-                  "audio": "assets/lessons/lesson8/wordhelp/audio/word-21.mp3",
-                  "example":"The class is very noisy...",
-                  "meaning":"everyone talking loudly",
-                  "telugu": "சத்தம்"
-              },
-              {
-                  "word": "relatives",
-                  "audio": "assets/lessons/lesson8/wordhelp/audio/word-25.mp3",
-                  "example":"Can you help Afsana find her relatives?",
-                  "meaning":"family members",
-                  "telugu": "உறவினர்கள்"
-              },
-              {
-                  "word": "repeat",
-                  "audio": "assets/lessons/lesson8/wordhelp/audio/word-26.mp3",
-                  "example":"Repeat the dates again.",
-                  "meaning":"read again",
-                  "telugu": "மீண்டும்"
-              },
-              {
-                  "word": "take turns",
-                  "audio": "assets/lessons/lesson8/wordhelp/audio/word-30.mp3",
-                  "example":"Take turns with your partner...",
-                  "meaning":"do one after the other",
-                  "telugu": "மாறி மாறி எடுக்கவும்"
-              }
-            ]   
+                {
+                    "word": "moods",
+                    "audio": "assets/lessons/lesson8/wordhelp/audio/word-17.mp3",
+                    "example": "Are there any other moods or feelings you would like to share?",
+                    "meaning": "state of mind: sad, happy, angry etc.",
+                    "telugu": "மனநிலைகள்"
+                },
+                {
+                    "word": "expressions",
+                    "audio": "assets/lessons/lesson8/wordhelp/audio/word-8.mp3",
+                    "example": "Use some of the expressions in the word cloud to help you.",
+                    "meaning": "groups of words used for a situation",
+                    "telugu": "வெளிப்பாடுகள்"
+                },
+                {
+                    "word": "tired",
+                    "audio": "assets/lessons/lesson8/wordhelp/audio/word-1.mp3",
+                    "example": "We will be tired after cricket",
+                    "meaning": "need rest or sleep",
+                    "telugu": "சோர்வாக"
+                }
+            ]
         }
-  ]
-  }
-  
-  
+    ]
+}

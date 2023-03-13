@@ -50,7 +50,7 @@ export class LevelSidemenuComponent implements OnInit {
             items: [
               { label: 'Describing Actions: What\'s in store today?', command: () => this.levelService.getLesson("lesson1", "introduction"), id: "introduction", pid: "lesson1" },
               { label: 'Warm Up', command: () => this.levelService.getLesson("lesson1", "warmup"), id: "warmup", pid: "lesson1" },
-              // { label: 'Picture Play', command: () => this.levelService.getLesson("lesson1", "pictureplay"), id: "pictureplay", pid: "lesson1" },
+              { label: 'Picture Play', command: () => this.levelService.getLesson("lesson1", "pictureplay"), id: "pictureplay", pid: "lesson1" },
               { label: 'Open Story', command: () => this.levelService.getLesson("lesson1", "openstory"), id: "openstory", pid: "lesson1" },
               { label: 'Think and Write', command: () => this.levelService.getLesson("lesson1", "thinkandwrite"), id: "thinkandwrite", pid: "lesson1" },
               { label: 'Word Help', command: () => this.levelService.getLesson("lesson1", "wordhelp"), id: "wordhelp", pid: "lesson1" }
@@ -132,6 +132,7 @@ export class LevelSidemenuComponent implements OnInit {
               { label: 'Introduction', command: () => this.levelService.getLesson("lesson2-unit2", "introduction"), id: "introduction", pid: "lesson2-unit2" },
               { label: 'Story Time: Ramya\'s Stars', command: () => this.levelService.getLesson("lesson2-unit2", "storytime"), id: "storytime", pid: "lesson2-unit2" },
               { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson2-unit2", "letstalk"), id: "letstalk", pid: "lesson2-unit2" },
+              { label: 'Open Story', command: () => this.levelService.getLesson("lesson2-unit2", "openstory"), id: "openstory", pid: "lesson2-unit2" },
               { label: 'Think and Write', command: () => this.levelService.getLesson("lesson2-unit2", "thinkandwrite"), id: "thinkandwrite", pid: "lesson2-unit2" },
               { label: 'Word Help', command: () => this.levelService.getLesson("lesson2-unit2", "wordhelp"), id: "wordhelp", pid: "lesson2-unit2" }
             ]
