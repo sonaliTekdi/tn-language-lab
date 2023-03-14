@@ -13,12 +13,15 @@
   {
     "type": "html",
     "content": "<br><blockquote>Click  ► to listen to a situation. Then, click on the appropriate 'feeling' in the box. Drag and drop it to the correct image/audio. Click on 'Check Answer' when you finish    <br> ஒரு சூழ்நிலையைக் கேட்க ► என்பதைக் கிளிக் செய்யவும். பிறகு, பெட்டியில் உள்ள பொருத்தமான 'உணர்வை' கிளிக் செய்யவும். அதை இழுத்து சரியான படம்/ஆடியோவில் விடவும். நீங்கள் முடித்ததும் 'பதிலைச் சரிபார்க்கவும்' என்பதைக் கிளிக் செய்யவும்.</blockquote>"
-},
-
+  },
+  {
+    "type": "audio",
+    "content": "assets/lessons/lesson8/pictureplay/audio/ins1.mp3"
+  },
     {
 
       "type": "h5p",
-      "content": "https://h5p.org/h5p/embed/1356282"
+      "content": "https://h5p.org/h5p/embed/1363619"
 
     }
   ]

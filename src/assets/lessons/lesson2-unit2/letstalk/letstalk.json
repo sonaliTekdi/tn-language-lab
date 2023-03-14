@@ -30,7 +30,7 @@
         {
           "audioSrc": "assets/lessons/lesson2-unit2/letstalk/audio/audio3.mp3",
           "name": "What do stars look like?",
-          "modelAudioSrc": "assets/lessons/lesson2-unit2/letstalk/audio/modelAns1.mp3",
+          "modelAudioSrc": "assets/lessons/lesson2-unit2/letstalk/audio/modelAns2.mp3",
           "modelImageSrc":"assets/lessons/lesson2-unit2/letstalk/images/modelAns1.png",
           "modelAnsTranscript": "A: Stars look like diamonds. </br> B: Stars look like little lights in the sky.",
           "quesionTranscript":"<pre  style='word-wrap: break-word; white-space: pre-wrap;'>What do stars look like?</pre>"

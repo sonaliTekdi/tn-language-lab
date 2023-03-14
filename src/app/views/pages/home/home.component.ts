@@ -38,12 +38,12 @@ if (e.data.for=="user")
        
        $(document).ready(function(){
         $("#eng").click(function(){
-          $(".tamil").fadeOut();
-           $(".english").fadeIn();
+          localStorage.setItem('lang','en');
+          document.location.reload();
         }); 
         $("#de").click(function(){
-           $(".english").hide();
-          $(".tamil").show();
+          localStorage.setItem('lang','ta');
+          document.location.reload();
         });
         }); 
         $(document).ready(function(){
@@ -55,8 +55,8 @@ if (e.data.for=="user")
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
-    touchDrag: false,
-    pullDrag: false,
+    touchDrag: true,
+    pullDrag: true,
     dots: true,
     navSpeed: 700,
     navText: ['', ''],
@@ -75,6 +75,36 @@ if (e.data.for=="user")
       }
     },
     nav: false
+  }
+
+
+  customOptions78: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    navSpeed: 700,
+   
+    navText: ['<i class="bi bi-chevron-compact-left"></i>', '<i class="bi bi-chevron-right"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1,
+        nav: false,
+        dots: true,
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1,
+        nav: true,
+        dots: false,
+      }
+    },
+  
   }
 
   goToLevelAndRouting()

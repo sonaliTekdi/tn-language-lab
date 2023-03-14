@@ -15,10 +15,13 @@
         "type": "html",
         "content": "<br><blockquote>Listen to the audio.<br>Drag and drop the objects into the correct places to finish the picture.<br>You can work with your partner.<br>ஆடியோவைக் கேளுங்கள்.படத்தை முடிக்க சரியான இடங்களில்பொருட்களை இழுத்து விடுங்கள்.உங்கள் சக மாணவருடன்  நீங்கள் செயல்பாடுகளைச் செய்யலாம். </blockquote>"
         },
-
+        {
+          "type": "audio",
+          "content": "assets/lessons/lesson6/pictureplay/audio/1.mp3"
+          },
         {
         "type": "h5p",
-        "content": "https://h5p.org/h5p/embed/1356284"
+        "content": "https://h5p.org/h5p/embed/1363612"
         }
 
     ]

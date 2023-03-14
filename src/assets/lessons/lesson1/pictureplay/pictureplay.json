@@ -23,6 +23,26 @@
         "content": "<blockquote>ஆடியோவைக் கவனமாகக் கேளுங்கள். செயலை விவரிக்கும் ஆடியோ எண் கொண்ட பெட்டியில் படத்தை இழுத்து விடவும்.</blockquote>"
         }, 
         {
+          "type": "audio",
+          "content": "assets/lessons/lesson1/pictureplay/audio/1.mp3"
+        },
+        {
+          "type": "audio",
+          "content": "assets/lessons/lesson1/pictureplay/audio/2.mp3"
+        },
+        {
+          "type": "audio",
+          "content": "assets/lessons/lesson1/pictureplay/audio/3.mp3"
+        },
+        {
+          "type": "audio",
+          "content": "assets/lessons/lesson1/pictureplay/audio/4.mp3"
+        },
+        {
+          "type": "audio",
+          "content": "assets/lessons/lesson1/pictureplay/audio/5.mp3"
+        },
+        {
         "type": "h5p",
         "content": "https://h5p.org/h5p/embed/1363186"
         }

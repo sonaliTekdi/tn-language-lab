@@ -17,21 +17,17 @@ export class LevelService {
   mechanic :any;
   constructor(private httpService: HttpClient, public telemetryService: TelemetryService) { }
 
-  getJson(basePath,id) {
-    return this.httpService.get('../../../../assets/lessons/'+ basePath +'/'+id+'/'+id+'.json');
+  getJson(basePath,lid) {
+    return this.httpService.get('../../../../assets/lessons/'+ basePath +'/'+lid+'/'+lid+'.json');
   }
 
   getCollection(){
     return this.httpService.get('../../../../assets/jsons/collection.json');
   }
 
-  getData(id){
-
-  }
-
   playNextLesson(){
     this.currentLessonData = this.getNextLesson();
-    this.getLesson(this.currentLessonData.pid, this.currentLessonData.id);
+    this.getLesson(this.currentLessonData.pid, this.currentLessonData.lid);
   }
 
   getNextLesson(){
@@ -39,8 +35,8 @@ export class LevelService {
     let nextId = '';
     this.nextLessonData.forEach(lesson => {
       index++;
-      this.currentLessonData = this.currentLessonData ? this.currentLessonData : {id: "lesson1", pid: "speakWithMe"}
-      if(this.currentLessonData.id === lesson.id && this.currentLessonData.pid === lesson.pid){
+      this.currentLessonData = this.currentLessonData ? this.currentLessonData : {lid: "lesson1", pid: "speakWithMe"}
+      if(this.currentLessonData.lid === lesson.lid && this.currentLessonData.pid === lesson.pid){
         nextId = this.nextLessonData[index];
       }
 
@@ -49,7 +45,7 @@ export class LevelService {
   }
 
   getLesson(basePath,lessonId){
-    this.currentLessonData = {id: lessonId, pid: basePath};
+    this.currentLessonData = {lid: lessonId, pid: basePath};
     this.telemetryService.interact(lessonId);
     console.log(lessonId);
     localStorage.setItem("basePath", JSON.stringify(basePath));
@@ -61,5 +57,5 @@ export class LevelService {
     return this.lessonData;
   }
 
-  
+
 }

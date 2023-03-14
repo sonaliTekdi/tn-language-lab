@@ -111,7 +111,7 @@ body , html{
 }
 .map-img{
     background-image: url("./../../../../assets/home-asset/map.png");
-    height: 567px;
+    // height: 567px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -156,7 +156,7 @@ body , html{
 
 .follow-label {
     position: absolute;
-    top: 52.8%;
+    top: 36.8%;
     color: #662D91; 
     font-size: 32px;
     transform: rotate(90deg);
@@ -292,20 +292,13 @@ a{
     }
 }
 .iframe-container {
-    position: relative;
-    overflow: hidden;
-    width: 60%;
-    height: 70%;
-    padding: 43.25% 42px 0;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 .responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+   width: 50%;
 }
 .owl-theme .owl-dots .owl-dot span {
     width: 20px !important;
@@ -364,4 +357,27 @@ li.special{
     padding-right: 25px !important;
     margin-right: 25px!important;
     border-right: 1px solid #e9e8e8 !important;
+}
+
+@media (max-width: 659px) {
+    .responsive-iframe{
+        width: 90%;
+    }
+    .lgo-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .br1{
+        margin:10px;
+        border: 1px solid #ddd;
+    }
+    .br1 img{
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+.br1{
+    padding:10px;
+    border: 1px solid #ddd;
 }

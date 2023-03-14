@@ -650,8 +650,8 @@ th[sortable].desc:after {
   color: #fff;
   font-weight: 900;
   margin-top: -14px;
-  position: relative;
-  left: 286px;
+  position: absolute;
+  right: 26px;
 }
 .sidepanel .pi-chevron-down:before, .sidepanel .pi-angle-down:before {
   content: "\F282";
@@ -663,12 +663,50 @@ th[sortable].desc:after {
   color: #fff;
   font-weight: 900;
   margin-top: -14px;
-  position: relative;
-  left: 286px;
+  position: absolute;
+  right: 26px;
 }
 li a[aria-expanded="true"] span{
   color: #662D91 !important;
   font-weight: 700 !important;
   font-size: 14px !important;
   line-height: 17px !important;
+}
+
+.owl-carousel .owl-nav .owl-prev{
+  background: #662D91 !important;
+  height: 50px !important;
+  width: 50px;
+  border-radius: 50% !important;
+  position: absolute;
+  left: 0%;
+  top: 30%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.owl-carousel .owl-nav .owl-next{
+  background: #662D91 !important;
+  height: 50px !important;
+  width: 50px;
+  border-radius: 50% !important;
+  position: absolute;
+  right: 0%;
+  top: 30%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+@media (max-width: 991px){
+.page-wrapper {
+    margin-top: 0px !important;
+}
+}
+.p-panelmenu .p-panelmenu-header.p-highlight a {
+  position: relative !important;
+}
+.sidepanel .p-panelmenu-content .p-menuitem .p-menuitem-link{
+  position: relative !important;
 }

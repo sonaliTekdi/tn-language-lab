@@ -40,7 +40,7 @@
           "imageSrc": "",
           "name":"Where is the chair?",
           "audioSrc": "assets/lessons/lesson6/letstalk/audio/option3.mp3",
-          "modelAudioSrc": "assets/lessons/lesson6/letstalk/audio/modelAns2.mp3",
+          "modelAudioSrc": "assets/lessons/lesson6/letstalk/audio/modelAns3.mp3",
           "modelImageSrc":"assets/lessons/lesson6/letstalk/images/modelAns3.png",
           "modelAnsTranscript": "A: Can you see the chair? </br> B: Yes, I can see it. </br> A: Where is it? </br> B: It is next to the girl."
         }

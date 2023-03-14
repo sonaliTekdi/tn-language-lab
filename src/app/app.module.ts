@@ -1,6 +1,6 @@
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER, LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,6 @@ import { LayoutModule } from './views/layout/layout.module';
 import { AppComponent } from './app.component';
 // import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 
-import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { DataService } from './core/services/data.service';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -21,14 +20,62 @@ import { ComponentsModule } from './views/component/components.module';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
 import { HomeComponent } from './views/pages/home/home.component';
-import { LevelComponent } from './views/pages/level/level.component';
 import { RouterModule } from '@angular/router';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ResearchComponent } from './views/pages/research/research.component';
 import { ComingComponent } from './views/pages/coming/coming.component';
 import { LearnTommorowComponent } from './views/pages/learn-tommorow/learn-tommorow.component';
 import { DownloadTelemetryComponent } from './download-telemetry/download-telemetry.component';
+import {
+  I18NextModule,
+  ITranslationService,
+  I18NEXT_SERVICE,
+  defaultInterpolationFormat,
+} from 'angular-i18next';
 
+import en from "../locales/en/translation.json"
+import ta from "../locales/ta/translation.json"
+
+export function appInit(i18next: ITranslationService) {
+  let lang = localStorage.getItem('lang');
+  const data = i18next.init({
+    fallbackLng: lang ? lang : "en" ,
+    debug: true,
+    returnEmptyString: false,
+    resources: {
+      en: {
+        translation: en
+      },
+      ta:{
+        translation: ta
+      }
+    },
+    ns: ['translation'],
+    defaultNS: 'translation',
+    interpolation: {
+      format: I18NextModule.interpolationFormat(defaultInterpolationFormat),
+    },
+  });
+  return () => data;
+}
+
+export function localeIdFactory(i18next: ITranslationService) {
+  return i18next.language;
+}
+
+export const I18N_PROVIDERS = [
+  {
+    provide: APP_INITIALIZER,
+    useFactory: appInit,
+    deps: [I18NEXT_SERVICE],
+    multi: true,
+  },
+  {
+    provide: LOCALE_ID,
+    deps: [I18NEXT_SERVICE],
+    useFactory: localeIdFactory,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -38,7 +85,7 @@ import { DownloadTelemetryComponent } from './download-telemetry/download-teleme
     ResearchComponent,
     ComingComponent,
     LearnTommorowComponent,
-    DownloadTelemetryComponent
+    DownloadTelemetryComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,26 +96,26 @@ import { DownloadTelemetryComponent } from './download-telemetry/download-teleme
     RouterModule,
     CarouselModule,
     HttpClientModule,
-    ReactiveFormsModule     ,
+    ReactiveFormsModule,
     ComponentsModule,
     FormsModule,
     NgHttpLoaderModule.forRoot(),
+    I18NextModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,
-      positionClass: "toast-top-right",
+      positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
     ReactiveFormsModule,
     FormsModule,
-
   ],
 
   providers: [
     // AuthGuard,
-
+    I18N_PROVIDERS,
     DataService,
-    ToastrService,AlertService,
-
+    ToastrService,
+    AlertService,
 
     // {
     //   provide: HIGHLIGHT_OPTIONS, // https://www.npmjs.com/package/ngx-highlightjs
@@ -82,6 +129,6 @@ import { DownloadTelemetryComponent } from './download-telemetry/download-teleme
     //   }
     // }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
