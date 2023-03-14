@@ -18,5 +18,5 @@ phases:
   post_build:
      commands:
       - aws s3 sync ./dist s3://${S3_BUCKET} --acl 'public-read' --delete
-      # - aws cloudfront create-invalidation --distribution-id=E37KW0JJL2N1HC --paths '/*'
+      - aws cloudfront create-invalidation --distribution-id=E2JR2ALQK7ONFY --paths '/*'
       - echo Build completed on `date`
