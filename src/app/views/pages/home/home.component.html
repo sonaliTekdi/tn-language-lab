@@ -29,7 +29,7 @@
                      <div class="navbar-nav ms-auto">
                         <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="">{{ 'HOME_HOME' | i18next }}</a>
                         <a class="nav-link active me-4 fs-14 fw-700" aria-current="page"  routerLink="/level">{{ 'HOME_LETS_LEARN' | i18next }}</a>
-                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="">{{ 'HOME_LETS_PLAY' | i18next }}</a>
+                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" (click)="scrolltoDiv('boost-learning')">{{ 'HOME_LETS_PLAY' | i18next }}</a>
                         <a class="nav-link me-4 fs-14 fw-700 parent"  href="">
                            {{ 'HOME_ABOUT' | i18next }}
                            <ul class="sub-menu">
@@ -65,7 +65,7 @@
                         <div class="col-lg-8 col-sm-12">
                            <div class="map-img ps-5">
                               <div class="english fw-700 fs-24">
-                                 <div>{{ 'HOME_LETS_LEARN_ENGLISH_TOGETHER' | i18next }}</div>
+                                 <!-- <div>{{ 'HOME_LETS_LEARN_ENGLISH_TOGETHER' | i18next }}</div> -->
                               </div>
                               <div class="text-blue fs-64 fw-900">{{ "HOME_SPEAK_ENGLISH" | i18next }}</div>
                               <div class="fs-64 fw-900 text-pink">{{ "HOME_WITH_CONFIDENCE" | i18next }}</div>
@@ -89,7 +89,7 @@
                                  <div>{{ "HOME_IMPACT_IN_TERMS_OF_POTENTIAL" | i18next }}</div>
                               </div>
                               <div class="text-blue fs-64 fw-900">{{ "HOME_WE_ARE_BUILDING" | i18next }}</div>
-                              <div class="fs-64 fw-900 text-yellow">{{ "HOME_FOR_THE_CHILDREN" | i18next }}.</div>
+                              <!-- <div class="fs-64 fw-900 text-yellow">{{ "HOME_FOR_THE_CHILDREN" | i18next }}.</div> -->
                               <div class="english fs-16 mw-72">{{ "HOME_BANNER_SECOUND_DESCRIPTION" | i18next}}</div>
                               <!-- <div class="mt-4">
                                  <a class="anker-holder bg-blue text-white fs-14" href="#">Read More</a>
@@ -110,7 +110,7 @@
                                  <div>{{ "HOME_STATE_OF_THE_ART_TECHNOLOGY_MEET" | i18next }}</div>
                               </div>
                               <div class="text-blue fs-64 fw-900">{{ "HOME_ACADEMIC_RESEARCH" | i18next }}</div>
-                              <div class="fs-34 fw-900 text-orange">{{ "HOME_TO_DRIVE_LANGUAGE_LEARNING" | i18next }}</div>
+                              <!-- <div class="fs-34 fw-900 text-orange">{{ "HOME_TO_DRIVE_LANGUAGE_LEARNING" | i18next }}</div> -->
                               <div class="english fs-16 mw-72">{{ "HOME_BANNER_THIRD_DESCRIPTION" | i18next }}</div>
                               <!-- <div class="mt-4">
                                  <a class="anker-holder bg-blue text-white fs-14" href="#">Read More</a>
@@ -127,7 +127,7 @@
          <div class="bg-grey">
             <div class="container">
                <div class="d-flex circle-holder justify-content-between flex-wrap">
-                  <a (click)="scrolltoDiv('lear-for-tomorrow')">
+                  <a routerLink="/level">
                      <div class="blue-circle flex-center">
                         <div>
                            <div class="flex-center">
@@ -190,10 +190,10 @@
                   <div class="col-lg-5 col-sm-12">
                      <div class="text-blue fs-64 fw-900">{{ "HOME_HOW_TO_LEARN_FOR_TOMORROW" | i18next }}</div>
                      <div class="fs-16 mt-3">
-                        In today’s interconnected world, it is essential for the school students to build the skills today to engage as confident global citizens of tomorrow. To achieve this, they need to have not just awareness of the world but strong communication skills to voice their thoughts. Reading and speaking a language with comfort are critical for sharing one’s thoughts and engaging with the wider world.    
+                        In today’s interconnected world, it is essential for the school students to build the skills today to engage as confident global citizens of tomorrow. To achieve this, they need to have not just awareness of the world but strong communication skills to voice their thoughts. Reading and speaking a language with comfort are critical for sharing one’s thoughts and engaging with the wider world.
                      </div>
                      <div class="fs-16 mt-3">
-                        The government of Tamilnadu envisions to leverage technological advances including leveraging Artificial Intelligence and Machine Learning capabilities to develop tools and processes to enable effective listening, speaking, and reading in Tamil and English.    
+                        The government of Tamilnadu envisions to leverage technological advances including leveraging Artificial Intelligence and Machine Learning capabilities to develop tools and processes to enable effective listening, speaking, and reading in Tamil and English.
                      </div>
                      <div class="mt-4"><a routerLink="/learn-tommorow" href="#" class="fs-14 fw-700 text-pink header-btn">{{ "HOME_KNOW_MORE" | i18next }}</a></div>
                   </div>
@@ -209,7 +209,7 @@
          <div class="item pb-120 ">
             <div class="row">
                <div class="col-lg-7 col-sm-12">
-                  <img width="832px" height="486.99px" class="img-fluid" src="../../../../assets/home-page/asset/girls-carausel.png" alt="girls">
+                  <img width="832px" height="486.99px" class="img-fluid" src="../../../../assets/home-asset/girls-carausel.png" alt="girls">
                </div>
                <div class="col-lg-4 ps-5 col-sm-12">
                         <div class="text-blue fs-34 fw-700">{{ "HOME_BREAK_THE_BARRIERS" | i18next }}</div>
@@ -428,21 +428,20 @@
             <div class="text-center text-blue fs-48 fw-900 flex-center">{{ "HOME_PARTNERS" | i18next }}</div>
             <div class="flex-center fs-24">{{ "HOME_TNSCERT_PARTNERS_WITH" | i18next }}</div>
             <div class="partner-logo flex-center">
-                <div class="d-flex justify-content-around align-content-center lgo-header flex-wrap gap-50">
+                <div class="d-flex justify-content-around align-content-center mt-4 lgo-header flex-wrap gap-50">
                     <div class="br1">
-                        <div><img class="" src="../../../../assets/home-asset/logo-en.png" alt="SCERT logo" height="150px"></div>
+                        <div><img class="" src="../../../../assets/home-asset/logo-en.png" alt="SCERT logo" height="135px"></div>
                     </div>
                     <div class="br1">
-                        <div><a href="https://ai4bharat.org/" target="_blank"name="AI4Bharat"><img height="150px" src="../../../../assets/home-asset/ai-for-bharat.jpeg" alt="AI4Bharat"></a></div>
+                        <div><a href="https://ai4bharat.org/" target="_blank"name="AI4Bharat"><img height="135px" src="../../../../assets/home-asset/ai-for-bharat.jpeg" alt="AI4Bharat"></a></div>
                     </div>
                     <div class="br1">
-                        <div><a href="#"><img height="150px" src="../../../../assets/home-asset/ekstep-removebg-preview.png" alt="ekstep Foundation"></a></div>
-                       
+                        <div><a href="#"><img height="135px" src="../../../../assets/home-asset/ekstep-removebg-preview.png" alt="ekstep Foundation"></a></div>
                     </div>
                     <div class="br1">
-                        <div class="d-flex align-content-center mt-4">
-                            <div><a href="#"><img  height="75px"src="../../../../assets/home-asset/connected.png" alt="ekstep Foundation"></a></div>
-                            <div><a href="#"><img height="105px"  src="../../../../assets/home-asset/tiss-logo.png" alt="ekstep Foundation"></a></div>
+                        <div class="d-flex align-content-center ">
+                            <div class="mt-4"><a href="#"><img  height="75px"src="../../../../assets/home-asset/connected.png" alt="ekstep Foundation"></a></div>
+                            <div><a href="#"><img height="135px"  src="../../../../assets/home-asset/tiss-logo.png" alt="ekstep Foundation"></a></div>
                         </div>
                     </div>
                 </div>
