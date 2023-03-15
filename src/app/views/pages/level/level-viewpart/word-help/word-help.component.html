@@ -1,0 +1,38 @@
+<div class="node-content-div py-3">         
+    <span itemprop="description" class="content_val">
+      
+    <table border="1px" cellpadding="10" cellspacing="10" style="width: 100%;">
+  
+      <thead>
+        <tr>
+          <td><strong>Words</strong></td>
+          <td style="text-align: center;"><strong>Pronunciation</strong>&nbsp; &nbsp;&nbsp;</td>
+          <td><strong>Usage</strong></td>
+          <td><strong>Meaning in Context</strong></td>
+          <td><strong>Tamil meaning</strong></td>
+        </tr>
+            
+      </thead>
+      <tbody>
+        <tr *ngFor="let dictionary of data">
+          <td>{{dictionary.word}}</td>
+          <td><script>
+            function togglerTranscript(a){
+                  $(a).next(".transcript-data").toggleClass("hide");
+              };
+            </script>
+              <audio controls="" id="audio-player-5a5daedf69602a0149d6d5ab" width="100px"><source src="{{dictionary.audio}}" type="audio/mp3"></audio>
+             </td>
+         
+          <td>{{dictionary.example}}</td>
+          <td>{{dictionary.meaning}}</td>
+          <td>{{dictionary.telugu}}</td>
+        </tr>
+    
+    </tbody>
+  </table>
+  <br>
+  &nbsp;</span>
+    
+    
+  </div>

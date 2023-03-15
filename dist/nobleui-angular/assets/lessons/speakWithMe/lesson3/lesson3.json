@@ -1,0 +1,10 @@
+{
+  "title": "Learn With Friends",
+  "id": "lesson3",
+  "data": [
+    {
+      "type": "iframe",
+      "content": "/assets/games/index.html"
+    }
+  ]
+}

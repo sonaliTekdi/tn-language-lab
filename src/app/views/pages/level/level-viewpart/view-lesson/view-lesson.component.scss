@@ -1,0 +1,12 @@
+
+.opt-selected {
+  border: 4px solid blue; cursor: pointer;padding: 16px;
+}
+
+.opt-unselected {
+  border: 3px solid black; cursor: pointer;padding: 16px;
+}
+.scrollbar{
+    overflow-y: scroll;
+    height: 100px;
+}

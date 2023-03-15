@@ -1,0 +1,35 @@
+.rounded{
+    border-radius: 20px!important;
+}
+
+
+.draggable {
+    display: inline-block;
+    background: #397ae7;
+    color: #fff;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+h3{
+    line-height: 1.7;
+}
+.input-bx{
+    display: inline-block;
+    min-width: 70px;
+    min-height: 30px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-bottom: -5px;
+}
+.droped_cls{
+    background: rgba(57, 122, 231, 0.5);
+    padding: 0px 10px 4px;
+    display: inline-block;
+}
+.alert{
+    border-radius: 10px;
+}
