@@ -1,19 +1,21 @@
 .content {
   position: absolute !important;
   margin: 3%;
-//   margin-top: 15%;
-bottom:2%
+  bottom: 0.1%;
+  width: auto;
+  margin-bottom: 3px!important;
 }
 
 .footer {
   display: flex;
   justify-content: right;
-//   align-items: center;
+  //   align-items: center;
 }
 
-h5 {
+p {
   color: white;
   line-height: 23px;
+  font-size:10px!important
 }
 
 a {
