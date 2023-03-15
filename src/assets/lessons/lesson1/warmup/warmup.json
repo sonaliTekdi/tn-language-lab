@@ -20,12 +20,12 @@
     },
     {
         "type": "transcript",
-        "content": "<pre style='word-wrap: break-word; white-space: pre-wrap;'>The girls are going to school.<br>The children are talking in class.<br>A boy is drawing.<br>A girl is writing in her notebook.<br>A woman is making rotis.<br>The children are eating rotis.<br>A boy is drinking water.<br></pre>"
+        "content": "<pre style='word-wrap: break-word; white-space: pre-wrap;'>The girls are going to school.<br>The children are talking in class.<br>A boy is drawing.<br>A girl is writing in her notebook.<br>The children are eating.<br>A boy is drinking water.<br></pre>"
     },
     {
         "type": "html",
         "content": "<br><blockquote><h4>Watch again by clicking&nbsp;► button.&nbsp;</h4>Click 'Picture Play' to go to the next activity.<br>► பொத்தானைக் கிளிக் செய்வதன் மூலம் மீண்டும் பார்க்கவும். அடுத்த செயல்பாட்டிற்குச் செல்ல 'படம் விளையாடு' என்பதைக் கிளிக் செய்யவும்.</blockquote>"
-    }      
+    }
 ]
 }
 
