@@ -26,7 +26,7 @@ export class TelemetryService {
       const telemetryConfig: any =  {
         config: {
           pdata: context.pdata,
-          env: 'contentplayer',
+          env: 'languagelab.portal',
           channel: context.channel,
           did: context.did,
           authtoken: context.authToken || '',
@@ -34,13 +34,12 @@ export class TelemetryService {
           sid: context.sid,
           batchsize: 1,
           mode: context.mode,
-          host: context.host || '',
-          apislug: '/telemetry/',
-          endpoint: context.endpoint || '/data/v3/telemetry',
+          host: context.host,
+          apislug: context.apislug,
+          endpoint: context.endpoint,
           tags: context.tags,
           cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
-          { id: this.playSessionId, type: 'PlaySession' },
-          {id: '2.0' , type: 'PlayerVersion'}]
+          { id: this.playSessionId, type: 'PlaySession' }]
         },
         userOrgDetails: {}
       };
@@ -59,11 +58,11 @@ export class TelemetryService {
   }
 
 
-  public start(duration) {
+  public start(duration, pageid) {
     CsTelemetryModule.instance.telemetryService.raiseStartTelemetry(
       {
         options: this.getEventOptions(),
-        edata: { type: 'content', mode: 'play', pageid: '', duration: Number((duration / 1e3).toFixed(2)) }
+        edata: { type: 'content', mode: 'play', pageid: pageid, duration: Number((duration / 1e3).toFixed(2)) }
       }
     );
 
@@ -74,19 +73,18 @@ export class TelemetryService {
       edata: {
         type: 'content',
         mode: 'play',
-        pageid: 'sunbird-player-Endpage',
-        summary: [],
-        duration: '000'
+        pageid: 'language-lab',
+        summary: []
       },
       options: this.getEventOptions()
     });
 
   }
 
-  public interact(id) {
+  public interact(id, currentPage) {
     CsTelemetryModule.instance.telemetryService.raiseInteractTelemetry({
       options: this.getEventOptions(),
-      edata: { type: 'TOUCH', subtype: '', id, pageid: id }
+      edata: { type: 'TOUCH', subtype: '', id, pageid: currentPage + '' }
     });
   }
 
@@ -105,10 +103,10 @@ export class TelemetryService {
     });
   }
 
-  public impression(currentPage) {
+  public impression(currentPage, uri) {
     CsTelemetryModule.instance.telemetryService.raiseImpressionTelemetry({
       options: this.getEventOptions(),
-      edata: { type: 'workflow', subtype: '', pageid: currentPage + '', uri: '' }
+      edata: { type: 'workflow', subtype: '', pageid: currentPage + '', uri: uri}
     });
   }
 
@@ -129,12 +127,11 @@ export class TelemetryService {
       context: {
         channel: this.context.channel,
         pdata: this.context.pdata,
-        env: 'contentplayer',
+        env: 'languagelab.portal',
         sid: this.context.sid,
         uid: this.context.uid,
         cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
-        { id: this.playSessionId, type: 'PlaySession' },
-        {id: '2.0' , type: 'PlayerVersion'}],
+        { id: this.playSessionId, type: 'PlaySession' }],
         rollup: this.context.contextRollup || {}
       }
     });

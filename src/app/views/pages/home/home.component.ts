@@ -2,6 +2,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import $ from 'jquery'
+import { LogsService } from 'src/app/logs.service';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,7 @@ if (e.data.for=="user")
     this.router.navigate(["level"])
   }
 }
-  constructor(private router:Router) { }
+  constructor(private router:Router, public logsService: LogsService) { }
 
   ngOnInit(): void {
     $('.moreless-button').click(function() {
