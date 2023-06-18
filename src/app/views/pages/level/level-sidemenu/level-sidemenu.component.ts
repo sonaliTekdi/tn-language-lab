@@ -279,6 +279,7 @@ export class LevelSidemenuComponent implements OnInit {
           { command: () => this.telemetryService.interact("lesson-node", 'level'), routerLink: ['/level'], queryParams: {lesson: 'help', topic: "word_help"}, label: 'Glossary: Word Help', lid: "word_help", pid: "help"},
           { command: () => this.telemetryService.interact("lesson-node", 'level'), routerLink: ['/level'], queryParams: {lesson: 'help', topic: "explore_and_learn"}, label: 'Explore and Learn', lid: "explore_and_learn", pid: "help"},
           { command: () => this.telemetryService.interact("lesson-node", 'level'), routerLink: ['/level'], queryParams: {lesson: 'help', topic: "learn_with_friends"}, label: 'Learn with Friends', lid: "learn_with_friends", pid: "help"},
+          { command: () => this.telemetryService.interact("lesson-node", 'level'), routerLink: ['/level'], queryParams: {lesson: 'help', topic: "ht_lab_settings"}, label: 'HT Lab settings', lid: "ht_lab_settings", pid: "help"},
         ]
       }
     ]
