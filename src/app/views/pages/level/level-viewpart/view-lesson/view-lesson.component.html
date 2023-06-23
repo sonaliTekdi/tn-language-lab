@@ -14,16 +14,19 @@
         Your browser does not support the audio element.
       </audio>
     </section>
-
     <section *ngIf="item.type == 'video'">
       <video class="w-50 mx-auto mt-4 rounded" controls>
         <source [src]="item.content" type="video/mp4">
+        <track id="track" [src]="item.subtitles" kind="subtitles" srclang="en" label="English" default />
         Your browser does not support the video element.
+
       </video>
     </section>
 
     <section *ngIf="item.type == 'h5p'" [innerHTML]="getH5pHtml(item.content)| safe: 'html'">
     </section>
+    <section *ngIf="item.type == 'googleInput'"><div style="text-align: center;"><a style="font-size: large;" target="_blank" href="https://www.google.com/intl/ta/inputtools/try/ ">Click here to type in Tamil - தமிழில் தட்டச்சு செய்ய இங்கே கிளிக் செய்யவும்</a>
+    </div></section>
 
     <section *ngIf="item.type == 'iframe'">
       <iframe allow="microphone" scrolling="no" width=100%; height="600;" allow="microphone" [src]="item.content | safe: 'resourceUrl'"></iframe>

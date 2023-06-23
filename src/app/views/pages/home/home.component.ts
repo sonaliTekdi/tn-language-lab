@@ -2,6 +2,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import $ from 'jquery'
+import { LogsService } from 'src/app/logs.service';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +26,7 @@ if (e.data.for=="user")
     this.router.navigate(["level"])
   }
 }
-  constructor(private router:Router) { }
+  constructor(private router:Router, public logsService: LogsService, public authService: AuthService) { }
 
   ngOnInit(): void {
     $('.moreless-button').click(function() {
@@ -35,17 +37,17 @@ if (e.data.for=="user")
       $(this).text("Read more")
       }
        });
-       
+
        $(document).ready(function(){
         $("#eng").click(function(){
           localStorage.setItem('lang','en');
           document.location.reload();
-        }); 
+        });
         $("#de").click(function(){
           localStorage.setItem('lang','ta');
           document.location.reload();
         });
-        }); 
+        });
         $(document).ready(function(){
           $("#flip").click(function(){
             $("#panel").slideToggle("fast");
@@ -84,7 +86,7 @@ if (e.data.for=="user")
     touchDrag: true,
     pullDrag: true,
     navSpeed: 700,
-   
+
     navText: ['<i class="bi bi-chevron-compact-left"></i>', '<i class="bi bi-chevron-right"></i>'],
     responsive: {
       0: {
@@ -104,7 +106,7 @@ if (e.data.for=="user")
         dots: false,
       }
     },
-  
+
   }
 
   goToLevelAndRouting()
@@ -114,6 +116,5 @@ if (e.data.for=="user")
   scrolltoDiv(id)
   {
     document.getElementById(id).scrollIntoView()
-
   }
 }
