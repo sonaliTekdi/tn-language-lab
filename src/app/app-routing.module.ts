@@ -18,17 +18,18 @@ const routes: Routes = [
   {
     path: '',
     component: BaseComponent,
-    canActivate: [AuthGuard],
     children: [
       {
         path: 'home',
         component: HomeComponent
       },{
         path: 'DownloadTelemetry',
+        canActivate: [AuthGuard],
         component: DownloadTelemetryComponent
       },
       {
         path: 'level',
+        canActivate: [AuthGuard],
         loadChildren: () => import('./views/pages/level/level.module').then(m => m.LevelModule)
       },
       {
