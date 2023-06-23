@@ -118,4 +118,8 @@ if (e.data.for=="user")
   {
     document.getElementById(id).scrollIntoView()
   }
+
+  logOut(){
+    localStorage.removeItem('token');
+  }
 }
