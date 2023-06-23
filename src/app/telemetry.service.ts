@@ -32,7 +32,7 @@ export class TelemetryService {
           authtoken: context.authToken || '',
           uid: context.uid || '',
           sid: context.sid,
-          batchsize: 1,
+          batchsize: 10,
           mode: context.mode,
           host: context.host,
           apislug: context.apislug,

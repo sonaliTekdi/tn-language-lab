@@ -46,7 +46,6 @@ export class AppComponent implements OnInit {
         uid: users?.emis_username || 'anonymous', // Current logged in user id
         pdata: environment.telemetryContext.pdata,
         channel: environment.telemetryContext.channel,
-        sid: users?.udise_code,
         tags: [ // Defines the tags data
           {"emis_usertype": users?.emis_usertype},
           {"udise_code": users?.udise_code},
