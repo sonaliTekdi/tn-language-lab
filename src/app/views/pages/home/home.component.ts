@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-
+  isUserActive = false;
 
 @HostListener('window:message',['$event'])
 onMessage(e)
@@ -29,6 +29,7 @@ if (e.data.for=="user")
   constructor(private router:Router, public logsService: LogsService, public authService: AuthService) { }
 
   ngOnInit(): void {
+    this.isUserActive = !!localStorage.getItem('token');
     $('.moreless-button').click(function() {
       $('.moretext').slideToggle();
       if ($('.moreless-button').text() == "Read more") {
