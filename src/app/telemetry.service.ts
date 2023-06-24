@@ -14,6 +14,7 @@ export class TelemetryService {
 
   constructor(private utilService: UtilService) {
     this.contentSessionId = this.utilService.uniqueId();
+    localStorage.setItem('contentSessionId', this.contentSessionId);
   }
 
   public initialize({ context, config, metadata }) {
