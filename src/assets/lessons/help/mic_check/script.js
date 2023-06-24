@@ -23,7 +23,7 @@ function handleError(e){
 
 document.querySelector("#micTest").addEventListener('click', function(){
   if ( window.stream ) {
-    this.innerText = "Test Microphone";
+    this.innerText = "Test Microphone and Speaker";
   } else {
     this.innerText = "Stop Test";
   }
