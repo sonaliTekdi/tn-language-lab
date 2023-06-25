@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
    }
 
   ngOnInit() {
-    console.log(environment)
+    // console.log(environment)
     let users = this.userService.getUser();
     this.telemetryService.initialize({
       context: {
@@ -65,7 +65,6 @@ export class AppComponent implements OnInit {
       }
     });
     //
-    const duration = new Date().getTime();
-    this.telemetryService.start(duration, this._router.url);
+    this.telemetryService.start(this._router.url);
   }
 }

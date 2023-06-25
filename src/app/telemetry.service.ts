@@ -11,6 +11,7 @@ export class TelemetryService {
   private telemetryObject: any;
   private context;
   public config;
+  startDuration: number;
 
   constructor(private utilService: UtilService) {
     this.contentSessionId = this.utilService.uniqueId();
@@ -59,11 +60,12 @@ export class TelemetryService {
   }
 
 
-  public start(duration, pageid) {
+  public start(pageid) {
+    this.startDuration = new Date().getTime();
     CsTelemetryModule.instance.telemetryService.raiseStartTelemetry(
       {
         options: this.getEventOptions(),
-        edata: { type: 'content', mode: 'play', pageid: pageid, duration: Number((duration / 1e3).toFixed(2)) }
+        edata: { type: 'content', mode: 'play', pageid: pageid }
       }
     );
 
@@ -75,11 +77,16 @@ export class TelemetryService {
         type: 'content',
         mode: 'play',
         pageid: 'language-lab',
-        summary: []
+        summary: [],
+        duration: new Date().getTime() - this.startDuration
       },
       options: this.getEventOptions()
     });
 
+  }
+
+  public response(data) {
+    CsTelemetryModule.instance.telemetryService.raiseResponseTelemetry(data, this.getEventOptions());
   }
 
   public interact(id, currentPage) {

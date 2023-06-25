@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://emislogin.tnschools.gov.in/emis_login/api/ATSLlogin'; // Replace with your API endpoint
+  private apiUrl = environment.loginApiUrl;
 
   constructor(private router: Router, private http: HttpClient) { }
 

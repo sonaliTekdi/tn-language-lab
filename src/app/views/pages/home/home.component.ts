@@ -120,6 +120,6 @@ if (e.data.for=="user")
   }
 
   logOut(){
-    localStorage.removeItem('token');
+    this.authService.logout()
   }
 }
