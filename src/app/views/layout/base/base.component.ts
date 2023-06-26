@@ -90,7 +90,7 @@ export class BaseComponent implements OnInit {
     // localStorage.removeItem(path);
     // this.authService.logOut();
     localStorage.clear();
-    this.router.navigate(['/auth/login']);
+    this.router.navigate(['/login']);
   }
 
   displayModalbutton(){
