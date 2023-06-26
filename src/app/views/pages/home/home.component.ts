@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import $ from 'jquery'
 import { LogsService } from 'src/app/logs.service';
 import { AuthService } from 'src/app/auth.service';
+import { TelemetryService } from 'src/app/telemetry.service';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,7 @@ if (e.data.for=="user")
     this.router.navigate(["level"])
   }
 }
-  constructor(private router:Router, public logsService: LogsService, public authService: AuthService) { }
+  constructor(public telemetryService: TelemetryService, private router:Router, public logsService: LogsService, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.isUserActive = !!localStorage.getItem('token');
