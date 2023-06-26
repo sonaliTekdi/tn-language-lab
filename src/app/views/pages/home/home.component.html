@@ -45,7 +45,7 @@
                         <a class="nav-link fs-14 fw-700" id="eng">Eng &nbsp; /</a>
                         <a class="nav-link me-4 fs-14 fw-700" id="de">தமிழ்</a>
                         <a routerLink="/login" *ngIf="!isUserActive" class="nav-link fs-14 fw-700 text-pink header-btn" href="">{{ 'HOME_SIGN_IN' | i18next }}</a>
-                        <a *ngIf="isUserActive" (click)="logOut()" class="nav-link fs-14 fw-700 text-pink header-btn" href="">{{ 'HOME_SIGN_OUT' | i18next }}</a>
+                        <a *ngIf="isUserActive" (click)="telemetryService.interact('logout', 'home'); logOut()" class="nav-link fs-14 fw-700 text-pink header-btn" href="">{{ 'HOME_SIGN_OUT' | i18next }}</a>
                      </div>
                   </div>
                </div>
