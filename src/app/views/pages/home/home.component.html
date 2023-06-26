@@ -27,7 +27,7 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
                      <div class="navbar-nav ms-auto">
-                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="">{{ 'HOME_HOME' | i18next }}</a>
+                        <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" href="/home">{{ 'HOME_HOME' | i18next }}</a>
                         <a class="nav-link active me-4 fs-14 fw-700" aria-current="page"  routerLink="/level">{{ 'HOME_LETS_LEARN' | i18next }}</a>
                         <a class="nav-link active me-4 fs-14 fw-700" aria-current="page" (click)="scrolltoDiv('boost-learning')">{{ 'HOME_LETS_PLAY' | i18next }}</a>
                         <a class="nav-link me-4 fs-14 fw-700 parent"  href="">
@@ -44,7 +44,8 @@
                         <a routerLink="/level" class="nav-link me-4 fs-14 fw-700 d-none"  href="">{{ 'HOME_LANGUAGE_LAB' | i18next }}</a>
                         <a class="nav-link fs-14 fw-700" id="eng">Eng &nbsp; /</a>
                         <a class="nav-link me-4 fs-14 fw-700" id="de">தமிழ்</a>
-                        <a routerLink="/level" class="nav-link fs-14 fw-700 text-pink header-btn" href="">{{ 'HOME_SIGN_IN' | i18next }}</a>
+                        <a routerLink="/login" *ngIf="!isUserActive" class="nav-link fs-14 fw-700 text-pink header-btn" href="">{{ 'HOME_SIGN_IN' | i18next }}</a>
+                        <a *ngIf="isUserActive" (click)="telemetryService.interact('logout', 'home'); logOut()" class="nav-link fs-14 fw-700 text-pink header-btn" href="">{{ 'HOME_SIGN_OUT' | i18next }}</a>
                      </div>
                   </div>
                </div>

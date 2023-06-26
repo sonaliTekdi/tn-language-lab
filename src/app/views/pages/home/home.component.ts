@@ -3,6 +3,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import $ from 'jquery'
 import { LogsService } from 'src/app/logs.service';
+import { AuthService } from 'src/app/auth.service';
+import { TelemetryService } from 'src/app/telemetry.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,7 @@ import { LogsService } from 'src/app/logs.service';
 })
 export class HomeComponent implements OnInit {
 
-
+  isUserActive = false;
 
 @HostListener('window:message',['$event'])
 onMessage(e)
@@ -25,9 +27,10 @@ if (e.data.for=="user")
     this.router.navigate(["level"])
   }
 }
-  constructor(private router:Router, public logsService: LogsService) { }
+  constructor(public telemetryService: TelemetryService, private router:Router, public logsService: LogsService, public authService: AuthService) { }
 
   ngOnInit(): void {
+    this.isUserActive = !!localStorage.getItem('token');
     $('.moreless-button').click(function() {
       $('.moretext').slideToggle();
       if ($('.moreless-button').text() == "Read more") {
@@ -36,17 +39,17 @@ if (e.data.for=="user")
       $(this).text("Read more")
       }
        });
-       
+
        $(document).ready(function(){
         $("#eng").click(function(){
           localStorage.setItem('lang','en');
           document.location.reload();
-        }); 
+        });
         $("#de").click(function(){
           localStorage.setItem('lang','ta');
           document.location.reload();
         });
-        }); 
+        });
         $(document).ready(function(){
           $("#flip").click(function(){
             $("#panel").slideToggle("fast");
@@ -85,7 +88,7 @@ if (e.data.for=="user")
     touchDrag: true,
     pullDrag: true,
     navSpeed: 700,
-   
+
     navText: ['<i class="bi bi-chevron-compact-left"></i>', '<i class="bi bi-chevron-right"></i>'],
     responsive: {
       0: {
@@ -105,7 +108,7 @@ if (e.data.for=="user")
         dots: false,
       }
     },
-  
+
   }
 
   goToLevelAndRouting()
@@ -115,6 +118,9 @@ if (e.data.for=="user")
   scrolltoDiv(id)
   {
     document.getElementById(id).scrollIntoView()
+  }
 
+  logOut(){
+    this.authService.logout()
   }
 }
