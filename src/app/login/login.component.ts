@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { TelemetryService } from '../telemetry.service';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -22,11 +23,14 @@ export class LoginComponent {
     this.telemetryService.interact("Submit", 'Login')
     this.authService.login(this.email, this.password).subscribe(
       (data) => {
-        this.telemetryService.response({"dataStatus": data.dataStatus, "status": data.status});
         if (data.dataStatus)
         {
+          this.telemetryService.response(jwt_decode(data?.records?.token));
           localStorage.setItem('token', data?.records?.token);
         }else{
+          this.telemetryService.error(data?.message, {
+            err: data?.message, errtype: data?.status
+          });
           alert(data.message)
         }
 

@@ -131,7 +131,7 @@ export class TelemetryService {
 
   private getEventOptions() {
     return ({
-      object: this.telemetryObject,
+      object: {},
       context: {
         channel: this.context.channel,
         pdata: this.context.pdata,
