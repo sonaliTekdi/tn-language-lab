@@ -33,7 +33,7 @@ export class TelemetryService {
           channel: context.channel,
           did: context.did,
           authtoken: context.authToken || '',
-          uid: context.uid || '',
+          uid: context.uid || 'anonymous',
           sid: context.sid,
           batchsize: 10,
           mode: context.mode,
@@ -155,7 +155,7 @@ export class TelemetryService {
         pdata: this.context.pdata,
         env: 'languagelab.portal',
         sid: this.context.sid,
-        uid: this.userService.getUser().emis_username || this.context.uid,
+        uid: this.userService.getUser().emis_username || 'anonymous',
         cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
         { id: this.playSessionId, type: 'PlaySession' }],
         rollup: this.context.contextRollup || {}
