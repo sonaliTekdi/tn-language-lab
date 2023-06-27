@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { TelemetryService } from '../telemetry.service';
 import jwt_decode from 'jwt-decode';
+import { environment } from 'src/environments/environment';
+import { UserService } from '../user/user.service';
+
 
 @Component({
   selector: 'app-login',
@@ -14,7 +17,7 @@ export class LoginComponent {
   password: string;
   errorMessage: string;
 
-  constructor(public telemetryService: TelemetryService, private authService: AuthService, private router: Router) { }
+  constructor(public userService: UserService, public telemetryService: TelemetryService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.telemetryService.impression("Login", "/login");
@@ -25,17 +28,23 @@ export class LoginComponent {
       (data) => {
         if (data.dataStatus)
         {
-          this.telemetryService.response(jwt_decode(data?.records?.token));
           localStorage.setItem('token', data?.records?.token);
+          let users = this.userService.getUser();
+          this.telemetryService.log(
+            'api_login_call',
+            'Successfully logged in',
+            'login',
+            users
+          );
+
+          this.router.navigate(['/level']);
+
         }else{
           this.telemetryService.error(data?.message, {
             err: data?.message, errtype: data?.status
           });
           alert(data.message)
         }
-
-    // Redirect to protected route
-    this.router.navigate(['/level']);
       },
       error => {
         console.log(error)

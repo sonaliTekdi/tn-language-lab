@@ -46,13 +46,7 @@ export class AppComponent implements OnInit {
         uid: users?.emis_username || 'anonymous', // Current logged in user id
         pdata: environment.telemetryContext.pdata,
         channel: environment.telemetryContext.channel,
-        tags: [ // Defines the tags data
-          {"emis_usertype": users?.emis_usertype},
-          {"udise_code": users?.udise_code},
-          {"class_studying": users?.class_studying_id},
-          {"medium_id": users?.medium_id},
-          {"school_name": users?.school_name}
-        ],
+        tags: [],
         timeDiff: 0,  // Defines the time difference// Defines the object roll up data
         host: environment.telemetryContext.host,
         apislug: environment.telemetryContext.apislug,
