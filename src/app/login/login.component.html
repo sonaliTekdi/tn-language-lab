@@ -34,7 +34,7 @@
         alt="header-logo"
       />
     </div>
-    <form class="login-form" (ngSubmit)="login()">
+    <form class="login-form">
       <div class="form-group">
         <label for="username" [style.color]="loginError ? 'red' : ''"
           >Username</label
@@ -97,7 +97,7 @@
           required
         />
       </div> -->
-      <button type="submit">Login</button>
+      <button (click)="login()" type="submit">Login</button>
       <button (click)="loginAsGuest()" class="login-via-mobile">Continue as Guest</button>
     </form>
   </div>
