@@ -1,6 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { CsTelemetryModule } from '@project-sunbird/client-services/telemetry';
 import { UtilService } from './util.service';
+import { UserService } from './user/user.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +14,7 @@ export class TelemetryService {
   public config;
   startDuration: number;
 
-  constructor(private utilService: UtilService) {
+  constructor(public userService:UserService, private utilService: UtilService) {
     this.contentSessionId = this.utilService.uniqueId();
     localStorage.setItem('contentSessionId', this.contentSessionId);
   }
@@ -32,7 +33,7 @@ export class TelemetryService {
           channel: context.channel,
           did: context.did,
           authtoken: context.authToken || '',
-          uid: context.uid || '',
+          uid: context.uid || 'anonymous',
           sid: context.sid,
           batchsize: 10,
           mode: context.mode,
@@ -66,6 +67,23 @@ export class TelemetryService {
       {
         options: this.getEventOptions(),
         edata: { type: 'content', mode: 'play', pageid: pageid }
+      }
+    );
+
+  }
+
+  public log(type, message, pageid, data) {
+    this.startDuration = new Date().getTime();
+    CsTelemetryModule.instance.telemetryService.raiseLogTelemetry(
+      {
+        options: this.getEventOptions(),
+        edata:  {
+          "type": type || 'system', // Required. Type of log (system, process, api_access, api_call, job, app_update etc)
+          "level": "INFO", // Required. Level of the log. TRACE, DEBUG, INFO, WARN, ERROR, FATAL
+          "message": message || "log", // Required. Log message
+          "pageid": pageid || '', // Optional. Page where the log event has happened
+          "params": [data] // Optional. Additional params in the log message
+        }
       }
     );
 
@@ -137,7 +155,7 @@ export class TelemetryService {
         pdata: this.context.pdata,
         env: 'languagelab.portal',
         sid: this.context.sid,
-        uid: this.context.uid,
+        uid: this.userService.getUser().emis_username || 'anonymous',
         cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
         { id: this.playSessionId, type: 'PlaySession' }],
         rollup: this.context.contextRollup || {}

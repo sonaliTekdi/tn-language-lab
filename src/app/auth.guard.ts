@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): boolean {
     // Check if user is authenticated
-    const isAuthenticated = !!localStorage.getItem('token');
+    const isAuthenticated = !!localStorage.getItem('token') || !!localStorage.getItem('guestUser');
 
     if (isAuthenticated) {
       return true;
