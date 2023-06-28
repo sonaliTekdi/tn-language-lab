@@ -30,7 +30,7 @@ if (e.data.for=="user")
   constructor(public telemetryService: TelemetryService, private router:Router, public logsService: LogsService, public authService: AuthService) { }
 
   ngOnInit(): void {
-    this.isUserActive = !!localStorage.getItem('token');
+    this.isUserActive = this.authService.isLoggedIn();
     $('.moreless-button').click(function() {
       $('.moretext').slideToggle();
       if ($('.moreless-button').text() == "Read more") {

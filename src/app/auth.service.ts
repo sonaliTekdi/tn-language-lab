@@ -19,10 +19,11 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('guestUser');
   }
 
   isLoggedIn(){
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token') || localStorage.getItem('guestUser');
     return !!token;
   }
 }

@@ -9,11 +9,11 @@
         <img class="img-fluid" style="cursor: pointer;" width="59px" routerLink="/home" height="59px" src="../../../../assets/home-asset/header-round.png" alt="">
         <img class="img-fluid ms-3" style="cursor: pointer;" height="64px"  routerLink="/home" width="162.77px" src="../../../../assets/home-asset/mozhigal_white.png" alt="header-logo">
       </div>
-      <div class="col-md-2 offset-md-4">
+      <div class="col-md-3 offset-md-3">
         <div class="row">
           <div class="col-md-6">
             <label class="form-label">
-              {{userService.getUser().student_name}}/{{userService.getUser().emis_username}}
+              {{userService.getUser()?.student_name || 'Guest User'}}/{{userService.getUser()?.emis_username || 'Anonymous'}}
             </label>
           </div>
           <div class="col-md-6">

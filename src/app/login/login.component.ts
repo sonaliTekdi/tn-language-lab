@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { TelemetryService } from '../telemetry.service';
-import jwt_decode from 'jwt-decode';
 import { environment } from 'src/environments/environment';
 import { UserService } from '../user/user.service';
 
@@ -21,6 +20,11 @@ export class LoginComponent {
 
   ngOnInit() {
     this.telemetryService.impression("Login", "/login");
+  }
+  loginAsGuest(){
+    this.telemetryService.interact("LoginAsGuest", 'Login')
+    localStorage.setItem('guestUser', 'true');
+    this.router.navigate(['/level']);
   }
   login() {
     this.telemetryService.interact("Submit", 'Login')
