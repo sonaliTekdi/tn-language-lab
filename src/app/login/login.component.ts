@@ -15,7 +15,7 @@ export class LoginComponent {
   email: string;
   password: string;
   errorMessage: string;
-  loginError: boolean = false;  
+  loginError: boolean = false;
   passwordLength: number;
   isPasswordVisible: boolean = false;
 
@@ -25,6 +25,7 @@ export class LoginComponent {
     this.telemetryService.impression("Login", "/login");
   }
   loginAsGuest(){
+    localStorage.removeItem('token');
     this.telemetryService.interact("LoginAsGuest", 'Login')
     localStorage.setItem('guestUser', 'true');
     this.router.navigate(['/level']);
@@ -74,5 +75,5 @@ export class LoginComponent {
   togglePasswordVisibility() {
     this.isPasswordVisible = !this.isPasswordVisible;
   }
-  
+
 }
