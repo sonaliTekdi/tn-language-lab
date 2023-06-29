@@ -23,6 +23,16 @@ export class LoginComponent {
 
   ngOnInit() {
     this.telemetryService.impression("Login", "/login");
+        $(document).ready(function(){
+        $("#eng").click(function(){
+          localStorage.setItem('lang','en');
+          document.location.reload();
+        });
+        $("#de").click(function(){
+          localStorage.setItem('lang','ta');
+          document.location.reload();
+        });
+        });
   }
   loginAsGuest(){
     localStorage.removeItem('token');
