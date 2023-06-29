@@ -16,6 +16,8 @@ export class LoginComponent {
   loginError: boolean = false;
   passwordLength: number;
   isPasswordVisible: boolean = false;
+  lockSVG='../../assets/images/eye.svg';
+  eyeSVG='../../assets/images/password.svg';
 
   constructor(
     public userService: UserService,
@@ -82,8 +84,8 @@ export class LoginComponent {
   }
   getPasswordIcon() {
     return this.passwordLength !== 0
-      ? '../../assets/images/eye.svg'
-      : '../../assets/images/password.svg';
+      ? this.lockSVG
+      : this.eyeSVG;
   }
 
   togglePasswordVisibility() {
