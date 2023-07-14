@@ -36,10 +36,7 @@ export class LoginComponent {
     localStorage.removeItem('token');
     this.telemetryService.interact('LoginAsGuest', 'Login');
     localStorage.setItem('guestUser', 'true');
-    this.location.replaceState('/');
-    window.location.reload();
-    this.router.navigate(['/level']);
-
+    window.location.href = '/level';
   }
   login() {
     this.telemetryService.interact('Submit', 'Login');
@@ -55,9 +52,7 @@ export class LoginComponent {
             users
           );
 
-          this.location.replaceState('/');
-          window.location.reload();
-          this.router.navigate(['/level']);
+          window.location.href = '/level';
 
           this.loginError = false;
         } else {
