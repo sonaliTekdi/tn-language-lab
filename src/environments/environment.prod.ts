@@ -14,7 +14,7 @@ export const environment = {
     },
     host: "https://telemetry-dev.theall.ai",
     env: "languagelab.portal", // Required. Unique environment where the event has occured.
-    apislug: "/v1/mysql",
+    apislug: "/v1/mysql/",
     endpoint: 'telemetry'
   }
 };
