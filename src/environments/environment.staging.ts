@@ -16,5 +16,6 @@ export const environment = {
     env: "languagelab.portal", // Required. Unique environment where the event has occured.
     apislug: '/v1/mysql/',
     endpoint: 'telemetry'
-  }
+  },
+  telemetry_variable: 'essential-telemetry' // can assign any variables: Essential-Telemetry, Normal-Telemetry, and Detailed-Telemetry in env
 };
