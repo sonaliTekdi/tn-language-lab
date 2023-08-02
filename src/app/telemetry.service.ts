@@ -12,6 +12,8 @@ export class TelemetryService {
   private telemetryObject: any;
   private context;
   public config;
+  public TELEMETRY_MODE = environment.telemetry_mode;
+
   startDuration: number;
 
   constructor(
@@ -68,49 +70,56 @@ export class TelemetryService {
   }
 
   public start(pageid) {
-    let myStatus = environment.telemetry_variable;
-    if (myStatus === 'essential-telemetry') {
-      this.startDuration = new Date().getTime();
-      CsTelemetryModule.instance.telemetryService.raiseStartTelemetry({
-        options: this.getEventOptions(),
-        edata: { type: 'content', mode: 'play', pageid: pageid },
-      });
-    }
-  }
-
-  public log(type, message, pageid, data) {
     this.startDuration = new Date().getTime();
-    CsTelemetryModule.instance.telemetryService.raiseLogTelemetry({
+    CsTelemetryModule.instance.telemetryService.raiseStartTelemetry({
       options: this.getEventOptions(),
-      edata: {
-        type: type || 'system', // Required. Type of log (system, process, api_access, api_call, job, app_update etc)
-        level: 'INFO', // Required. Level of the log. TRACE, DEBUG, INFO, WARN, ERROR, FATAL
-        message: message || 'log', // Required. Log message
-        pageid: pageid || '', // Optional. Page where the log event has happened
-        params: [data], // Optional. Additional params in the log message
-      },
+      edata: { type: 'content', mode: 'play', pageid: pageid },
     });
   }
 
-  public end() {
-    let myStatus = environment.telemetry_variable;
-    if (myStatus === 'essential-telemetry') {
-      CsTelemetryModule.instance.telemetryService.raiseEndTelemetry({
-        edata: {
-          type: 'content',
-          mode: 'play',
-          pageid: 'language-lab',
-          summary: [],
-          duration: new Date().getTime() - this.startDuration,
-        },
+  public log(type, message, pageid, data, currentMode) {
+    if (
+      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
+      (this.TELEMETRY_MODE === 'NT' &&
+        (currentMode === 'ET' || currentMode === 'NT')) ||
+      (this.TELEMETRY_MODE === 'DT' &&
+        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
+    ) {
+      this.startDuration = new Date().getTime();
+      CsTelemetryModule.instance.telemetryService.raiseLogTelemetry({
         options: this.getEventOptions(),
+        edata: {
+          type: type || 'system', // Required. Type of log (system, process, api_access, api_call, job, app_update etc)
+          level: 'INFO', // Required. Level of the log. TRACE, DEBUG, INFO, WARN, ERROR, FATAL
+          message: message || 'log', // Required. Log message
+          pageid: pageid || '', // Optional. Page where the log event has happened
+          params: [data], // Optional. Additional params in the log message
+        },
       });
     }
   }
 
-  public response(data) {
-    let myStatus = environment.telemetry_variable;
-    if (myStatus === 'essential-telemetry') {
+  public end() {
+    CsTelemetryModule.instance.telemetryService.raiseEndTelemetry({
+      edata: {
+        type: 'content',
+        mode: 'play',
+        pageid: 'language-lab',
+        summary: [],
+        duration: new Date().getTime() - this.startDuration,
+      },
+      options: this.getEventOptions(),
+    });
+  }
+
+  public response(data, currentMode) {
+    if (
+      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
+      (this.TELEMETRY_MODE === 'NT' &&
+        (currentMode === 'ET' || currentMode === 'NT')) ||
+      (this.TELEMETRY_MODE === 'DT' &&
+        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
+    ) {
       CsTelemetryModule.instance.telemetryService.raiseResponseTelemetry(
         data,
         this.getEventOptions()
@@ -118,50 +127,86 @@ export class TelemetryService {
     }
   }
 
-  public interact(id, currentPage) {
-    CsTelemetryModule.instance.telemetryService.raiseInteractTelemetry({
-      options: this.getEventOptions(),
-      edata: { type: 'TOUCH', subtype: '', id, pageid: currentPage + '' },
-    });
+  public interact(id, currentPage, currentMode) {
+    if (
+      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
+      (this.TELEMETRY_MODE === 'NT' &&(currentMode === 'ET' || currentMode === 'NT')) ||
+      (this.TELEMETRY_MODE === 'DT' && (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
+    ) {
+      console.log("calling Interact");
+      
+      CsTelemetryModule.instance.telemetryService.raiseInteractTelemetry({
+        options: this.getEventOptions(),
+        edata: { type: 'TOUCH', subtype: '', id, pageid: currentPage + '' },
+      });
+    }
   }
 
-  public search(id) {
-    CsTelemetryModule.instance.telemetryService.raiseSearchTelemetry({
-      options: this.getEventOptions(),
-      edata: {
-        // Required
-        type: 'content', // Required. content, assessment, asset
-        query: id, // Required. Search query string
-        filters: {}, // Optional. Additional filters
-        sort: {}, // Optional. Additional sort parameters
-        correlationid: '', // Optional. Server generated correlation id (for mobile app's telemetry)
-        size: 0, // Required. Number of search results
-        topn: [{}], // Required. top N (configurable) results with their score
-      },
-    });
+  public search(id, currentMode) {
+    if (
+      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
+      (this.TELEMETRY_MODE === 'NT' &&
+        (currentMode === 'ET' || currentMode === 'NT')) ||
+      (this.TELEMETRY_MODE === 'DT' &&
+        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
+    ) {
+      CsTelemetryModule.instance.telemetryService.raiseSearchTelemetry({
+        options: this.getEventOptions(),
+        edata: {
+          // Required
+          type: 'content', // Required. content, assessment, asset
+          query: id, // Required. Search query string
+          filters: {}, // Optional. Additional filters
+          sort: {}, // Optional. Additional sort parameters
+          correlationid: '', // Optional. Server generated correlation id (for mobile app's telemetry)
+          size: 0, // Required. Number of search results
+          topn: [{}], // Required. top N (configurable) results with their score
+        },
+      });
+    }
   }
 
-  public impression(currentPage, uri) {
-    CsTelemetryModule.instance.telemetryService.raiseImpressionTelemetry({
-      options: this.getEventOptions(),
-      edata: {
-        type: 'workflow',
-        subtype: '',
-        pageid: currentPage + '',
-        uri: uri,
-      },
-    });
+  public impression(currentPage, uri, currentMode) {
+    if (
+      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
+      (this.TELEMETRY_MODE === 'NT' &&
+        (currentMode === 'ET' || currentMode === 'NT')) ||
+      (this.TELEMETRY_MODE === 'DT' &&
+        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
+    ) {
+      CsTelemetryModule.instance.telemetryService.raiseImpressionTelemetry({
+        options: this.getEventOptions(),
+        edata: {
+          type: 'workflow',
+          subtype: '',
+          pageid: currentPage + '',
+          uri: uri,
+        },
+      });
+    }
   }
 
-  public error(error: any, data: { err: string; errtype: string }) {
-    CsTelemetryModule.instance.telemetryService.raiseErrorTelemetry({
-      options: this.getEventOptions(),
-      edata: {
-        err: data.err,
-        errtype: data.errtype,
-        stacktrace: error.toString() || '',
-      },
-    });
+  public error(
+    error: any,
+    data: { err: string; errtype: string },
+    currentMode
+  ) {
+    if (
+      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
+      (this.TELEMETRY_MODE === 'NT' &&
+        (currentMode === 'ET' || currentMode === 'NT')) ||
+      (this.TELEMETRY_MODE === 'DT' &&
+        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
+    ) {
+      CsTelemetryModule.instance.telemetryService.raiseErrorTelemetry({
+        options: this.getEventOptions(),
+        edata: {
+          err: data.err,
+          errtype: data.errtype,
+          stacktrace: error.toString() || '',
+        },
+      });
+    }
   }
 
   private getEventOptions() {

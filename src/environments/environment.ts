@@ -1,22 +1,22 @@
 export const environment = {
   production: false,
-  environment: "LOCAL",
+  environment: 'LOCAL',
   showEnvironment: true,
-  loginApiUrl: "https://emislogin.tnschools.gov.in/emis_login/api/ATSLlogin",
+  loginApiUrl: 'https://emislogin.tnschools.gov.in/emis_login/api/ATSLlogin',
   telemetryContext: {
     authToken: '',
     batchSize: 10,
-    channel: "mozhigal",
-    pdata: { // Optional. Producer of the event
-      id: "languagelab.portal", // Required. unique id assigned to that component
-      pid: "languagelab.portal.portal", // Optional. In case the component is distributed, then which instance of that component
-      ver: "0.3.0"// Optional. version number of the build
+    channel: 'mozhigal',
+    pdata: {
+      // Optional. Producer of the event
+      id: 'languagelab.portal', // Required. unique id assigned to that component
+      pid: 'languagelab.portal.portal', // Optional. In case the component is distributed, then which instance of that component
+      ver: '0.3.0', // Optional. version number of the build
     },
-    host: "https://telemetry-dev.theall.ai",
-    env: "languagelab.portal", // Required. Unique environment where the event has occured.
+    host: 'https://telemetry-dev.theall.ai',
+    env: 'languagelab.portal', // Required. Unique environment where the event has occured.
     apislug: '/v1/mysql/',
     endpoint: 'telemetry',
   },
-  telemetry_variable: 'essential-telemetry' // can assign any variables: Essential-Telemetry, Normal-Telemetry, and Detailed-Telemetry in env
+  telemetry_mode: 'ET', // can assign any variables as follows: Essential-Telemetry = ET, Normal-Telemetry = NT, and Detailed-Telemetry = DT.
 };
-  
