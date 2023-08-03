@@ -18,5 +18,5 @@ export const environment = {
     apislug: '/v1/mysql/',
     endpoint: 'telemetry',
   },
-  telemetry_mode: 'ET', // can assign any variables as follows: Essential-Telemetry = ET, Normal-Telemetry = NT, and Detailed-Telemetry = DT.
+  telemetry_mode: 'DT', // can assign any variables as follows: Essential-Telemetry = ET, Normal-Telemetry = NT, and Detailed-Telemetry = DT.
 };

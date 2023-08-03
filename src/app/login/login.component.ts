@@ -63,7 +63,7 @@ export class LoginComponent {
               err: data?.message,
               errtype: data?.status,
             },
-            'ET'
+            'DT'
           );
           // alert(data.message)
           this.loginError = true;

@@ -24,6 +24,21 @@ export class TelemetryService {
     localStorage.setItem('contentSessionId', this.contentSessionId);
   }
 
+
+  telemetryMode(currentMode){
+    if (
+      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
+      (this.TELEMETRY_MODE === 'NT' &&
+        (currentMode === 'ET' || currentMode === 'NT')) ||
+      (this.TELEMETRY_MODE === 'DT' &&
+        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
+    ){
+      return true;
+    }
+    return false;
+
+  }
+
   public initialize({ context, config, metadata }) {
     this.context = context;
     this.config = config;
@@ -76,15 +91,11 @@ export class TelemetryService {
       edata: { type: 'content', mode: 'play', pageid: pageid },
     });
   }
+  
+
 
   public log(type, message, pageid, data, currentMode) {
-    if (
-      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
-      (this.TELEMETRY_MODE === 'NT' &&
-        (currentMode === 'ET' || currentMode === 'NT')) ||
-      (this.TELEMETRY_MODE === 'DT' &&
-        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
-    ) {
+    if (this.telemetryMode(currentMode) === true) {
       this.startDuration = new Date().getTime();
       CsTelemetryModule.instance.telemetryService.raiseLogTelemetry({
         options: this.getEventOptions(),
@@ -113,13 +124,7 @@ export class TelemetryService {
   }
 
   public response(data, currentMode) {
-    if (
-      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
-      (this.TELEMETRY_MODE === 'NT' &&
-        (currentMode === 'ET' || currentMode === 'NT')) ||
-      (this.TELEMETRY_MODE === 'DT' &&
-        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
-    ) {
+    if (this.telemetryMode(currentMode) === true)  {
       CsTelemetryModule.instance.telemetryService.raiseResponseTelemetry(
         data,
         this.getEventOptions()
@@ -128,11 +133,7 @@ export class TelemetryService {
   }
 
   public interact(id, currentPage, currentMode) {
-    if (
-      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
-      (this.TELEMETRY_MODE === 'NT' &&(currentMode === 'ET' || currentMode === 'NT')) ||
-      (this.TELEMETRY_MODE === 'DT' && (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
-    ) {
+    if (this.telemetryMode(currentMode) === true) {
       console.log("calling Interact");
       
       CsTelemetryModule.instance.telemetryService.raiseInteractTelemetry({
@@ -143,13 +144,7 @@ export class TelemetryService {
   }
 
   public search(id, currentMode) {
-    if (
-      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
-      (this.TELEMETRY_MODE === 'NT' &&
-        (currentMode === 'ET' || currentMode === 'NT')) ||
-      (this.TELEMETRY_MODE === 'DT' &&
-        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
-    ) {
+    if (this.telemetryMode(currentMode) === true)  {
       CsTelemetryModule.instance.telemetryService.raiseSearchTelemetry({
         options: this.getEventOptions(),
         edata: {
@@ -167,13 +162,7 @@ export class TelemetryService {
   }
 
   public impression(currentPage, uri, currentMode) {
-    if (
-      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
-      (this.TELEMETRY_MODE === 'NT' &&
-        (currentMode === 'ET' || currentMode === 'NT')) ||
-      (this.TELEMETRY_MODE === 'DT' &&
-        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
-    ) {
+    if (this.telemetryMode(currentMode) === true)  {
       CsTelemetryModule.instance.telemetryService.raiseImpressionTelemetry({
         options: this.getEventOptions(),
         edata: {
@@ -191,13 +180,7 @@ export class TelemetryService {
     data: { err: string; errtype: string },
     currentMode
   ) {
-    if (
-      (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
-      (this.TELEMETRY_MODE === 'NT' &&
-        (currentMode === 'ET' || currentMode === 'NT')) ||
-      (this.TELEMETRY_MODE === 'DT' &&
-        (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
-    ) {
+    if (this.telemetryMode(currentMode) === true)  {
       CsTelemetryModule.instance.telemetryService.raiseErrorTelemetry({
         options: this.getEventOptions(),
         edata: {
