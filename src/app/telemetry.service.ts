@@ -95,7 +95,7 @@ export class TelemetryService {
 
 
   public log(type, message, pageid, data, currentMode) {
-    if (this.telemetryMode(currentMode) === true) {
+    if (this.telemetryMode(currentMode)) {
       this.startDuration = new Date().getTime();
       CsTelemetryModule.instance.telemetryService.raiseLogTelemetry({
         options: this.getEventOptions(),
@@ -124,7 +124,7 @@ export class TelemetryService {
   }
 
   public response(data, currentMode) {
-    if (this.telemetryMode(currentMode) === true)  {
+    if (this.telemetryMode(currentMode))  {
       CsTelemetryModule.instance.telemetryService.raiseResponseTelemetry(
         data,
         this.getEventOptions()
@@ -133,9 +133,7 @@ export class TelemetryService {
   }
 
   public interact(id, currentPage, currentMode) {
-    if (this.telemetryMode(currentMode) === true) {
-      console.log("calling Interact");
-      
+    if (this.telemetryMode(currentMode)) {      
       CsTelemetryModule.instance.telemetryService.raiseInteractTelemetry({
         options: this.getEventOptions(),
         edata: { type: 'TOUCH', subtype: '', id, pageid: currentPage + '' },
@@ -144,7 +142,7 @@ export class TelemetryService {
   }
 
   public search(id, currentMode) {
-    if (this.telemetryMode(currentMode) === true)  {
+    if (this.telemetryMode(currentMode))  {
       CsTelemetryModule.instance.telemetryService.raiseSearchTelemetry({
         options: this.getEventOptions(),
         edata: {
@@ -162,7 +160,7 @@ export class TelemetryService {
   }
 
   public impression(currentPage, uri, currentMode) {
-    if (this.telemetryMode(currentMode) === true)  {
+    if (this.telemetryMode(currentMode))  {
       CsTelemetryModule.instance.telemetryService.raiseImpressionTelemetry({
         options: this.getEventOptions(),
         edata: {
@@ -180,7 +178,7 @@ export class TelemetryService {
     data: { err: string; errtype: string },
     currentMode
   ) {
-    if (this.telemetryMode(currentMode) === true)  {
+    if (this.telemetryMode(currentMode))  {
       CsTelemetryModule.instance.telemetryService.raiseErrorTelemetry({
         options: this.getEventOptions(),
         edata: {

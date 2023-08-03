@@ -39,7 +39,7 @@ export class LoginComponent {
     window.location.href = '/level';
   }
   login() {
-    this.telemetryService.interact('Submit', 'Login', 'ET');
+    this.telemetryService.interact('Submit', 'Login', 'NT');
     this.authService.login(this.email, this.password).subscribe(
       (data) => {
         if (data.dataStatus) {
