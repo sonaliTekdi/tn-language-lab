@@ -18,8 +18,8 @@ export class LoginComponent {
   loginError: boolean = false;
   passwordLength: number;
   isPasswordVisible: boolean = false;
-  lockSVG='../../assets/images/eye.svg';
-  eyeSVG='../../assets/images/password.svg';
+  lockSVG = '../../assets/images/eye.svg';
+  eyeSVG = '../../assets/images/password.svg';
 
   constructor(
     public userService: UserService,
@@ -30,16 +30,16 @@ export class LoginComponent {
   ) {}
 
   ngOnInit() {
-    this.telemetryService.impression('Login', '/login');
+    this.telemetryService.impression('Login', '/login', 'ET');
   }
   loginAsGuest() {
     localStorage.removeItem('token');
-    this.telemetryService.interact('LoginAsGuest', 'Login');
+    this.telemetryService.interact('LoginAsGuest', 'Login', 'NT');
     localStorage.setItem('guestUser', 'true');
     window.location.href = '/level';
   }
   login() {
-    this.telemetryService.interact('Submit', 'Login');
+    this.telemetryService.interact('Submit', 'Login', 'NT');
     this.authService.login(this.email, this.password).subscribe(
       (data) => {
         if (data.dataStatus) {
@@ -49,17 +49,22 @@ export class LoginComponent {
             'api_login_call',
             'Successfully logged in',
             'login',
-            users
+            users,
+            'ET'
           );
 
           window.location.href = '/level';
 
           this.loginError = false;
         } else {
-          this.telemetryService.error(data?.message, {
-            err: data?.message,
-            errtype: data?.status,
-          });
+          this.telemetryService.error(
+            data?.message,
+            {
+              err: data?.message,
+              errtype: data?.status,
+            },
+            'DT'
+          );
           // alert(data.message)
           this.loginError = true;
         }
@@ -86,9 +91,7 @@ export class LoginComponent {
     this.calculatePasswordLength();
   }
   getPasswordIcon() {
-    return this.passwordLength !== 0
-      ? this.lockSVG
-      : this.eyeSVG;
+    return this.passwordLength !== 0 ? this.lockSVG : this.eyeSVG;
   }
 
   togglePasswordVisibility() {
