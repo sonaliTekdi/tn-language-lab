@@ -1,0 +1,34 @@
+name: tn-language-lab S3 Deployment
+
+on:
+  push:
+    branches:
+      - Mozhigal-2.0
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install AWS CLI
+        run: |
+          # Install AWS CLI
+          apt-get install -y awscli
+
+      - name: Configure AWS credentials
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set default.region ap-south-1
+
+      - name: Build and Package Application
+        run: |
+          npm install
+          ng build
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync /dist s3://sballtnlanglab
