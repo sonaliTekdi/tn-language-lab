@@ -32,7 +32,7 @@ jobs:
       - name: Build and Package Application
         run: |
           npm install
-          ng build --prod
+          ng build --configuration=staging
 
       - name: Deploy to S3 Bucket
         run: |
