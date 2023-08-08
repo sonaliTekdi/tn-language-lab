@@ -36,4 +36,4 @@ jobs:
 
       - name: Deploy to S3 Bucket
         run: |
-          aws s3 sync ./dist/ s3://YOUR_S3_BUCKET_NAME
+          aws s3 sync ./dist/ s3://sballtnlanglab
