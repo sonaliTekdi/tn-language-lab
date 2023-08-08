@@ -191,6 +191,10 @@ export class TelemetryService {
   }
 
   private getEventOptions() {
+    // localStorage.setItem("UID_1",this.userService.getUser().emis_username)
+    // localStorage.setItem("UID_2",this.userService.getBuddyUser())
+    // console.log(this.userService.getBuddyUser());
+  const isBuddyLogin = localStorage.getItem('BuddyLogin')
     return {
       object: {},
       context: {
@@ -198,7 +202,9 @@ export class TelemetryService {
         pdata: this.context.pdata,
         env: 'languagelab.portal',
         sid: this.context.sid,
-        uid: this.userService.getUser().emis_username || 'anonymous',
+        uid: isBuddyLogin==='true'? this.userService.getUser().emis_username+" / "+this.userService.getBuddyUser().emis_username : this.userService.getUser().emis_username || 'anonymous',
+        // uid: this.userService.getUser().emis_username || 'anonymous',
+        // uid: isBuddyLogin==='true'? this.userService.getUser().emis_username+" / "+this.userService.getBuddyUser() : this.userService.getUser().emis_username || 'anonymous',
         cdata: [
           { id: this.contentSessionId, type: 'ContentSession' },
           { id: this.playSessionId, type: 'PlaySession' },

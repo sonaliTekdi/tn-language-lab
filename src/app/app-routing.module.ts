@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BaseComponent } from './views/layout/base/base.component';
 import { AuthGuard } from './auth.guard';
+// import { routeGuard } from './route.guard';
 import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
@@ -11,9 +12,14 @@ import { ComingComponent } from './views/pages/coming/coming.component';
 import { LearnTommorowComponent } from './views/pages/learn-tommorow/learn-tommorow.component';
 import { DownloadTelemetryComponent } from './download-telemetry/download-telemetry.component';
 import { LoginComponent } from './login/login.component';
+import { BuddyLoginComponent } from './buddy-login/buddy-login.component';
 
 const routes: Routes = [
   { path:'login', component: LoginComponent },
+  { 
+    path:'buddy-login',
+    component: BuddyLoginComponent,
+  },
   {
     path: '',
     component: BaseComponent,
