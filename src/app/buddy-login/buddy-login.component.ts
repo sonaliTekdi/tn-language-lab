@@ -30,19 +30,19 @@ export class BuddyLoginComponent implements OnInit {
     private location: Location) { }
 
   ngOnInit() {
-    this.telemetryService.impression('Login', '/login', 'ET');
+    this.telemetryService.impression('BuddyLogin', '/buddy-login', 'ET');
   }
 
   loginAsBuddy() {
     this.telemetryService.interact('Submit', 'BuddyLogin', 'NT');
-    if(this.userService.getUser().emis_username===this.email)
+    if(this.userService.getUser().emis_username === this.email)
     {
       alert("User Already Exists");
       return;
     }
     localStorage.setItem('BuddyLogin', 'true');
     
-    this.authService.buddyLogin(this.email, this.password).subscribe(
+    this.authService.login(this.email, this.password).subscribe(
       (data) => {
         if (data.dataStatus) {
           localStorage.setItem('buddyToken', data?.records?.token);
@@ -67,7 +67,6 @@ export class BuddyLoginComponent implements OnInit {
             },
             'DT'
           );
-          // alert(data.message)
           this.loginError = true;
         }
       },

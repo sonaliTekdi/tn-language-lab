@@ -25,14 +25,14 @@ export class TelemetryService {
   }
 
 
-  telemetryMode(currentMode){
+  telemetryMode(currentMode) {
     if (
       (this.TELEMETRY_MODE === 'ET' && currentMode === 'ET') ||
       (this.TELEMETRY_MODE === 'NT' &&
         (currentMode === 'ET' || currentMode === 'NT')) ||
       (this.TELEMETRY_MODE === 'DT' &&
         (currentMode === 'ET' || currentMode === 'NT' || currentMode === 'DT'))
-    ){
+    ) {
       return true;
     }
     return false;
@@ -91,7 +91,7 @@ export class TelemetryService {
       edata: { type: 'content', mode: 'play', pageid: pageid },
     });
   }
-  
+
 
 
   public log(type, message, pageid, data, currentMode) {
@@ -124,7 +124,7 @@ export class TelemetryService {
   }
 
   public response(data, currentMode) {
-    if (this.telemetryMode(currentMode))  {
+    if (this.telemetryMode(currentMode)) {
       CsTelemetryModule.instance.telemetryService.raiseResponseTelemetry(
         data,
         this.getEventOptions()
@@ -133,7 +133,7 @@ export class TelemetryService {
   }
 
   public interact(id, currentPage, currentMode) {
-    if (this.telemetryMode(currentMode)) {      
+    if (this.telemetryMode(currentMode)) {
       CsTelemetryModule.instance.telemetryService.raiseInteractTelemetry({
         options: this.getEventOptions(),
         edata: { type: 'TOUCH', subtype: '', id, pageid: currentPage + '' },
@@ -142,7 +142,7 @@ export class TelemetryService {
   }
 
   public search(id, currentMode) {
-    if (this.telemetryMode(currentMode))  {
+    if (this.telemetryMode(currentMode)) {
       CsTelemetryModule.instance.telemetryService.raiseSearchTelemetry({
         options: this.getEventOptions(),
         edata: {
@@ -160,7 +160,7 @@ export class TelemetryService {
   }
 
   public impression(currentPage, uri, currentMode) {
-    if (this.telemetryMode(currentMode))  {
+    if (this.telemetryMode(currentMode)) {
       CsTelemetryModule.instance.telemetryService.raiseImpressionTelemetry({
         options: this.getEventOptions(),
         edata: {
@@ -178,7 +178,7 @@ export class TelemetryService {
     data: { err: string; errtype: string },
     currentMode
   ) {
-    if (this.telemetryMode(currentMode))  {
+    if (this.telemetryMode(currentMode)) {
       CsTelemetryModule.instance.telemetryService.raiseErrorTelemetry({
         options: this.getEventOptions(),
         edata: {
@@ -191,10 +191,7 @@ export class TelemetryService {
   }
 
   private getEventOptions() {
-    // localStorage.setItem("UID_1",this.userService.getUser().emis_username)
-    // localStorage.setItem("UID_2",this.userService.getBuddyUser())
-    // console.log(this.userService.getBuddyUser());
-  const isBuddyLogin = localStorage.getItem('BuddyLogin')
+    const isBuddyLogin = localStorage.getItem('BuddyLogin')
     return {
       object: {},
       context: {
@@ -202,15 +199,15 @@ export class TelemetryService {
         pdata: this.context.pdata,
         env: 'languagelab.portal',
         sid: this.context.sid,
-        uid: isBuddyLogin==='true'? this.userService.getUser().emis_username+" / "+this.userService.getBuddyUser().emis_username : this.userService.getUser().emis_username || 'anonymous',
-        // uid: this.userService.getUser().emis_username || 'anonymous',
-        // uid: isBuddyLogin==='true'? this.userService.getUser().emis_username+" / "+this.userService.getBuddyUser() : this.userService.getUser().emis_username || 'anonymous',
+        uid: isBuddyLogin === 'true' ? this.userService.getUser().emis_username + "/" +this.userService.getBuddyUser().emis_username : this.userService.getUser().emis_username || 'anonymous',
         cdata: [
           { id: this.contentSessionId, type: 'ContentSession' },
           { id: this.playSessionId, type: 'PlaySession' },
         ],
         rollup: this.context.contextRollup || {},
       },
+
+
     };
   }
 }

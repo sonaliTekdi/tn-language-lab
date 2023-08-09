@@ -18,11 +18,6 @@ export class AuthService {
     return this.http.post(this.apiUrl, credentials);
   }
 
-  buddyLogin(email: string, password: string): Observable<any> {
-    const credentials = {records: { emis_username: email, emis_password: password }};
-    return this.http.post(this.apiUrl, credentials);
-  }
-
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('buddyToken');

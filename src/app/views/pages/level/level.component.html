@@ -13,7 +13,6 @@
         <div class="row">
           <div class="col-md-5">
             <label class="form-label" style="color: white;">
-
               <span *ngIf="isGuestUser; else loginUser">
                   {{userService.getUser()?.student_name || 'Guest User'}}/{{userService.getUser()?.emis_username || 'Anonymous'}}
               </span>
@@ -26,8 +25,6 @@
               <ng-template #notBuddyLogin>
                 <!-- Empty ng-template to handle the case where buddy login is not true -->
               </ng-template>
-
-             
             </label>
           </div>
           <div class="col-md-7">

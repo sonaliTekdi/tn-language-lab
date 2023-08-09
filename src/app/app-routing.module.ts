@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BaseComponent } from './views/layout/base/base.component';
 import { AuthGuard } from './auth.guard';
-// import { routeGuard } from './route.guard';
 import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NoAccessComponent } from './views/pages/no-access/no-access.component';
