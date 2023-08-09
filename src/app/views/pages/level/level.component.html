@@ -9,15 +9,28 @@
         <img class="img-fluid" style="cursor: pointer;" width="59px" routerLink="/home" height="59px" src="../../../../assets/home-asset/header-round.png" alt="">
         <img class="img-fluid ms-3" style="cursor: pointer;" height="64px"  routerLink="/home" width="162.77px" src="../../../../assets/home-asset/mozhigal_white.png" alt="header-logo">
       </div>
-      <div class="col-md-3 offset-md-3">
+      <div class="col-md-4 offset-md-2">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-5">
             <label class="form-label" style="color: white;">
-              {{userService.getUser()?.student_name || 'Guest User'}}/{{userService.getUser()?.emis_username || 'Anonymous'}}
+              <span *ngIf="isGuestUser; else loginUser">
+                  {{userService.getUser()?.student_name || 'Guest User'}}/{{userService.getUser()?.emis_username || 'Anonymous'}}
+              </span>
+              <ng-template #loginUser>
+                {{ userService.getUser()?.student_name }} / {{ userService.getUser()?.emis_username }}
+              </ng-template>
+              <span *ngIf="isBuddyLogin; else notBuddyLogin">
+               & {{ userService.getBuddyUser()?.student_name }} / {{ userService.getBuddyUser()?.emis_username }}
+              </span>
+              <ng-template #notBuddyLogin>
+                <!-- Empty ng-template to handle the case where buddy login is not true -->
+              </ng-template>
             </label>
           </div>
-          <div class="col-md-6">
-            <button class="px-3 py-2 rounded bg-primary border-0 text-white fs-10 mt-1" (click)="telemetryService.interact('logout', 'level','NT'); logout()">Logout</button>
+          <div class="col-md-7">
+            <button class="px-3 py-2 rounded bg-success border-0 text-white fs-10 mt-1 mx-2" *ngIf="isGuestUser !== 'true'"
+        (click)="buddyLogin()">Login As Buddy</button>
+            <button class="px-3 py-2 rounded bg-danger border-0 text-white fs-10 mt-1" (click)="telemetryService.interact('logout', 'level','NT'); logout()">Logout</button>
           </div>
         </div>
       </div>
