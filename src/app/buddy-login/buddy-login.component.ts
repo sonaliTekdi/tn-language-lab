@@ -13,7 +13,6 @@ import jwt_decode from 'jwt-decode';
   styleUrls: ['./buddy-login.component.scss']
 })
 export class BuddyLoginComponent implements OnInit {
-  isBuddyLogin = localStorage.getItem('BuddyLogin')
   email: string;
   password: string;
   errorMessage: string;
@@ -40,7 +39,6 @@ export class BuddyLoginComponent implements OnInit {
       alert("User Already Exists");
       return;
     }
-    localStorage.setItem('BuddyLogin', 'true');
     
     this.authService.login(this.email, this.password).subscribe(
       (data) => {

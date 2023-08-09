@@ -13,7 +13,6 @@ export class AuthService {
   constructor(private router: Router, private http: HttpClient) { }
 
   login(email: string, password: string): Observable<any> {
-    sessionStorage.setItem('myId',email)
     const credentials = {records: { emis_username: email, emis_password: password }};
     return this.http.post(this.apiUrl, credentials);
   }
@@ -22,7 +21,6 @@ export class AuthService {
     localStorage.removeItem('token');
     localStorage.removeItem('buddyToken');
     localStorage.removeItem('guestUser');
-    localStorage.removeItem('BuddyLogin');
   }
 
   isLoggedIn(){

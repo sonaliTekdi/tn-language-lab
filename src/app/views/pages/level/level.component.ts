@@ -14,7 +14,7 @@ import { AuthService } from 'src/app/auth.service';
 export class LevelComponent implements OnInit {
   lesson: string;
   topic: string;
-  isBuddyLogin =localStorage.getItem('BuddyLogin');
+  isBuddyLogin =this.userService.isBuddyLoggedIn();
   isGuestUser: string | null;
 
   constructor(private router:Router, public authService:AuthService, public userService: UserService, public levelService: LevelService,  public telemetryService: TelemetryService, private route: ActivatedRoute, private _router: Router, public logService: LogsService) { }
@@ -34,7 +34,6 @@ export class LevelComponent implements OnInit {
 
   buddyLogin()
   {
-    //this.isBuddyLogin = localStorage.removeItem('BuddyLogin');
     this.router.navigate(['/buddy-login']);
   }
 

@@ -28,4 +28,10 @@ export class UserService {
       return false;
     }
   }
+
+  isBuddyLoggedIn()
+  {
+    return !!localStorage.getItem('buddyToken')? true : false;
+  }
+
 }

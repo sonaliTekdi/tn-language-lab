@@ -19,7 +19,7 @@
               <ng-template #loginUser>
                 {{ userService.getUser()?.student_name }} / {{ userService.getUser()?.emis_username }}
               </ng-template>
-              <span *ngIf="isBuddyLogin === 'true'; else notBuddyLogin">
+              <span *ngIf="isBuddyLogin; else notBuddyLogin">
                & {{ userService.getBuddyUser()?.student_name }} / {{ userService.getBuddyUser()?.emis_username }}
               </span>
               <ng-template #notBuddyLogin>

@@ -12,7 +12,6 @@ import { Location } from '@angular/common';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  isBuddyLogin = localStorage.getItem('BuddyLogin')
   email: string;
   password: string;
   errorMessage: string;

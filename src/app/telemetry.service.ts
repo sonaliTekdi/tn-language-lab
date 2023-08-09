@@ -13,7 +13,7 @@ export class TelemetryService {
   private context;
   public config;
   public TELEMETRY_MODE = environment.telemetry_mode;
-
+  
   startDuration: number;
 
   constructor(
@@ -189,9 +189,13 @@ export class TelemetryService {
       });
     }
   }
+ 
 
   private getEventOptions() {
-    const isBuddyLogin = localStorage.getItem('BuddyLogin')
+   const isBuddyLogin = this.userService.isBuddyLoggedIn();
+    const userType = isBuddyLogin ? 'Buddy User' : 'User';
+    const userId = isBuddyLogin ? this.userService.getUser().emis_username + "/" +this.userService.getBuddyUser().emis_username : this.userService.getUser().emis_username;
+    
     return {
       object: {},
       context: {
@@ -199,14 +203,14 @@ export class TelemetryService {
         pdata: this.context.pdata,
         env: 'languagelab.portal',
         sid: this.context.sid,
-        uid: isBuddyLogin === 'true' ? this.userService.getUser().emis_username + "/" +this.userService.getBuddyUser().emis_username : this.userService.getUser().emis_username || 'anonymous',
+        uid: isBuddyLogin ? this.userService.getUser().emis_username + "/" +this.userService.getBuddyUser().emis_username : this.userService.getUser().emis_username || 'anonymous',
         cdata: [
           { id: this.contentSessionId, type: 'ContentSession' },
           { id: this.playSessionId, type: 'PlaySession' },
+          { id: userId, type: userType }
         ],
         rollup: this.context.contextRollup || {},
       },
-
 
     };
   }
