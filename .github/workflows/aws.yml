@@ -1,4 +1,4 @@
-name: Mozhigal Dev Deployment
+name: Mozhigal Dev Deployment for hotfix
 
 on:
   push:
