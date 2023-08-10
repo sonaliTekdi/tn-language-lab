@@ -1,9 +1,10 @@
-name: Mozhigal Dev Deployment for hotfix
+name: Mozhigal Dev Deployment for hotfix-branch
 
 on:
   push:
     branches:
       - release-0.3.1-hotfix
+      - Mozhigal-2.0
 
 jobs:
   deploy:
